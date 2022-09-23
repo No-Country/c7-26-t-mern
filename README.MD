@@ -1,6 +1,6 @@
 ### Web app "Reclami" Cohorte 7 No-Country.
 
-## Teamleader
+## TeamLeader
 - Stiven Morales Meza
  
 ## Integrantes 
