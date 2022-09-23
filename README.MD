@@ -13,5 +13,3 @@
 - Emanuel Martinez ( Front End React)
 - Juan Pablo Muñiz (Full Stack)
 - Pedro Fernandez (Full Stack)
-
--
