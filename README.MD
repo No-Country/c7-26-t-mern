@@ -1,9 +1,10 @@
 ### Web app "Reclami" Cohorte 7 No-Country.
 
 ## TeamLeader
+
 - Stiven Morales Meza
- 
-## Integrantes 
+
+## Integrantes
 
 - Andrea Abdala (UX/UI)
 - André Umbert (Full Stack)
@@ -13,3 +14,4 @@
 - Juan Pablo Muñiz (Full Stack)
 - Pedro Fernandez (Full Stack)
 
+-
