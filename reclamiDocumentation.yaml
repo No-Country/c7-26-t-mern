@@ -1,0 +1,416 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: 'RECLAMI API'
+  license:
+    name: MIT
+host: api.reclami.com
+basePath: /v1
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: claimmers
+    description: users administration
+paths:
+  /claimmers:
+    get:
+      summary: List of all claimmers
+      tags:
+        - claimmers
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: array of claimmers
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Claimmers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create an claimmer
+      tags:
+        - claimmers
+      parameters:
+        - in: body
+          name: body
+          description: Claimmer Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/Claimmers'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      summary: Update an claimmers
+      tags:
+        - claimmers
+      parameters:
+        - in: body
+          name: body
+          description: Claimmer Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/Claimmers'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      summary: delete an claimmer
+      tags:
+        - claimmers
+      parameters:
+        - name: claimmersId
+          in: query
+          description: id of the claimmers who want to be deleted
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: claimmers deleted succesfully
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /countries:
+    get:
+      summary: List of all countries
+      tags:
+        - countries
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: array of countries
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Countries'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: create a country
+      tags:
+        - countries
+      parameters:
+        - in: body
+          name: body
+          description: Country Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/Country'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      summary: Modify a Country
+      tags:
+        - countries
+      parameters:
+        - in: body
+          name: body
+          description: Country Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/Country'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      summary: Delete a Country
+      tags:
+        - countries
+      parameters:
+        - name: regionId
+          in: query
+          description: id of the country to delete
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Country was deleted succesfully
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /cities:
+    get:
+      summary: List of all cities
+      tags:
+        - cities
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: array of cities
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Cities'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: create a city
+      tags:
+        - cities
+      parameters:
+        - in: body
+          name: body
+          description: City Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/City'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      summary: Modify a City
+      tags:
+        - cities
+      parameters:
+        - in: body
+          name: body
+          description: City Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/City'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      summary: Delete a City
+      tags:
+        - cities
+      parameters:
+        - name: cityId
+          in: query
+          description: id of the city to delete
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: City was deleted succesfully
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /decisionMakers:
+    get:
+      summary: List of all decisionMakers
+      tags:
+        - decisionMakers
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: array of decisionMakers
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DecisionMakers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: create a decisionMaker
+      tags:
+        - decisionMakers
+      parameters:
+        - in: body
+          name: body
+          description: DecisionMaker Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/DecisionMaker'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      summary: Modify a DecisionMaker
+      tags:
+        - decisionMakers
+      parameters:
+        - in: body
+          name: body
+          description: DecisionMaker Type Object
+          required: true
+          schema:
+            $ref: '#/definitions/DecisionMaker'
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      summary: Delete a DecisionMaker
+      tags:
+        - decisionMakers
+      parameters:
+        - name: decisionMakerId
+          in: query
+          description: id of the decisionMaker to delete
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: DecisionMaker was deleted succesfully
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+  
+definitions:
+  Claimmer:
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+      lastname:
+        type: string
+      email:
+        type: number
+      password:
+        type: string
+      rePassword:
+        type: string
+      profile:
+        type: string
+      role:
+        type: string
+  Claimmers:
+    type: array
+    items:
+      $ref: '#/definitions/Claimmer'
+  City:
+    properties: 
+      id:
+        type: number
+      cityName:
+        type: string
+  Cities:
+    type: array
+    items:
+      $ref: '#/definitions/City'
+  Country:
+    type: array
+    items:
+      $ref: '#/definitions/Cities'
+    properties: 
+      id:
+        type: number
+      countryName:
+        type: string
+  Countries:
+    type: array
+    items:
+      $ref: '#/definitions/Country'
+  DecisionMaker:
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+      lastname:
+        type: string
+      email:
+        type: number
+      password:
+        type: string
+      rePassword:
+        type: string
+      profile:
+        type: string
+      role:
+        type: string
+      position:
+        type: string
+  DecisionMakers:
+    type: array
+    items:
+      $ref: '#/definitions/DecisionMaker'
+  Error:
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
