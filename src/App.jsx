@@ -1,10 +1,12 @@
+import Header from "./Header/Header";
+import Nav from "./Nav/Nav";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <>
+      <Header />
+      <Nav />
+    </>
   );
 }
 
