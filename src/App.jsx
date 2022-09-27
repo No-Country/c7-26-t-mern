@@ -1,10 +1,13 @@
 import TopNav from './Nav/TopNav/TopNav'
+import Nav from './Nav/Nav';
+
 
 function App() {
   return (
-    <div className="App">
-          <TopNav/>
-    </div>
+    <>
+      <TopNav/>
+      <Nav />
+    </>
   );
 }
 
