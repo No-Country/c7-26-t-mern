@@ -12,19 +12,19 @@ function Nav() {
 
   const menus = [
     {
-      icon: <BsFillHouseFill size={25} />,
+      icon: <BsFillHouseFill size={20} />,
       name: "Home",
     },
     {
-      icon: <BsGeoAltFill size={25} />,
+      icon: <BsGeoAltFill size={20} />,
       name: "Map",
     },
     {
-      icon: <BsFillPeopleFill size={25} />,
+      icon: <BsFillPeopleFill size={20} />,
       name: "Comunity",
     },
     {
-      icon: <BsExclamationCircleFill size={25} />,
+      icon: <BsExclamationCircleFill size={20} />,
       name: "Claims",
     },
   ];
