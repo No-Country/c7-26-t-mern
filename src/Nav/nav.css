@@ -6,7 +6,7 @@
     font-weight: 400;
 }
 
-
+/* 
 body {
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
     height: 100vh;
     border: 1px solid black;
     background: var(--color-primary);
-}
+} */
 
 .navigation {
     width: 400px;
