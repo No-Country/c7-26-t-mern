@@ -1,10 +1,10 @@
-import Header from "./Header/Header";
 import Nav from "./Nav/Nav";
+import TopNav from "./Nav/TopNav/TopNav";
 
 function App() {
   return (
     <>
-      <Header />
+      <TopNav />
       <Nav />
     </>
   );
