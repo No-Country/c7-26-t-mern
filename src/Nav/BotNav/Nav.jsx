@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./nav.css";
-import {
-  BsGeoAltFill,
-  BsFillHouseFill,
-  BsFillPeopleFill,
-  BsExclamationCircleFill,
-} from "react-icons/bs";
+import { BsGeoAltFill, BsFillHouseFill } from "react-icons/bs";
+
+// Icons bottom navbar
+import iconCommunity from "../../assets/communityInactive.svg";
+import iconClaims from "../../assets/claimsInactive.svg";
 
 function BotNav() {
   const [selected, setSelected] = useState(0);
@@ -20,11 +19,11 @@ function BotNav() {
       name: "Map",
     },
     {
-      icon: <BsFillPeopleFill size={20} />,
-      name: "Comunity",
+      icon: <img src={iconCommunity} alt="" size={20} />,
+      name: "Community",
     },
     {
-      icon: <BsExclamationCircleFill size={20} />,
+      icon: <img src={iconClaims} alt="" size={20} />,
       name: "Claims",
     },
   ];
