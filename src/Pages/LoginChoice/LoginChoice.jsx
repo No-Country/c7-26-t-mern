@@ -1,8 +1,8 @@
 import React from "react";
 
-import Logo from "../../Components/Logo";
-import PrimaryButton from "../../Components/PrimaryButton"
-import SecundaryButton from "../../Components/SecundaryButton"
+import Logo from "../../Components/Logo/Logo";
+import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton"
+import SecundaryButton from "../../Components/SecundaryButton/SecundaryButton"
 
 import "./loginChoice.css";
 

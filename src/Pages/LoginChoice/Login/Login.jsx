@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./login.css";
-import InputField from "../../../Components/InputField";
-import PrimaryButton from "../../../Components/PrimaryButton";
+import InputField from "../../../Components/InputField/InputField";
+import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 
 const Login = () => {
   return (
