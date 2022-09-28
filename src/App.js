@@ -1,6 +1,6 @@
 import React from "react";
-import BotNav from "./Components/Nav/BotNav/BotNav";
-import TopNav from "./Components/Nav/TopNav/TopNav";
+import BotNav from "./components/Nav/BotNav/BotNav";
+import TopNav from "./components/Nav/TopNav/TopNav";
 import Login from "./Pages/LoginChoice/Login/Login";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 
