@@ -16,7 +16,15 @@ const JWT_SECRET = process.env.JWT_SECRET;
 //----------------------------------------------------
 //2. Import models
 //----------------------------------------------------
-
+const {
+  Claimmers,
+  DecisionMakers,
+  Claims,
+  Cities,
+  Countries,
+  Favours,
+  Roles,
+} = require("./models");
 //----------------------------------------------------
 //3. Instance of express
 //----------------------------------------------------
@@ -39,12 +47,12 @@ app.use(helmet());
 app.use(compression());
 app.use(cors());
 
-// app.use(
-//   expressJwt({
-//     secret: JWT_SECRET,
-//     algorithms: ["HS256"],
-//   }).unless({ path: ["/login"] })
-// );
+app.use(
+  expressJwt({
+    secret: JWT_SECRET,
+    algorithms: ["HS256"],
+  }).unless({ path: ["/login"] })
+);
 
 //----------------------------------------------------
 //4.3 Import services
@@ -63,56 +71,60 @@ app.use(cors());
 //----------------------------------------------------
 
 app.post("/login", async (req, res) => {
-  const { name, password } = req.body;
+  const { claimmerName, password } = req.body;
   // console.log(name, password);
-  const posibleUser = await User.findOne({
-    attributes: ["id", "name", "email"],
+  const posibleClaimmer = await User.findOne({
+    attributes: ["id", "claimmerName", "email"],
     where: {
-      name,
+      claimmerName,
       password,
     },
-    include: [{ model: Rol }],
+    include: [{ model: Roles }],
   });
-  console.log(posibleUser.rol.dataValues.id);
-  if (posibleUser == null) {
+  console.log(posibleClaimmer.rol.dataValues.id);
+  if (posibleClaimmer == null) {
     res.status(401).json({ error: "user or password incorrect" });
   } else {
     const token = jwt.sign(
       {
-        posibleUser,
+        posibleClaimmer,
       },
       JWT_SECRET,
       { expiresIn: "60m" }
     );
-    res.json({ token, id: posibleUser.id, rol: posibleUser.rol.dataValues.id });
+    res.json({
+      token,
+      id: posibleClaimmer.id,
+      rol: posibleClaimmer.rol.dataValues.id,
+    });
   }
   //Pushear id de usuario a localstorage para obtenerlo en el front y traer los contactos de este idusuario. (AXIOS)
 });
 
-app.post("/signup", adminVerification, async (req, res) => {
-  try {
-    const newUser = await db.query(
-      "INSERT INTO userTable (name, lastname, email, password, rePassword, profile, rolId) values (?,?,?,?,?,?,?)",
-      //establecer rol
-      {
-        type: db.QueryTypes.INSERT,
-        replacements: [
-          req.body.name,
-          req.body.lastname,
-          req.body.email,
-          req.body.password,
-          req.body.rePassword,
-          req.body.profile,
-          req.body.rol,
-        ],
-      }
-    );
-    res.status(200).json(newUser);
-  } catch (error) {
-    console.error(error.message);
-    response.status(500).json({ error: "Please try again in a few minutes" });
-  }
-});
+// app.post("/signup", adminVerification, async (req, res) => {
+//   try {
+//     const newUser = await db.query(
+//       "INSERT INTO userTable (name, lastname, email, password, rePassword, profile, rolId) values (?,?,?,?,?,?,?)",
+//       //establecer rol
+//       {
+//         type: db.QueryTypes.INSERT,
+//         replacements: [
+//           req.body.name,
+//           req.body.lastname,
+//           req.body.email,
+//           req.body.password,
+//           req.body.rePassword,
+//           req.body.profile,
+//           req.body.rol,
+//         ],
+//       }
+//     );
+//     res.status(200).json(newUser);
+//   } catch (error) {
+//     console.error(error.message);
+//     response.status(500).json({ error: "Please try again in a few minutes" });
+//   }
+// });
 
 //----------------------------------------------------
 //6. PUT THE SERVER ON
