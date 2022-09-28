@@ -1,4 +1,4 @@
-import BotNav from "../src/components/Nav/BotNav/Nav";
+import BotNav from "../src/components/Nav/BotNav/BotNav";
 import TopNav from "../src/components/Nav/TopNav/TopNav";
 
 function App() {
