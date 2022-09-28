@@ -1,8 +1,11 @@
 import React from "react";
-import logo from "../../assets/reclami_squareLogo.svg";
+import logo from "../../../assets/img/reclami_squareLogo.svg";
 import "./topnav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import Dropdown, { DropdownItem } from "../../Dropdown/Dropdown";
+import { BiUserCircle } from "react-icons/bi";
+
 
 const TopNav = () => {
   return (
@@ -13,7 +16,14 @@ const TopNav = () => {
         </picture>
         <span className="topNavUserText">Hola, Moria!</span>
       </div>
-      <FontAwesomeIcon icon={faEllipsisV} className="topNavIcon" />
+      <ul>
+        <FontAwesomeIcon icon={faEllipsisV} className="topNavIcon" />
+        <Dropdown>
+            <DropdownItem icon={<BiUserCircle/>}/>
+            <DropdownItem icon="😀"/>
+            <DropdownItem icon="😀"/>
+        </Dropdown>
+      </ul>
     </nav>
   );
 };

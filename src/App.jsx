@@ -1,5 +1,5 @@
-import Nav from "./Nav/Nav";
-import TopNav from "./Nav/TopNav/TopNav";
+import Nav from "./components/Nav/Nav";
+import TopNav from "./components/Nav/TopNav/TopNav";
 
 function App() {
   return (
