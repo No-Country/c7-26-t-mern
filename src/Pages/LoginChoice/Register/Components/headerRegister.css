@@ -1,0 +1,15 @@
+.headerLogin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogin-box-icon {
+  padding: 0 !important;
+  margin: 0;
+  background: none;
+  border: none;
+}
+
+.headerLogin-icon {
+  width: 16px;
+}

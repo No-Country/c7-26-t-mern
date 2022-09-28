@@ -1,8 +1,6 @@
 .primary-button {
   padding: 17px;
-  background: #8f0000;
   border-radius: 4px;
-  color: white;
   
   font-style: normal;
   font-weight: 600;
@@ -16,4 +14,5 @@
   justify-content: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  width: 100%;
 }
