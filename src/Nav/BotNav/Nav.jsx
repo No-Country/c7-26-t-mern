@@ -7,7 +7,7 @@ import {
   BsExclamationCircleFill,
 } from "react-icons/bs";
 
-function Nav() {
+function BotNav() {
   const [selected, setSelected] = useState(0);
 
   const menus = [
@@ -49,4 +49,4 @@ function Nav() {
     </div>
   );
 }
-export default Nav;
+export default BotNav;
