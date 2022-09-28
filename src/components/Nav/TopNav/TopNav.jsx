@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/img/reclamiSquareLogo.svg";
+import logo from "../../../Assets/img/reclamiSquareLogo.svg";
 import "./topnav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";

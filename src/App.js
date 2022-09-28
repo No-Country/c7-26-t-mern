@@ -1,11 +1,15 @@
-import BotNav from "../src/components/Nav/BotNav/BotNav";
-import TopNav from "../src/components/Nav/TopNav/TopNav";
+import React from "react";
+import BotNav from "./Components/Nav/BotNav/BotNav";
+import TopNav from "./Components/Nav/TopNav/TopNav";
+import Login from "./Pages/LoginChoice/Login/Login";
+import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 
 function App() {
   return (
     <>
-      <TopNav />
-      <BotNav />
+      <LoginChoice />
+      {/* <TopNav />
+      <BotNav /> */}
     </>
   );
 }
