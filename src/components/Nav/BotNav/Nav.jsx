@@ -3,8 +3,8 @@ import "./nav.css";
 import { BsGeoAltFill, BsFillHouseFill } from "react-icons/bs";
 
 // Icons bottom navbar
-import iconCommunity from "../../assets/communityInactive.svg";
-import iconClaims from "../../assets/claimsInactive.svg";
+import iconCommunity from "../../../assets/communityInactive.svg";
+import iconClaims from "../../../assets/claimsInactive.svg";
 
 function BotNav() {
   const [selected, setSelected] = useState(0);
