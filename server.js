@@ -2,7 +2,7 @@
 //1. Import express and others libraries
 //----------------------------------------------------
 const express = require("express");
-const expressJwt = require("express-jwt");
+var { expressjwt: ejwt } = require("express-jwt");
 const jwt = require("jsonwebtoken");
 const helmet = require("helmet");
 const compression = require("compression");
@@ -16,6 +16,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 //----------------------------------------------------
 //2. Import models
 //----------------------------------------------------
+
 const {
   Claimmers,
   DecisionMakers,
@@ -25,14 +26,17 @@ const {
   Favours,
   Roles,
 } = require("./models");
+
 //----------------------------------------------------
 //3. Instance of express
 //----------------------------------------------------
+
 const app = express();
 
 //----------------------------------------------------
 //4.1 Rate limit policy
 //----------------------------------------------------
+
 const rateLimitPolicy = rateLimit({
   message: "Try again later",
   max: 10,
@@ -48,7 +52,7 @@ app.use(compression());
 app.use(cors());
 
 app.use(
-  expressJwt({
+  ejwt({
     secret: JWT_SECRET,
     algorithms: ["HS256"],
   }).unless({ path: ["/login"] })
@@ -74,14 +78,14 @@ app.post("/login", async (req, res) => {
   const { claimmerName, password } = req.body;
   // console.log(name, password);
   const posibleClaimmer = await User.findOne({
-    attributes: ["id", "claimmerName", "email"],
+    attributes: ["idClaimmer", "claimmerName", "email"],
     where: {
       claimmerName,
       password,
     },
     include: [{ model: Roles }],
   });
-  console.log(posibleClaimmer.rol.dataValues.id);
+  console.log(posibleClaimmer.rol.dataValues.idRole);
   if (posibleClaimmer == null) {
     res.status(401).json({ error: "user or password incorrect" });
   } else {
@@ -94,8 +98,8 @@ app.post("/login", async (req, res) => {
     );
     res.json({
       token,
-      id: posibleClaimmer.id,
-      rol: posibleClaimmer.rol.dataValues.id,
+      id: posibleClaimmer.idClaimmer,
+      rol: posibleClaimmer.rol.dataValues.idRole,
     });
   }
   //Pushear id de usuario a localstorage para obtenerlo en el front y traer los contactos de este idusuario. (AXIOS)
