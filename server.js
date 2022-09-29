@@ -77,7 +77,7 @@ app.use(
 app.post("/login", async (req, res) => {
   const { claimmerName, password } = req.body;
   // console.log(name, password);
-  const posibleClaimmer = await User.findOne({
+  const posibleClaimmer = await Claimmers.findOne({
     attributes: ["idClaimmer", "claimmerName", "email"],
     where: {
       claimmerName,
@@ -133,6 +133,14 @@ app.post("/login", async (req, res) => {
 //----------------------------------------------------
 //6. PUT THE SERVER ON
 //----------------------------------------------------
-app.listen(APP_PORT, () => {
-  console.log(`escuchando en puerto ${APP_PORT}`);
-});
+
+async function main(){
+  // migraciones
+  await db.sync()
+  //levantar servidor
+  app.listen(APP_PORT, () => {
+    console.log(`escuchando en puerto ${APP_PORT}`);
+  });
+}
+
+main()
