@@ -5,7 +5,7 @@ import "./register.css";
 import { redirect } from "react-router-dom";
 
 import HeaderRegister from "./Components/HeaderRegister";
-import LogoRounded from "../../../Components/LogoRounded/LogoRounded";
+import LogoRounded from "../../../components/LogoRounded/LogoRounded";
 
 import FormCredentials from "./Components/FormCredentials/FormCredentials";
 import FormPersonal from "./Components/FormPersonal/FormPersonal";
@@ -45,30 +45,33 @@ const Register = (props) => {
 
   return (
     <section className="section-register">
-        <HeaderRegister to={state.step === 0 ? "/" : null} onClick={state.step === 1 ? prevState : ""}/>
-        <section className="section-register__container">
-          <LogoRounded />
+      <HeaderRegister
+        to={state.step === 0 ? "/" : null}
+        onClick={state.step === 1 ? prevState : ""}
+      />
+      <section className="section-register__container">
+        <LogoRounded />
 
-          <p className="section-register__container-title">REGISTRATE</p>
-          <p className="section-register__container-description">
-            Ingresa tus datos personales.
-          </p>
-          {state.step === 0 && (
-            <FormPersonal
-              nextStep={nextStep}
-              handleChange={handleChange}
-              values={state}
-            ></FormPersonal>
-          )}
-          {state.step === 1 && (
-            <FormCredentials
-              nextStep={nextStep}
-              prevState={prevState}
-              handleChange={handleChange}
-              values={state}
-            ></FormCredentials>
-          )}
-        </section>
+        <p className="section-register__container-title">REGISTRATE</p>
+        <p className="section-register__container-description">
+          Ingresa tus datos personales.
+        </p>
+        {state.step === 0 && (
+          <FormPersonal
+            nextStep={nextStep}
+            handleChange={handleChange}
+            values={state}
+          ></FormPersonal>
+        )}
+        {state.step === 1 && (
+          <FormCredentials
+            nextStep={nextStep}
+            prevState={prevState}
+            handleChange={handleChange}
+            values={state}
+          ></FormCredentials>
+        )}
+      </section>
     </section>
   );
 };

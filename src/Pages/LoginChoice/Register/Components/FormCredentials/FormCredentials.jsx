@@ -3,10 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./formCredentials.css";
 
-import InputField from "../../../../../Components/InputField/InputField";
-import PrimaryButton from "../../../../../Components/PrimaryButton/PrimaryButton";
+import InputField from "../../../../../components/InputField/InputField";
+import PrimaryButton from "../../../../../components/PrimaryButton/PrimaryButton";
 import HeaderRegister from "../HeaderRegister";
-import LogoRounded from "../../../../../Components/LogoRounded/LogoRounded";
+import LogoRounded from "../../../../../components/LogoRounded/LogoRounded";
 
 const FormCredentials = (props) => {
   const next = (e) => {

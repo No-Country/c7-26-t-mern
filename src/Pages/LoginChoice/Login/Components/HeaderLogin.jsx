@@ -14,7 +14,7 @@ const HeaderLogin = () => {
         <img src={BackIcon} alt="" className="headerLogin-icon" />
       </Link>
 
-      <Link className="headerLogin-box-icon"  to="/">
+      <Link className="headerLogin-box-icon" to="/">
         <img src={CloseIcon} alt="" className="headerLogin-icon" />
       </Link>
     </header>
