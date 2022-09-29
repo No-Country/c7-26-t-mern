@@ -1,13 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./register.css";
-import InputField from "../../../Components/InputField/InputField";
-import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
+
 import HeaderRegister from "./Components/HeaderRegister";
 import LogoRounded from "../../../Components/LogoRounded/LogoRounded";
 
+import FormCredentials from "./Components/FormCredentials/FormCredentials";
+import FormPersonal from "./Components/FormPersonal/FormPersonal";
 
-const Register = () => {
+const Register = (props) => {
+  const [state, setState] = useState({
+    step: 1,
+    name: "",
+    dni: "",
+    email: "",
+    password: "",
+    passwordRepited: "",
+  });
+
+  const nextStep = () => {
+    setState((state) => ({
+      ...state,
+      step: state.step + 1,
+    }));
+  };
+
+  const prevState = () => {
+    const { step } = state;
+    setState({
+      step: step - 1,
+    });
+  };
+
+  const handleChange = (input) => (e) => {
+    setState((state) => ({
+      ...state,
+      [input]: e.target.value,
+    }));
+  };
+
   return (
     <section className="section-register">
       <HeaderRegister />
@@ -18,11 +49,18 @@ const Register = () => {
         <p className="section-register__container-description">
           Ingresa tus datos personales.
         </p>
-        <InputField type={"text"} label={"Nombre Completo"} />
-        <InputField type={"text"} label={"DNI"} />
-        <PrimaryButton text="Siguiente" bg="#8E938D" color="#F0F0F0"/>
-
-
+        {state.step === 1 && (
+          <FormPersonal
+            nextStep={nextStep}
+            handleChange={handleChange}
+          ></FormPersonal>
+        )}
+        {state.step === 2 && (
+          <FormCredentials
+            nextStep={nextStep}
+            handleChange={handleChange}
+          ></FormCredentials>
+        )}
       </section>
     </section>
   );
