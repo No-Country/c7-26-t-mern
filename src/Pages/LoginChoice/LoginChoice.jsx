@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../../assets/img/logo.svg";
+import Logo from "../../components/Logo/Logo";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 
 import "./loginChoice.css";
@@ -9,7 +9,7 @@ const LoginChoice = () => {
   return (
     <section className="section-loginChoice">
       <div className="section-loginChoice__container">
-        {/*  <Logo /> */}
+         <Logo />
         <p className="section-loginChoice__container-description">
           Haz valer tus reclamos y apoya los de tu comunidad
         </p>
