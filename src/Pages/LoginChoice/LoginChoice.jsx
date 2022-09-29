@@ -9,7 +9,7 @@ const LoginChoice = () => {
   return (
     <section className="section-loginChoice">
       <div className="section-loginChoice__container">
-        {/*  <Logo /> */}
+        <Logo />
         <p className="section-loginChoice__container-description">
           Haz valer tus reclamos y apoya los de tu comunidad
         </p>
