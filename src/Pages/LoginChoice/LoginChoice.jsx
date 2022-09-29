@@ -2,7 +2,6 @@ import React from "react";
 
 import Logo from "../../assets/img/logo.svg";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
-import SecundaryButton from "../../components/SecundaryButton/SecundaryButton";
 
 import "./loginChoice.css";
 
