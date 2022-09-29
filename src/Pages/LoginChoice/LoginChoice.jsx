@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../../assets/img/logo.svg";
+import Logo from "../../components/Logo/Logo";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 
 import "./loginChoice.css";
