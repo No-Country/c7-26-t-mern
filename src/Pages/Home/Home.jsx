@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <React.Fragment>
       <TopNav></TopNav>
-      <Card></Card>
       <BotNav></BotNav>
+      <Card></Card>
     </React.Fragment>
   );
 };
