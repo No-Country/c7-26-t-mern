@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom"
 import "./formPersonal.css";
 
 import InputField from "../../../../../Components/InputField/InputField";
@@ -24,7 +25,7 @@ const FormPersonal = (props) => {
         label={"DNI"}
         onChange={props.handleChange("dni")}
       />
-      <PrimaryButton text="Siguiente" bg="#8E938D" color="#F0F0F0" onClick={next}/>
+      <Link to="/home"><PrimaryButton text="Siguiente" bg="#8E938D" color="#F0F0F0" onClick={next}/></Link>
     </React.Fragment>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./formCredentials.css";
+import { Link } from "react-router-dom";
 
 import InputField from "../../../../../Components/InputField/InputField";
 import PrimaryButton from "../../../../../Components/PrimaryButton/PrimaryButton";
@@ -11,7 +12,6 @@ const FormCredentials = (props) => {
     // BACKEND
     props.nextStep();
   };
-
 
   return (
     <React.Fragment>
@@ -30,12 +30,8 @@ const FormCredentials = (props) => {
         label={"Repita la contraseña"}
         onChange={props.handleChange("passwordRepited")}
       />
-      <PrimaryButton
-        text="Registrarse"
-        bg="#8E938D"
-        color="#F0F0F0"
-        onClick={next}
-      />
+
+      <PrimaryButton text="Siguiente" bg="#8E938D" color="#F0F0F0" to="/home" />
     </React.Fragment>
   );
 };
