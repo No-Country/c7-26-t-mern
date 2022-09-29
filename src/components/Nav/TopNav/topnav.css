@@ -14,7 +14,7 @@
     background-color: #8f0000;
     color: #fff;
     /* padding: 0.2rem 1.5rem 0.2rem 0; */
-    font-family: 'Product Sans';
+    font-family: var(--font-secundary);
     padding: 1.2rem;
 }
 
