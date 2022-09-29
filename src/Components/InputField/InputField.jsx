@@ -4,9 +4,9 @@ import "./inputField.css";
 
 const InputField = (props) => {
   return (
-    <div className={`input-box ${props.class}`}>
+    <div className={`inputBox ${props.class}`}>
       <input
-        className="input-box-input"
+        className="inputBoxInput"
         type={props.type}
         id={props.type}
         placeholder={props.label}

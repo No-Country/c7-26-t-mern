@@ -10,12 +10,12 @@ import CloseIcon from "../../../../assets/img/closeIcon.svg";
 const HeaderLogin = () => {
   return (
     <header className="headerLogin">
-      <Link className="headerLogin-box-icon" to="/">
-        <img src={BackIcon} alt="" className="headerLogin-icon" />
+      <Link className="headerLoginBoxIcon" to="/">
+        <img src={BackIcon} alt="" className="headerLoginIcon" />
       </Link>
 
-      <Link className="headerLogin-box-icon" to="/">
-        <img src={CloseIcon} alt="" className="headerLogin-icon" />
+      <Link className="headerLoginBoxIcon" to="/">
+        <img src={CloseIcon} alt="" className="headerLoginIcon" />
       </Link>
     </header>
   );

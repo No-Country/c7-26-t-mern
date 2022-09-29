@@ -1,12 +1,10 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import InputField from "../../../../components/InputField/InputField";
+import PrimaryButton from "../../../../components/PrimaryButton/PrimaryButton";
+
 import "./formPersonal.css";
 
-import InputField from "../../../../../components/InputField/InputField";
-import PrimaryButton from "../../../../../components/PrimaryButton/PrimaryButton";
-import HeaderRegister from "../HeaderRegister";
-import LogoRounded from "../../../../../components/LogoRounded/LogoRounded";
 
 const FormPersonal = (props) => {
   const next = (e) => {

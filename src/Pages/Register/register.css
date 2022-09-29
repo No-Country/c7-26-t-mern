@@ -1,15 +1,15 @@
-.section-register {
+.sectionRegister {
   padding: 16px;
 }
 
-.section-register__container {
+.sectionRegisterContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
-.section-register__container-title {
+.sectionRegisterContainerTitle {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -23,9 +23,8 @@
   letter-spacing: -0.5px;
 
   color: #262724;
-
 }
-.section-register__container-description {
+.sectionRegisterContainerDescription {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;

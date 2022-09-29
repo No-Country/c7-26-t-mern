@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* import BotNav from "./components/Nav/BotNav/BotNav";
 import TopNav from "./components/Nav/TopNav/TopNav"; */
-import Login from "./Pages/LoginChoice/Login/Login";
-import Register from "./Pages/LoginChoice/Register/Register.jsx";
-import LoginChoice from "./Pages/LoginChoice/LoginChoice";
-import Home from "./Pages/Home/Home.jsx";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register.jsx";
+import LoginChoice from "./pages/LoginChoice/LoginChoice";
+import Home from "./pages/Home/Home.jsx";
 
 function App() {
   return (
