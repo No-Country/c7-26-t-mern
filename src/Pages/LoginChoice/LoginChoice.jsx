@@ -10,14 +10,24 @@ const LoginChoice = () => {
   return (
     <section className="section-loginChoice">
       <div className="section-loginChoice__container">
-        <img src={Logo} alt="" />
+        <Logo />
         <p className="section-loginChoice__container-description">
           Haz valer tus reclamos y apoya los de tu comunidad
         </p>
 
         <div className="section-loginChoice__container-buttons">
-          <PrimaryButton />
-          <SecundaryButton />
+          <PrimaryButton
+            text="REGISTRATE"
+            bg="#8F0000"
+            color="#F0F0F0"
+            to="/register"
+          />
+          <PrimaryButton
+            text="INICIA SESION"
+            bg="#FFE9AC"
+            color="#8F0000"
+            to="/login"
+          />
         </div>
 
         <div className="section-loginChoice__container-terms">

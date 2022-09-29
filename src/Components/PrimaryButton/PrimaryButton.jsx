@@ -1,9 +1,23 @@
 import React from "react";
 
 import "./primaryButton.css";
+import { Link } from "react-router-dom";
 
-const PrimaryButton = () => {
-  return <a href="/#" className="primary-button">REGISTRATE</a>;
+const PrimaryButton = (prop) => {
+  return (
+    <Link
+      className="primary-button"
+      style={{
+        backgroundColor: prop.bg,
+        color: prop.color,
+        pointerEvents: prop.disabled ? "none" : "",
+      }}
+      to={prop.to}
+      onClick={prop.onClick}
+    >
+      {prop.text}
+    </Link>
+  );
 };
 
 export default PrimaryButton;

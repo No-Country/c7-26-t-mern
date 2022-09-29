@@ -1,18 +1,24 @@
 import React from "react";
-import BotNav from "./components/Nav/BotNav/BotNav";
-import Card from "./components/Card/Card";
-import TopNav from "./components/Nav/TopNav/TopNav";
-/* import Login from "./Pages/LoginChoice/Login/Login";
-import LoginChoice from "./Pages/LoginChoice/LoginChoice"; */
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+/* import BotNav from "./components/Nav/BotNav/BotNav";
+import TopNav from "./components/Nav/TopNav/TopNav"; */
+import Login from "./Pages/LoginChoice/Login/Login";
+import Register from "./Pages/LoginChoice/Register/Register.jsx";
+import LoginChoice from "./Pages/LoginChoice/LoginChoice";
+import Home from "./Pages/Home/Home.jsx";
 
 function App() {
   return (
-    <>
-      {/* <LoginChoice /> */}
-      <TopNav />
-      <Card />
-      <BotNav />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginChoice />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

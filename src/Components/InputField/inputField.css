@@ -5,12 +5,13 @@ body {
 .input-box {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-bottom: 26px;
 
   background-color: white;
   border-radius: 4px 4px 0 0;
-  border-bottom: 1px solid #262724;
+  border-bottom: 3px solid #26272442;
   position: relative;
+  width: 100%;
 }
 
 .input-box-input {
@@ -55,5 +56,5 @@ label {
 }
 
 .input-box:has(.input-box-input:focus-visible) {
-  border-bottom: 1px solid #8f0000;
+  border-bottom: 3px solid #8f0000;
 }
