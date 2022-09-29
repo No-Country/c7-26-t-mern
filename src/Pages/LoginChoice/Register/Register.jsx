@@ -13,7 +13,7 @@ import LoginChoice from "../LoginChoice";
 
 const Register = (props) => {
   const [state, setState] = useState({
-    step: 1,
+    step: 0,
     name: "",
     dni: "",
     email: "",
@@ -45,21 +45,30 @@ const Register = (props) => {
 
   return (
     <section className="section-register">
-      {state.step === 1 && (
-        <FormPersonal
-          nextStep={nextStep}
-          handleChange={handleChange}
-          values={state}
-        ></FormPersonal>
-      )}
-      {state.step === 2 && (
-        <FormCredentials
-          nextStep={nextStep}
-          prevState={prevState}
-          handleChange={handleChange}
-          values={state}
-        ></FormCredentials>
-      )}
+        <HeaderRegister to={state.step === 0 ? "/" : null} onClick={state.step === 1 ? prevState : ""}/>
+        <section className="section-register__container">
+          <LogoRounded />
+
+          <p className="section-register__container-title">REGISTRATE</p>
+          <p className="section-register__container-description">
+            Ingresa tus datos personales.
+          </p>
+          {state.step === 0 && (
+            <FormPersonal
+              nextStep={nextStep}
+              handleChange={handleChange}
+              values={state}
+            ></FormPersonal>
+          )}
+          {state.step === 1 && (
+            <FormCredentials
+              nextStep={nextStep}
+              prevState={prevState}
+              handleChange={handleChange}
+              values={state}
+            ></FormCredentials>
+          )}
+        </section>
     </section>
   );
 };

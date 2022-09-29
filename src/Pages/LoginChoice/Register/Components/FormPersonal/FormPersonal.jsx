@@ -15,16 +15,10 @@ const FormPersonal = (props) => {
     props.nextStep();
   };
 
+  let buttonHandlerColor = (props.values["dni"] === "" || props.values["name"] === "")
+
   return (
     <React.Fragment>
-      <HeaderRegister to="/" />
-      <section className="section-register__container">
-        <LogoRounded />
-
-        <p className="section-register__container-title">REGISTRATE</p>
-        <p className="section-register__container-description">
-          Ingresa tus datos personales.
-        </p>
         <InputField
           type={"text"}
           label={"Nombre Completo"}
@@ -39,11 +33,11 @@ const FormPersonal = (props) => {
         />
         <PrimaryButton
           text="Siguiente"
-          bg="#8E938D"
+          bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
           color="#F0F0F0"
           onClick={next}
+          disabled= {buttonHandlerColor ? "false" : ""}
         />
-      </section>
     </React.Fragment>
   );
 };

@@ -15,42 +15,38 @@ const FormCredentials = (props) => {
     props.nextStep();
   };
 
+  let buttonHandlerColor =
+    props.values["email"] === "" ||
+    props.values["password"] === "" ||
+    props.values["passwordRepited"] === "";
 
   return (
     <React.Fragment>
-      <HeaderRegister onClick={props.prevState} />
-      <section className="section-register__container">
-        <LogoRounded />
-
-        <p className="section-register__container-title">REGISTRATE</p>
-        <p className="section-register__container-description">
-          Ingresa tus datos personales.
-        </p>
-        <InputField
-          type={"text"}
-          label={"Correo electronico"}
-          onChange={props.handleChange("email")}
-          defaultValue={props.values.email}
-        />
-        <InputField
-          type={"password"}
-          label={"Contraseña"}
-          onChange={props.handleChange("password")}
-          defaultValue={props.values.password}
-        />
-        <InputField
-          type={"password"}
-          label={"Repita la contraseña"}
-          onChange={props.handleChange("passwordRepited")}
-          defaultValue={props.values.passwordRepited}
-        />
-        <PrimaryButton
-          text="Siguiente"
-          bg="#8E938D"
-          color="#F0F0F0"
-          to="/home"
-        />
-      </section>
+      <InputField
+        type={"text"}
+        label={"Correo Electronico"}
+        onChange={props.handleChange("email")}
+        defaultValue={props.values.email}
+      />
+      <InputField
+        type={"password"}
+        label={"Contraseña"}
+        onChange={props.handleChange("password")}
+        defaultValue={props.values.password}
+      />
+      <InputField
+        type={"password"}
+        label={"Repita la contraseña"}
+        onChange={props.handleChange("passwordRepited")}
+        defaultValue={props.values.passwordRepited}
+      />
+      <PrimaryButton
+        text="Siguiente"
+        bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
+        color="#F0F0F0"
+        to="/home"
+        disabled={buttonHandlerColor ? "false" : ""}
+      />
     </React.Fragment>
   );
 };

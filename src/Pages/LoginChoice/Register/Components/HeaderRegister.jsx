@@ -6,7 +6,7 @@ import "./headerRegister.css";
 import BackIcon from "../../../../assets/img/backIcon.svg";
 import CloseIcon from "../../../../assets/img/closeIcon.svg";
 
-const HeaderLogin = (props) => {
+const HeaderRegister = (props) => {
   return (
     <header className="headerLogin">
       <Link to={props.to}>
@@ -19,4 +19,4 @@ const HeaderLogin = (props) => {
   );
 };
 
-export default HeaderLogin;
+export default HeaderRegister;

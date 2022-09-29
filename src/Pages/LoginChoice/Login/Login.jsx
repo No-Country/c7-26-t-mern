@@ -18,7 +18,7 @@ const Login = () => {
         <InputField type={"text"} label={"Nombre Completo"} />
         <InputField type={"text"} label={"DNI"} class="probando"/>
         <a className="section-login__container-recovery-link" href="/">¿Restablecer Contraseña?</a>
-        <PrimaryButton text="Ingresar" bg="#8E938D" color="#F0F0F0" />
+        <PrimaryButton text="Ingresar" bg="#8E938D" color="#F0F0F0" to="/home"/>
       
 
         <p className="section-login__container-helper-text">
