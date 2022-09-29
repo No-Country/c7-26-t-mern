@@ -5,7 +5,7 @@ import InputField from "../../../components/InputField/InputField";
 import PrimaryButton from "../../../components/PrimaryButton/PrimaryButton";
 import HeaderLogin from "./Components/HeaderLogin";
 import LogoRounded from "../../../components/LogoRounded/LogoRounded";
-import LoginButtons from "./Components/loginButtons";
+import LoginButtons from "./Components/LoginButtons";
 
 const Login = () => {
   return (
