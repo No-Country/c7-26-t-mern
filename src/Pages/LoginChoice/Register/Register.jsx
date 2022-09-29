@@ -2,11 +2,14 @@ import React, { useState } from "react";
 
 import "./register.css";
 
+import { redirect } from "react-router-dom";
+
 import HeaderRegister from "./Components/HeaderRegister";
 import LogoRounded from "../../../Components/LogoRounded/LogoRounded";
 
 import FormCredentials from "./Components/FormCredentials/FormCredentials";
 import FormPersonal from "./Components/FormPersonal/FormPersonal";
+import LoginChoice from "../LoginChoice";
 
 const Register = (props) => {
   const [state, setState] = useState({
@@ -28,6 +31,7 @@ const Register = (props) => {
   const prevState = () => {
     const { step } = state;
     setState({
+      ...state,
       step: step - 1,
     });
   };
@@ -41,27 +45,21 @@ const Register = (props) => {
 
   return (
     <section className="section-register">
-      <HeaderRegister />
-      <section className="section-register__container">
-        <LogoRounded />
-
-        <p className="section-register__container-title">REGISTRATE</p>
-        <p className="section-register__container-description">
-          Ingresa tus datos personales.
-        </p>
-        {state.step === 1 && (
-          <FormPersonal
-            nextStep={nextStep}
-            handleChange={handleChange}
-          ></FormPersonal>
-        )}
-        {state.step === 2 && (
-          <FormCredentials
-            nextStep={nextStep}
-            handleChange={handleChange}
-          ></FormCredentials>
-        )}
-      </section>
+      {state.step === 1 && (
+        <FormPersonal
+          nextStep={nextStep}
+          handleChange={handleChange}
+          values={state}
+        ></FormPersonal>
+      )}
+      {state.step === 2 && (
+        <FormCredentials
+          nextStep={nextStep}
+          prevState={prevState}
+          handleChange={handleChange}
+          values={state}
+        ></FormCredentials>
+      )}
     </section>
   );
 };
