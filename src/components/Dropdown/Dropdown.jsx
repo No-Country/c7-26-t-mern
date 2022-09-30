@@ -4,6 +4,7 @@ import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSTransition } from "react-transition-group";
 import { AiOutlineUser } from "react-icons/ai";
+import  Backdrop  from "../Backdrop/Backdrop";
 
 function Dropdown() {
   return (
@@ -33,8 +34,9 @@ function NavItem(props) {
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>
-
+      {open && <Backdrop onClick={() => setOpen(!open)}></Backdrop>}
       {open && props.children}
+    
     </li>
   );
 }

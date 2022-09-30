@@ -60,6 +60,7 @@
   border-radius: var(--border-radius);
   overflow: hidden;
   transition: height var(--speed) ease;
+  z-index: 11;
 }
 
 .menu {
