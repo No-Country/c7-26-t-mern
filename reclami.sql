@@ -21,10 +21,11 @@ USE `reclami` ;
 -- Table `reclami`.`countries`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reclami`.`countries` (
-  `idCountries` INT(11) NOT NULL AUTO_INCREMENT,
-  `countryName` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idCountries`))
+  `idCountry` INT(11) NOT NULL AUTO_INCREMENT,
+  `countryName` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idCountry`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -33,13 +34,13 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reclami`.`cities` (
   `idCity` INT(11) NOT NULL AUTO_INCREMENT,
-  `cityName` VARCHAR(45) NOT NULL,
-  `idCountries` INT(11) NOT NULL,
+  `cityName` VARCHAR(100) NOT NULL,
+  `idCountry` INT(11) NOT NULL,
   PRIMARY KEY (`idCity`),
-  INDEX `fk_cities_countries1_idx` (`idCountries` ASC),
+  INDEX `fk_cities_countries1_idx` (`idCountry` ASC) VISIBLE,
   CONSTRAINT `fk_cities_countries1`
-    FOREIGN KEY (`idCountries`)
-    REFERENCES `reclami`.`countries` (`idCountries`)
+    FOREIGN KEY (`idCountry`)
+    REFERENCES `reclami`.`countries` (`idCountry`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -50,10 +51,11 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `reclami`.`roles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reclami`.`roles` (
-  `idRoles` INT(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `roleName` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idRoles`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -61,26 +63,27 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `reclami`.`claimmers`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reclami`.`claimmers` (
-  `idClaimmer` INT(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `claimmerName` VARCHAR(100) NOT NULL,
   `claimmerLastname` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `rePassword` VARCHAR(45) NOT NULL,
-  `profile` VARCHAR(45) NOT NULL,
-  `idRoles` INT(11) NOT NULL,
+  `DNI` INT NOT NULL,
+  `position` VARCHAR(100) NULL,
+  `idRole` INT(11) NOT NULL,
   `idCity` INT(11) NOT NULL,
-  PRIMARY KEY (`idClaimmer`),
-  INDEX `fk_claimmers_roles_idx` (`idRoles` ASC) ,
-  INDEX `fk_claimmers_cities1_idx` (`idCity` ASC),
+  PRIMARY KEY (`id`),
+  INDEX `fk_claimmers_roles_idx` (`idRole` ASC) VISIBLE,
+  INDEX `fk_claimmers_cities1_idx` (`idCity` ASC) VISIBLE,
   CONSTRAINT `fk_claimmers_cities1`
     FOREIGN KEY (`idCity`)
     REFERENCES `reclami`.`cities` (`idCity`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_claimmers_roles`
-    FOREIGN KEY (`idRoles`)
-    REFERENCES `reclami`.`roles` (`idRoles`)
+    FOREIGN KEY (`idRole`)
+    REFERENCES `reclami`.`roles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -88,29 +91,19 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
--- Table `reclami`.`decisionmakers`
+-- Table `reclami`.`claims`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `reclami`.`decisionmakers` (
-  `idDecisionMaker` INT(11) NOT NULL AUTO_INCREMENT,
-  `decisionMakerName` VARCHAR(100) NOT NULL,
-  `decisionMakerLastname` VARCHAR(100) NOT NULL,
-  `decisionMakerEmail` VARCHAR(100) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
-  `rePassword` VARCHAR(45) NOT NULL,
-  `position` VARCHAR(45) NOT NULL,
-  `idRoles` INT(11) NOT NULL,
-  `idCity` INT(11) NOT NULL,
-  PRIMARY KEY (`idDecisionMaker`),
-  INDEX `fk_decisionMakers_roles1_idx` (`idRoles` ASC) ,
-  INDEX `fk_decisionMakers_cities1_idx` (`idCity` ASC),
-  CONSTRAINT `fk_decisionMakers_cities1`
-    FOREIGN KEY (`idCity`)
-    REFERENCES `reclami`.`cities` (`idCity`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_decisionMakers_roles1`
-    FOREIGN KEY (`idRoles`)
-    REFERENCES `reclami`.`roles` (`idRoles`)
+CREATE TABLE IF NOT EXISTS `reclami`.`claims` (
+  `idClaims` INT(11) NOT NULL AUTO_INCREMENT,
+  `claimTitle` VARCHAR(45) NOT NULL,
+  `claimDescription` VARCHAR(2000) NOT NULL,
+  `idClaimmer` INT(11) NOT NULL,
+  `idDecisionMaker` INT(11) NOT NULL,
+  PRIMARY KEY (`idClaims`),
+  INDEX `fk_claims_claimmers1_idx` (`idClaimmer` ASC) VISIBLE,
+  CONSTRAINT `fk_claims_claimmers1`
+    FOREIGN KEY (`idClaimmer`)
+    REFERENCES `reclami`.`claimmers` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -125,46 +118,10 @@ CREATE TABLE IF NOT EXISTS `reclami`.`favours` (
   `idClaimmer` INT(11) NOT NULL,
   `idClaims` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idFavours`),
-  INDEX `fk_favours_claimmers1_idx` (`idClaimmer` ASC),
+  INDEX `fk_favours_claimmers1_idx` (`idClaimmer` ASC) VISIBLE,
   CONSTRAINT `fk_favours_claimmers1`
     FOREIGN KEY (`idClaimmer`)
-    REFERENCES `reclami`.`claimmers` (`idClaimmer`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
-
-
--- -----------------------------------------------------
--- Table `reclami`.`claims`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `reclami`.`claims` (
-  `idClaims` INT(11) NOT NULL AUTO_INCREMENT,
-  `claimTitle` VARCHAR(255) NOT NULL,
-  `claimDescription` VARCHAR(2000) NOT NULL,
-  `claimPictureURL` VARCHAR(255) NOT NULL,
-  `claimDate` VARCHAR(100) NOT NULL,
-  `likes` INT(11) NOT NULL,
-  `idClaimmer` INT(11) NOT NULL,
-  `idDecisionMaker` INT(11) NOT NULL,
-  `favours_idFavours` INT(11) NOT NULL,
-  PRIMARY KEY (`idClaims`),
-  INDEX `fk_claims_claimmers1_idx` (`idClaimmer` ASC) ,
-  INDEX `fk_claims_decisionMakers1_idx` (`idDecisionMaker` ASC) ,
-  INDEX `fk_claims_favours1_idx` (`favours_idFavours` ASC),
-  CONSTRAINT `fk_claims_claimmers1`
-    FOREIGN KEY (`idClaimmer`)
-    REFERENCES `reclami`.`claimmers` (`idClaimmer`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_claims_decisionMakers1`
-    FOREIGN KEY (`idDecisionMaker`)
-    REFERENCES `reclami`.`decisionmakers` (`idDecisionMaker`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_claims_favours1`
-    FOREIGN KEY (`favours_idFavours`)
-    REFERENCES `reclami`.`favours` (`idFavours`)
+    REFERENCES `reclami`.`claimmers` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
