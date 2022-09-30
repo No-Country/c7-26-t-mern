@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
+import HeaderRegister from "./registerComponents/HeaderRegister/HeaderRegister";
+import LogoRounded from "../../components/LogoRounded/LogoRounded";
+
+import FormCredentials from "./registerComponents/FormCredentials/FormCredentials";
+import FormPersonal from "./registerComponents/FormPersonal/FormPersonal";
+
 import "./register.css";
-
-import { redirect } from "react-router-dom";
-
-import HeaderRegister from "./Components/HeaderRegister";
-import LogoRounded from "../../../components/LogoRounded/LogoRounded";
-
-import FormCredentials from "./Components/FormCredentials/FormCredentials";
-import FormPersonal from "./Components/FormPersonal/FormPersonal";
-import LoginChoice from "../LoginChoice";
 
 const Register = (props) => {
   const [state, setState] = useState({
@@ -44,16 +41,16 @@ const Register = (props) => {
   };
 
   return (
-    <section className="section-register">
+    <section className="sectionRegister">
       <HeaderRegister
         to={state.step === 0 ? "/" : null}
         onClick={state.step === 1 ? prevState : ""}
       />
-      <section className="section-register__container">
+      <section className="sectionRegisterContainer">
         <LogoRounded />
 
-        <p className="section-register__container-title">REGISTRATE</p>
-        <p className="section-register__container-description">
+        <p className="sectionRegisterContainerTitle">REGISTRATE</p>
+        <p className="sectionRegisterContainerDescription">
           Ingresa tus datos personales.
         </p>
         {state.step === 0 && (

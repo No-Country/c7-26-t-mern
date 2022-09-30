@@ -2,7 +2,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.input-box {
+.inputBox {
   display: flex;
   flex-direction: column;
   margin-bottom: 26px;
@@ -14,22 +14,22 @@ body {
   width: 100%;
 }
 
-.input-box-input {
+.inputBoxInput {
   border: none;
   padding: 19px 16px;
 }
 
-/* .input-box-input:focus {
+/* .inputBoxInput:focus {
   padding: 8px 16px;
   padding-top: 30px;
 } */
 
-.input-box-input:focus-visible {
+.inputBoxInput:focus-visible {
   border: none;
   outline: none;
 }
 
-.input-box-input::placeholder {
+.inputBoxInput::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -37,7 +37,7 @@ body {
   color: #4e4f4c;
 }
 
-.input-box-input:not(:placeholder-shown) {
+.inputBoxInput:not(:placeholder-shown) {
   padding: 8px 16px;
   padding-top: 30px;
 }
@@ -46,7 +46,7 @@ label {
   display: none;
 }
 
-.input-box-input:not(:placeholder-shown)~label {
+.inputBoxInput:not(:placeholder-shown)~label {
   display: block;
   position: absolute;
   z-index: 50;
@@ -55,6 +55,6 @@ label {
   top: 0;
 }
 
-.input-box:has(.input-box-input:focus-visible) {
+.inputBox:has(.inputBoxInput:focus-visible) {
   border-bottom: 3px solid #8f0000;
 }

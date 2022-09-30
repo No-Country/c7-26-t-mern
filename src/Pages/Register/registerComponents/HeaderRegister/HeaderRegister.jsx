@@ -10,11 +10,17 @@ const HeaderRegister = (props) => {
   return (
     <header className="headerLogin">
       <Link to={props.to}>
-        <img src={BackIcon} alt="" className="headerLogin-icon" onClick={props.onClick}/>
+        <img
+          src={BackIcon}
+          alt=""
+          className="headerLoginIcon"
+          onClick={props.onClick}
+        />
       </Link>
 
-        <Link to="/"><img src={CloseIcon} alt="" className="headerLogin-icon" /></Link>
-        
+      <Link to="/">
+        <img src={CloseIcon} alt="" className="headerLoginIcon" />
+      </Link>
     </header>
   );
 };

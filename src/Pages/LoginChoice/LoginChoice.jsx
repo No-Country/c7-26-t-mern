@@ -7,14 +7,14 @@ import "./loginChoice.css";
 
 const LoginChoice = () => {
   return (
-    <section className="section-loginChoice">
-      <div className="section-loginChoice__container">
+    <section className="sectionLoginChoice">
+      <div className="sectionLoginChoiceContainer">
         <Logo />
-        <p className="section-loginChoice__container-description">
+        <p className="sectionLoginChoiceContainerDescription">
           Haz valer tus reclamos y apoya los de tu comunidad
         </p>
 
-        <div className="section-loginChoice__container-buttons">
+        <div className="sectionLoginChoiceContainerButtons">
           <PrimaryButton
             text="REGISTRATE"
             bg="#8F0000"
@@ -29,20 +29,14 @@ const LoginChoice = () => {
           />
         </div>
 
-        <div className="section-loginChoice__container-terms">
-          <p className="section-loginChoice__container-terms-text">
+        <div className="sectionLoginChoiceContainerTerms">
+          <p className="sectionLoginChoiceContainerTerms-text">
             Al registrarte, o iniciar sesión, aceptás los{" "}
-            <a
-              href="/"
-              className="section-loginChoice__container-terms-text-link"
-            >
+            <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
               Términos de Servicio{" "}
             </a>
             y la{" "}
-            <a
-              href="/"
-              className="section-loginChoice__container-terms-text-link"
-            >
+            <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
               Política de Privacidad
             </a>{" "}
             de Reclami.
