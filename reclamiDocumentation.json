@@ -470,6 +470,119 @@
           }
         }
       }
+    },
+    "/claims": {
+      "get": {
+        "summary": "List of all claims",
+        "tags": ["claims"],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "array of claims",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Claims"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "create a claim",
+        "tags": ["claims"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "City Type Object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Claims"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify a Claim",
+        "tags": ["claims"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Claim Type Object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Claim"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Null response"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a Claim",
+        "tags": ["claims"],
+        "parameters": [
+          {
+            "name": "claimId",
+            "in": "query",
+            "description": "id of the claim to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Claim was deleted succesfully"
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -505,6 +618,25 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Claimmer"
+      }
+    },
+    "Claim": {
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "Claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Claim"
       }
     },
     "City": {

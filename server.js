@@ -19,7 +19,6 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 const {
   Claimmers,
-  DecisionMakers,
   Claims,
   Cities,
   Countries,
@@ -66,6 +65,8 @@ app.use(
 //4.4 Import controlers
 //----------------------------------------------------
 
+const claimmerVerification = require("./controlers/claimmerVerification");
+
 //----------------------------------------------------
 //5. ENDPOINTS OR PATHS
 //----------------------------------------------------
@@ -76,16 +77,16 @@ app.use(
 
 app.post("/login", async (req, res) => {
   const { claimmerName, password } = req.body;
-  // console.log(name, password);
-  const posibleClaimmer = await User.findOne({
-    attributes: ["idClaimmer", "claimmerName", "email"],
+  console.log(claimmerName, password);
+  const posibleClaimmer = await Claimmers.findOne({
+    attributes: ["id", "claimmerName", "email"],
     where: {
       claimmerName,
       password,
     },
     include: [{ model: Roles }],
   });
-  console.log(posibleClaimmer.rol.dataValues.idRole);
+  console.log(posibleClaimmer);
   if (posibleClaimmer == null) {
     res.status(401).json({ error: "user or password incorrect" });
   } else {
@@ -98,37 +99,93 @@ app.post("/login", async (req, res) => {
     );
     res.json({
       token,
-      id: posibleClaimmer.idClaimmer,
-      rol: posibleClaimmer.rol.dataValues.idRole,
+      // idClaimmer: posibleClaimmer.idClaimmer,
+      // rol: posibleClaimmer.rol.dataValues.idRole,
     });
   }
   //Pushear id de usuario a localstorage para obtenerlo en el front y traer los contactos de este idusuario. (AXIOS)
 });
 
-// app.post("/signup", adminVerification, async (req, res) => {
-//   try {
-//     const newUser = await db.query(
-//       "INSERT INTO userTable (name, lastname, email, password, rePassword, profile, rolId) values (?,?,?,?,?,?,?)",
-//       //establecer rol
-//       {
-//         type: db.QueryTypes.INSERT,
-//         replacements: [
-//           req.body.name,
-//           req.body.lastname,
-//           req.body.email,
-//           req.body.password,
-//           req.body.rePassword,
-//           req.body.profile,
-//           req.body.rol,
-//         ],
-//       }
-//     );
-//     res.status(200).json(newUser);
-//   } catch (error) {
-//     console.error(error.message);
-//     response.status(500).json({ error: "Please try again in a few minutes" });
-//   }
-// });
+//----------------------------------------------------
+//5.2: CLAIMMERS
+//----------------------------------------------------
+
+app.get("/claimmers/dashboard", claimmerVerification, async (req, res) => {
+  try {
+    const claimmers = await db.query("SELECT * FROM claimmers", {
+      type: db.QueryTypes.SELECT,
+    });
+    res.status(200).json(claimmers);
+  } catch (error) {
+    console.error(error.message);
+    response.status(500).json({ error: "Please try again in a few minutes" });
+  }
+});
+
+app.get("/claimmer/dashboard/:claimmerId", claimmerVerification, async (req, res) => {
+  try {
+    const claimmers = await db.query(
+      `SELECT * FROM claimmers WHERE id = "${req.params.claimmerId}
+"`,
+      { type: db.QueryTypes.SELECT }
+    );
+    res.status(200).json(claimmers);
+  } catch (error) {
+    console.error(error.message);
+    response.status(500).json({ error: "Please try again in a few minutes" });
+  }
+});
+
+app.put("/claimmer/changes/:idClaimmer", claimmerVerification, async (req, res) => {
+  const idClaimmer = req.params.idClaimmer;
+  const claimmerName = req.body.claimmerName;
+  const claimmerLastname = req.body.claimmerLastname;
+  const email = req.body.email;
+  const password = req.body.password;
+  const rePassword = req.body.rePassword;
+  const position = req.body.position;
+  const DNI = req.body.DNI;
+  console.log(idClaimmer);
+  try {
+    const claimmer = await db.query(
+      //NUNCA PERO NUUUNCA usar variables dentro de las consultas de SQL
+      "UPDATE claimmers SET claimmerName = :claimmerName, claimmerLastname = :claimmerLastname, email = :email, password = :password, rePassword= :rePassword, position= :position, DNI= :DNI WHERE id= :idClaimmer",
+      {
+        replacements: {
+          idClaimmer: idClaimmer,
+          claimmerName: claimmerName,
+          claimmerLastname: claimmerLastname,
+          email: email,
+          password: password,
+          rePassword: rePassword,
+          DNI: DNI,
+          position: position,
+        },
+      }
+    );
+    res.status(200).json(claimmer);
+  } catch (error) {
+    console.error(error.message);
+    response.status(500).json({ error: "Please try again in a few minutes" });
+  }
+});
+
+//----------------------------------------------------
+//5.3: COUNTRIES
+//----------------------------------------------------
+
+//----------------------------------------------------
+//5.4: CITIES
+//----------------------------------------------------
+
+//----------------------------------------------------
+//5.5: FAVOURS
+//----------------------------------------------------
+
+//----------------------------------------------------
+//5.6: CLAIMS
+//----------------------------------------------------
+
 
 //----------------------------------------------------
 //6. PUT THE SERVER ON
