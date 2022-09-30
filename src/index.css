@@ -1,10 +1,6 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-
-@font-face {
-  font-family: 'Product Sans';
-  src: url(./assets/fonts/Product\ Sans\ Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;600&display=swap');
 
 /* variables */
 
@@ -20,6 +16,7 @@
 
   /* fonts family*/
   --font-primary: 'Montserrat', sans-serif;
+  --font-secundary: 'Lexend', sans-serif;
 
   /* font size*/
   --text-title-primary: 2.4em;

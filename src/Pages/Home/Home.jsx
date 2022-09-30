@@ -9,6 +9,7 @@ const Home = () => {
       <TopNav></TopNav>
       <BotNav></BotNav>
       <Card></Card>
+      <Card></Card>
     </React.Fragment>
   );
 };

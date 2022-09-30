@@ -46,7 +46,7 @@ label {
   display: none;
 }
 
-.inputBoxInput:not(:placeholder-shown) ~ label {
+.inputBoxInput:not(:placeholder-shown)~label {
   display: block;
   position: absolute;
   z-index: 50;

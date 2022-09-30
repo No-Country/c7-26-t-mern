@@ -5,7 +5,6 @@ import PrimaryButton from "../../../../components/PrimaryButton/PrimaryButton";
 
 import "./formPersonal.css";
 
-
 const FormPersonal = (props) => {
   const next = (e) => {
     e.preventDefault();
