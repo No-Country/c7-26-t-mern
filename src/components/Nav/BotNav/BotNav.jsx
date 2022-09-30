@@ -12,19 +12,19 @@ function BotNav() {
   const menus = [
     {
       icon: <BsFillHouseFill size={20} />,
-      name: "Home",
+      name: "Inicio",
     },
     {
       icon: <BsGeoAltFill size={20} />,
-      name: "Map",
+      name: "Mapa",
     },
     {
       icon: <img src={iconCommunity} alt="" size={20} />,
-      name: "Community",
+      name: "Comunidad",
     },
     {
       icon: <img src={iconClaims} alt="" size={20} />,
-      name: "Claims",
+      name: "Reclamos",
     },
   ];
 
