@@ -54,21 +54,24 @@
   .dropdown {
     position: absolute;
     top: 35px;
-    transform: translateX(-20%);
+    transform: translateX(-35%);
     background-color: #fff;
     border: var(--border);
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     overflow: hidden;
     transition: height var(--speed) ease;
+    width: 100px;
   }
   
   .menu {
     width: 100%;
     font-size: 1.1em;
+    overflow: hidden;
   }
   
   .menu-item {
     height: 30px;
+    width: 100%;
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);

@@ -3,12 +3,12 @@ import './dropdown.css'
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSTransition } from 'react-transition-group';
-import { AiOutlineUser } from "react-icons/ai";
+
 
 function Dropdown() {
     return (
         <Navbar>
-            <NavItem icon={<FontAwesomeIcon icon={faEllipsisV} className="dropdownIcon"/>}>
+            <NavItem icon={<FontAwesomeIcon icon={faEllipsisV} className="dropdownIcon" />}>
                 <DropdownMenu></DropdownMenu>
             </NavItem>
         </Navbar>
@@ -28,7 +28,7 @@ function NavItem(props) {
 
     return (
         <li className="navItem">
-            <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+            <a href="/#" className="icon-button" onClick={() => setOpen(!open)}>
                 {props.icon}
             </a>
 
@@ -46,6 +46,7 @@ function DropdownMenu() {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
     }, [])
 
+
     function calcHeight(el) {
         const height = el.offsetHeight;
         setMenuHeight(height);
@@ -53,8 +54,7 @@ function DropdownMenu() {
 
     function DropdownItem(props) {
         return (
-            <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-                <span className="icon-button">{props.leftIcon}</span>
+            <a href="/#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
                 {props.children}
             </a>
         );
@@ -71,7 +71,9 @@ function DropdownMenu() {
                 onEnter={calcHeight}>
                 <div className="menu">
                     <DropdownItem
-                        leftIcon={<AiOutlineUser/>}>Profile</DropdownItem>
+                    >Perfil</DropdownItem>
+                    <DropdownItem
+                    >Cerrar Sesion</DropdownItem>
                 </div>
             </CSSTransition>
         </div>
