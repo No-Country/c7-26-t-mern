@@ -143,13 +143,11 @@ app.put("/claimmer/changes/:idClaimmer", claimmerVerification, async (req, res) 
   const email = req.body.email;
   const password = req.body.password;
   const rePassword = req.body.rePassword;
-  const position = req.body.position;
   const DNI = req.body.DNI;
-  console.log(idClaimmer);
   try {
     const claimmer = await db.query(
       //NUNCA PERO NUUUNCA usar variables dentro de las consultas de SQL
-      "UPDATE claimmers SET claimmerName = :claimmerName, claimmerLastname = :claimmerLastname, email = :email, password = :password, rePassword= :rePassword, position= :position, DNI= :DNI WHERE id= :idClaimmer",
+      "UPDATE claimmers SET claimmerName = :claimmerName, claimmerLastname = :claimmerLastname, email = :email, password = :password, rePassword= :rePassword, DNI= :DNI WHERE id= :idClaimmer",
       {
         replacements: {
           idClaimmer: idClaimmer,
@@ -159,7 +157,6 @@ app.put("/claimmer/changes/:idClaimmer", claimmerVerification, async (req, res) 
           password: password,
           rePassword: rePassword,
           DNI: DNI,
-          position: position,
         },
       }
     );
