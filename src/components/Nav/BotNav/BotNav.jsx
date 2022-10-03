@@ -43,7 +43,7 @@ function BotNav() {
             </li>
           );
         })}
-        <div className="menu-bg" />
+        <div className="menuBg" />
       </ul>
     </div>
   );
