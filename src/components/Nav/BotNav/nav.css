@@ -56,7 +56,7 @@ body {
 }
 
 .navigation ul li.active .icon {
-    transform: translateY(-30px);
+    transform: translateY(-17px);
     color: white;
     padding-top: 0.5rem;
 }
@@ -75,9 +75,9 @@ body {
     color: var(--color-primary);
 }
 
-.menu-bg {
+.menuBg {
     position: absolute;
-    top: -1em;
+    top: 0.2em;
     background: var(--color-secondary);
     width: 7em;
     height: 7em;
@@ -86,26 +86,26 @@ body {
     transition: 0.5s;
 }
 
-.navigation ul li:nth-child(1).active~.menu-bg {
+.navigation ul li:nth-child(1).active~.menuBg {
     transform: translateX(calc(70px *0));
 }
 
-.navigation ul li:nth-child(2).active~.menu-bg {
+.navigation ul li:nth-child(2).active~.menuBg {
     transform: translateX(calc(70px *1));
 }
 
-.navigation ul li:nth-child(3).active~.menu-bg {
+.navigation ul li:nth-child(3).active~.menuBg {
     transform: translateX(calc(70px *2));
 }
 
-.navigation ul li:nth-child(3).active~.menu-bg:hover {
+.navigation ul li:nth-child(3).active~.menuBg:hover {
     transform: translateX(calc(70px *2));
 }
 
-.navigation ul li:nth-child(4).active~.menu-bg {
+.navigation ul li:nth-child(4).active~.menuBg {
     transform: translateX(calc(70px*3));
 }
 
-.navigation ul li:nth-child(5).active~.menu-bg {
+.navigation ul li:nth-child(5).active~.menuBg {
     transform: translateX(calc(70px *4));
 }
