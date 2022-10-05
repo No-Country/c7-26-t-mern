@@ -1,7 +1,8 @@
 .themeCardContent {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8em;
+    gap: 1em 0.5em;
     justify-content: center;
-    padding-bottom: 3em;
+    padding-top: 0.1em;
+    padding-bottom: 2em;
 }
