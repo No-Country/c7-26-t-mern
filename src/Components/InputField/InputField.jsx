@@ -12,6 +12,8 @@ const InputField = (props) => {
         placeholder={props.label}
         onChange={props.onChange}
         defaultValue={props.defaultValue}
+        name={props.name}
+        required="required"
       />
       <label>{props.label}</label>
     </div>

@@ -30,10 +30,20 @@
 }
 
 .topNavUserText {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 32px;
 }
 
-.topNavIcon {
-    font-size: 1.4em;
-    transition: all 1s;
+.topNavList {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificationIcon {
+        width: 18px;
+        margin-top: 0.4rem;
 }

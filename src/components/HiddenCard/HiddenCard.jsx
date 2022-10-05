@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const HiddenCard = (component, visiblity = false) => {
   const [visible, setVisiblity] = useState(() => visiblity);
