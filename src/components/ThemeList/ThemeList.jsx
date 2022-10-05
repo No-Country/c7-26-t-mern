@@ -1,6 +1,6 @@
 import React from "react";
 import ThemeCard from "../ThemeCard/ThemeCard";
-import { themesData } from "../../assets/datas/themesData";
+import { themesData } from "../../datas/themesData";
 import "./themelist.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
