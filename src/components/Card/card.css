@@ -1,0 +1,78 @@
+.claimContainer {
+    margin: 5%;
+    width: 89.5%;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.claimTopInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.imgClaimmer {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 2px solid var(--color-bg-primary);
+    margin: 3% 0 0 3%;
+}
+
+.claimTitleAndSubtitle {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+}
+
+.claimTitle {
+    font-size: var(--text-title-secondary);
+    font-weight: 500;
+    font-family: var(--font-secundary);
+}
+
+.claimSubtitle {
+    font-size: var(--text-subtitle-secondary);
+    font-family: var(--font-primary);
+}
+
+.claimArrowUp {
+    font-size: 4vw;
+    margin-left: 5%;
+}
+
+.claimPrincipalImg {
+    height: 50vw;
+}
+
+.claimBottomInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.claimDescription {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.claimButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seeProgressButton {
+    border: none;
+    color: var(--color-bg-primary);
+    margin-left: 5%;
+}
+
+.claimIconsBottom {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-around;
+    margin: 5% 0 5% 0;
+}

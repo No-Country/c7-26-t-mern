@@ -1,0 +1,39 @@
+.topNav {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-shrink: 0;
+    position: static;
+    background-color: #8f0000;
+    color: #fff;
+    /* padding: 0.2rem 1.5rem 0.2rem 0; */
+    font-family: var(--font-secundary);
+    padding: 1.2rem;
+}
+
+.topNavLogo {
+    width: 30px;
+    display: none;
+}
+
+.topNavUser {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-caption)
+}
+
+.topNavUserText {
+    font-size: 1.3em;
+}
+
+.topNavIcon {
+    font-size: 1.4em;
+    transition: all 1s;
+}
