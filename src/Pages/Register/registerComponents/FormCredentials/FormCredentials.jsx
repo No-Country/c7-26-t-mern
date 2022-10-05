@@ -8,16 +8,19 @@ import "./formCredentials.css";
 const FormCredentials = (props) => {
   const next = (e) => {
     e.preventDefault();
-      axios.post('localhost:3000/signup', {
+      axios.post('http://localhost:8000/signup', {
+        DNI: props.values.dni,
         claimmerName: props.values.name,
         claimmerLastname: props.values.lastName,
         email: "pedro@gmail.com",
         password: 123456
       })
-    props.nextStep();
+
+      props.nextStep();
+    
   };
 
-  console.log(props.values.name)
+  console.log(props.values)
 
   let buttonHandlerColor =
     props.values["email"] === "" ||
