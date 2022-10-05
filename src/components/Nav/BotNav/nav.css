@@ -26,7 +26,7 @@ body {
     /* border-radius: 10px; */
     position: fixed;
     bottom: 0;
-    font-family: 'Product Sans';
+    font-family: var(--font-secundary);
 }
 
 .navigation>ul {
@@ -56,7 +56,7 @@ body {
 }
 
 .navigation ul li.active .icon {
-    transform: translateY(-30px);
+    transform: translateY(-18px);
     color: white;
     padding-top: 0.5rem;
 }
@@ -77,7 +77,7 @@ body {
 
 .menu-bg {
     position: absolute;
-    top: -1em;
+    top: 0.2em;
     background: var(--color-secondary);
     width: 7em;
     height: 7em;

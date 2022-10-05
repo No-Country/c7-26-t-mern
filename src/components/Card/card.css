@@ -30,7 +30,7 @@
 .claimTitle {
     font-size: var(--text-title-secondary);
     font-weight: 500;
-    font-family: 'Product Sans';
+    font-family: var(--font-secundary);
 }
 
 .claimSubtitle {

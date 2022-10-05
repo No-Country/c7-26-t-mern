@@ -1,15 +1,15 @@
-.section-login {
+.sectionLogin {
   padding: 16px;
 }
 
-.section-login__container {
+.sectionLoginContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
-.section-login__container-title {
+.sectionLoginContainerTitle {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -27,7 +27,7 @@
   margin-bottom: 24px;
 }
 
-.section-login__container-recovery-link {
+.sectionLoginContainerRecoveyLink {
   font-family: "Product Sans";
   font-style: normal;
   font-weight: 400;
@@ -42,7 +42,7 @@
   margin-bottom: 18px;
 }
 
-.section-login__container-helper-text {
+.sectionLoginContainerHelperText {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #000;
@@ -60,11 +60,11 @@
   /* Inside auto layout */
 }
 
-.section-login__container-helper-text span {
+.sectionLoginContainerHelperText span {
   background: #f0f0f0;
   padding: 0 10px;
 }
 
-.probando {
+.inputMargin {
   margin: 5px !important;
 }

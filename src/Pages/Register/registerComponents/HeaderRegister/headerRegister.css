@@ -3,13 +3,13 @@
   justify-content: space-between;
 }
 
-.headerLogin-box-icon {
+.headerLoginBoxIcon {
   padding: 0 !important;
   margin: 0;
   background: none;
   border: none;
 }
 
-.headerLogin-icon {
+.headerLoginIcon {
   width: 16px;
 }
