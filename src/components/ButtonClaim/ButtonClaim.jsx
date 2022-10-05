@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ButtonClaim = () => {
   return (
     <div className="buttonClaim">
-      <Link to={"/claims"} className="buttonAddClaim">
+      <Link to={"/themelist"} className="buttonAddClaim">
         + Nuevo reclamo
       </Link>
     </div>

@@ -1,0 +1,35 @@
+.themeCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    height: 5%;
+    position: relative;
+}
+
+.themeImg {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.blurImg {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: 0%;
+    border-radius: 0.4rem;
+    background: linear-gradient(180deg, rgba(38, 39, 36, 0) 37.5%, #262724 100%);
+}
+
+.themeTitle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    color: #fff;
+    top: -8vw;
+    margin: 0;
+    height: 0;
+    text-align: center;
+    z-index: 2;
+}
