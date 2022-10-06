@@ -6,6 +6,7 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import Themelist from "./components/ThemeList/ThemeList";
 import AppNotification from "./components/AppNotification/AppNotification";
+import { ClaimmerProvider } from "./context/context";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/themelist" element={<Themelist />}></Route>
       </Routes>
+      <ClaimmerProvider />
     </Router>
   );
 }

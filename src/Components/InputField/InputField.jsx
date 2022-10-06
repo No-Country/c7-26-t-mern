@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import "./inputField.css";
 
 const InputField = (props) => {
@@ -8,12 +7,9 @@ const InputField = (props) => {
       <input
         className="inputBoxInput"
         type={props.type}
-        id={props.type}
         placeholder={props.label}
         onChange={props.onChange}
-        defaultValue={props.defaultValue}
-        name={props.name}
-        required="required"
+        defaultValue={props.value}
       />
       <label>{props.label}</label>
     </div>
