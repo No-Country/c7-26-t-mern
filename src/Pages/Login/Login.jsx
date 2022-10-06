@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import { useState } from "react";
-
-=======
 import React, { useContext, useState } from "react";
 import axios from "axios";
->>>>>>> 891f3df73ea81919d134e1c31a81a90ee4612476
 import InputField from "../../components/InputField/InputField";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import LogoRounded from "../../components/LogoRounded/LogoRounded";
