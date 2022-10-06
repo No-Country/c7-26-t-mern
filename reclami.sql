@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `reclami`.`cities` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -69,8 +70,8 @@ CREATE TABLE IF NOT EXISTS `reclami`.`claimmers` (
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `rePassword` VARCHAR(45) NOT NULL,
-  `DNI` INT NOT NULL,
-  `position` VARCHAR(100) NULL,
+  `DNI` INT(11) NOT NULL,
+  `position` VARCHAR(100) NULL DEFAULT NULL,
   `idRole` INT(11) NOT NULL,
   `idCity` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -87,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `reclami`.`claimmers` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -97,8 +99,10 @@ CREATE TABLE IF NOT EXISTS `reclami`.`claims` (
   `idClaims` INT(11) NOT NULL AUTO_INCREMENT,
   `claimTitle` VARCHAR(45) NOT NULL,
   `claimDescription` VARCHAR(2000) NOT NULL,
+  `claimPictureURL` VARCHAR(255) NOT NULL,
+  `claimDate` DATE NOT NULL,
+  `likes` INT NOT NULL,
   `idClaimmer` INT(11) NOT NULL,
-  `idDecisionMaker` INT(11) NOT NULL,
   PRIMARY KEY (`idClaims`),
   INDEX `fk_claims_claimmers1_idx` (`idClaimmer` ASC) VISIBLE,
   CONSTRAINT `fk_claims_claimmers1`

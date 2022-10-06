@@ -99,8 +99,9 @@ app.post("/login", async (req, res) => {
     );
     res.json({
       token,
-      // idClaimmer: posibleClaimmer.idClaimmer,
-      // rol: posibleClaimmer.rol.dataValues.idRole,
+      idClaimmer: posibleClaimmer.id,
+      rol: posibleClaimmer.role.dataValues.roleName,
+      path: "/home"
     });
   }
   //Pushear id de usuario a localstorage para obtenerlo en el front y traer los contactos de este idusuario. (AXIOS)
@@ -167,6 +168,30 @@ app.put("/claimmer/changes/:idClaimmer", claimmerVerification, async (req, res) 
   }
 });
 
+app.delete("/claimmer/delete/:idClaimmer", claimmerVerification, async (req, res) => {
+  const idClaimmer = req.params.idClaimmer;
+  console.log(req.params);
+  db.models.claimmers
+    .destroy({
+      where: {
+        id: idClaimmer,
+      },
+    })
+    .then((record) => {
+      console.log(record);
+      if (record >= 1) {
+        res.status(200).json({ message: "User was deleted successfully" });
+      } else {
+        res.status(404).json({ message: "record not found" });
+      }
+    })
+    .catch(function (error) {
+      res.status(500).json(error);
+    });
+});
+
+
+
 //----------------------------------------------------
 //5.3: COUNTRIES
 //----------------------------------------------------
@@ -183,6 +208,17 @@ app.put("/claimmer/changes/:idClaimmer", claimmerVerification, async (req, res) 
 //5.6: CLAIMS
 //----------------------------------------------------
 
+app.get("/claims", claimmerVerification, async (req, res) => {
+  try {
+    const claims = await db.query("SELECT * FROM claims", {
+      type: db.QueryTypes.SELECT,
+    });
+    res.status(200).json(claims);
+  } catch (error) {
+    console.error(error.message);
+    response.status(500).json({ error: "Please try again in a few minutes" });
+  }
+});
 
 //----------------------------------------------------
 //6. PUT THE SERVER ON

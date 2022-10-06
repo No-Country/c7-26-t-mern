@@ -1,5 +1,5 @@
 import React from "react";
-
+import { ClaimmerProvider } from "./context/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* import BotNav from "./components/Nav/BotNav/BotNav";
@@ -12,12 +12,14 @@ import Home from "./Pages/Home/Home.jsx";
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<LoginChoice />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-      </Routes>
+      <ClaimmerProvider>
+        <Routes>
+          <Route path="/" element={<LoginChoice />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+        </Routes>
+      </ClaimmerProvider>
     </Router>
   );
 }

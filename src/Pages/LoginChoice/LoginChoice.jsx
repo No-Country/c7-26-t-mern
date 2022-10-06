@@ -6,6 +6,12 @@ import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import "./loginChoice.css";
 
 const LoginChoice = () => {
+  function goToSelectedOption() {
+    console.log("Im here to avoid a conflict!");
+  }
+
+  window.localStorage.setItem("path", "/login");
+
   return (
     <section className="sectionLoginChoice">
       <div className="sectionLoginChoiceContainer">
@@ -20,12 +26,14 @@ const LoginChoice = () => {
             bg="#8F0000"
             color="#F0F0F0"
             to="/register"
+            onClick={goToSelectedOption}
           />
           <PrimaryButton
             text="INICIA SESION"
             bg="#FFE9AC"
             color="#8F0000"
             to="/login"
+            onClick={goToSelectedOption}
           />
         </div>
 
