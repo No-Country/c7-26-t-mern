@@ -1,8 +1,11 @@
 const { sequelize, Sequelize } = require("sequelize");
-const { DB_USER, DB_NAME, DB_PORT, DB_SERVER, DB_PwD } = process.env;
-const conString = `mysql://${DB_USER}${
-  DB_PwD && `:${DB_PwD}`
-}@${DB_SERVER}:${DB_PORT}/${DB_NAME}`;
+const { MYSQL_ADDON_USER, MYSQL_ADDON_DB, MYSQL_ADDON_PORT, MYSQL_ADDON_HOST, MYSQL_ADDON_PASSWORD } = process.env;
+// const {MYSQL_ADDON_HOST, MYSQL_ADDON_DB, MYSQL_ADDON_USER, MYSQL_ADDON_PORT, MYSQL_ADDON_PASSWORD} = require('../dbenviroment.js')
+
+
+const conString = `mysql://${MYSQL_ADDON_USER}${MYSQL_ADDON_PASSWORD && `:${MYSQL_ADDON_PASSWORD}`
+  }@${MYSQL_ADDON_HOST}:${MYSQL_ADDON_PORT}/${MYSQL_ADDON_DB}`;
+
 const seq = new Sequelize(conString);
 
 seq

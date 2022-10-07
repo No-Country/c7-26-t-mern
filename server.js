@@ -12,6 +12,7 @@ const db = require("./config/db");
 const { response } = require("express");
 const APP_PORT = process.env.APP_PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET;
+const claimerRoutes = require('./routes/claimers.routes.js')
 
 //----------------------------------------------------
 //2. Import models
@@ -50,12 +51,12 @@ app.use(helmet());
 app.use(compression());
 app.use(cors());
 
-app.use(
-  ejwt({
-    secret: JWT_SECRET,
-    algorithms: ["HS256"],
-  }).unless({ path: ["/login"] })
-);
+// app.use(
+//   ejwt({
+//     secret: JWT_SECRET,
+//     algorithms: ["HS256"],
+//   }).unless({ path: ["/login"] })
+// );
 
 //----------------------------------------------------
 //4.3 Import services
@@ -75,11 +76,15 @@ const claimmerVerification = require("./controlers/claimmerVerification");
 //5.1 SIGN UP & LOG IN:
 //----------------------------------------------------
 
+app.use(claimerRoutes)
+
 app.post("/login", async (req, res) => {
   const { claimmerName, password } = req.body;
+
   console.log(claimmerName, password);
   const posibleClaimmer = await Claimmers.findOne({
     attributes: ["id", "claimmerName", "email"],
+
     where: {
       claimmerName,
       password,
@@ -223,6 +228,14 @@ app.get("/claims", claimmerVerification, async (req, res) => {
 //----------------------------------------------------
 //6. PUT THE SERVER ON
 //----------------------------------------------------
-app.listen(APP_PORT, () => {
-  console.log(`escuchando en puerto ${APP_PORT}`);
-});
+
+async function main() {
+  // migraciones
+  await db.sync({ force: false })
+  //levantar servidor
+  app.listen(APP_PORT, () => {
+    console.log(`escuchando en puerto ${APP_PORT || 8000}`);
+  });
+}
+
+main()

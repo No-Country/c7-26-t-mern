@@ -5,7 +5,7 @@ const claimmerContext = createContext();
 
 // 2. Definimos nuestro Provider
 export const ClaimmerProvider = ({ children }) => {
-    const [name, setName] = useState("");
+    const [name, setName] = useState("")
     const [password, setPassword] = useState("");
 
     function authUser(name, password) {
@@ -16,6 +16,8 @@ export const ClaimmerProvider = ({ children }) => {
     console.log("Tenemos context provider!")
     console.log(name);
     console.log(password);
+
+
 
     return (
         //3. pasamos al Provider el "value" para los componentes que consuman el context

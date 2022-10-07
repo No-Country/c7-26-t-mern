@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../../components/Logo/Logo";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 
-import "./loginChoice.css";
+import "./LoginChoice.css";
 
 const LoginChoice = () => {
   function goToSelectedOption() {

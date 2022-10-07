@@ -12,6 +12,7 @@ const Register = (props) => {
   const [state, setState] = useState({
     step: 0,
     name: "",
+    lastName: "",
     dni: "",
     email: "",
     password: "",
