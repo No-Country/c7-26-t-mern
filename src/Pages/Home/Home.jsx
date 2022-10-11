@@ -1,9 +1,8 @@
 import React from "react";
-import ButtonClaim from "../../components/ButtonClaim/ButtonClaim";
-import Card from "../../components/Card/Card";
-import TopNav from "../../components/Nav/BotNav/BotNav";
-import BotNav from "../../components/Nav/TopNav/TopNav";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import Card from "../../Components/Card/Card";
+import TopNav from "../../Components/Nav/BotNav/BotNav";
+import BotNav from "../../Components/Nav/TopNav/TopNav";
+import SearchBar from "../../Components/SearchBar/SearchBar";
 
 const Home = () => {
   return (
@@ -12,7 +11,7 @@ const Home = () => {
       <BotNav></BotNav>
       <SearchBar placeholder="Busca un reclamo" />
       <Card></Card>
-      <ButtonClaim></ButtonClaim>
+      {/* <ButtonClaim></ButtonClaim> */}
     </React.Fragment>
   );
 };

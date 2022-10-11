@@ -4,8 +4,8 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
-import Themelist from "./components/ThemeList/ThemeList";
-import AppNotification from "./components/AppNotification/AppNotification";
+import Themelist from "./Components/ThemeList/ThemeList";
+import AppNotification from "./Components/AppNotification/AppNotification";
 import { ClaimmerProvider } from "./context/context";
 
 function App() {

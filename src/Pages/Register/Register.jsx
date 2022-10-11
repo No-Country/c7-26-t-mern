@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import HeaderRegister from "./registerComponents/HeaderRegister/HeaderRegister";
-import LogoRounded from "../../components/LogoRounded/LogoRounded";
+import LogoRounded from "../../Components/LogoRounded/LogoRounded";
 
 import FormCredentials from "./registerComponents/FormCredentials/FormCredentials";
 import FormPersonal from "./registerComponents/FormPersonal/FormPersonal";

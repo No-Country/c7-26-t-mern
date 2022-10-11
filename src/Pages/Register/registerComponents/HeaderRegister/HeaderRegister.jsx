@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./headerRegister.css";
-import BackIcon from "../../../../assets/img/backIcon.svg";
-import CloseIcon from "../../../../assets/img/closeIcon.svg";
+import BackIcon from "../../../../Assets/img/backIcon.svg";
+import CloseIcon from "../../../../Assets/img/closeIcon.svg";
 
 const HeaderRegister = (props) => {
   return (

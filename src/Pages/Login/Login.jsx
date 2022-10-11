@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import InputField from "../../components/InputField/InputField";
-import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
-import LogoRounded from "../../components/LogoRounded/LogoRounded";
+import InputField from "../../Components/InputField/InputField";
+import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import LogoRounded from "../../Components/LogoRounded/LogoRounded";
 import HeaderLogin from "./loginComponents/HeaderLogin/HeaderLogin";
 import LoginButtons from "./loginComponents/LoginButtons/loginButtons";
 
