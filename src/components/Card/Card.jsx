@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./card.css";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { MdKeyboardArrowUp} from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
 import HiddenCard from "../HiddenCard/HiddenCard";
 
