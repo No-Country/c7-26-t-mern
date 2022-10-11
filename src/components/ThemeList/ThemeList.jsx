@@ -17,7 +17,7 @@ const ThemeList = () => {
         </Link>
         <span className="appNotificationTextMenu">Nuevo Reclamo</span>
       </div>
-      {/* <SearchNewClaim /> */}
+      <SearchNewClaim />
       <div className="themeCardContent">
         {themesData.map((card, idx) => (
           <ThemeCard url={card.url} title={card.title} key={idx} />
