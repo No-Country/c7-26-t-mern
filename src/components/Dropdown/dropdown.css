@@ -74,3 +74,33 @@
   background-color: var(--color-bg-primary);
   color: #fff;
 }
+
+.iconImgAvatar {
+  width: 33px;
+  margin-right: 2.5rem;
+  display: none;
+}
+
+
+/* media queries */
+@media (min-width:579px) {
+  .iconImgEllipsis {
+    display: none;
+  }
+
+  .iconImgAvatar {
+    display: block;
+  }
+
+  .dropdown {
+    margin-top: 2rem;
+    margin-right: 3rem;
+  }
+
+}
+
+@media (min-width:768px) {
+  .iconImgAvatar {
+    margin-right: 3rem;
+  } 
+}
