@@ -15,8 +15,8 @@ function BotNav() {
         <NavLink
           to="/home"
           style={({ isActive }) => ({
-            color: isActive ? "#ff0" : "#fff",
-            fill: isActive ? "#ff0" : "#fff",
+            color: isActive ? "#ffe9ac" : "#fff",
+            fill: isActive ? "#ffe9ac" : "#fff",
           })}
         >
           <div className="botNavContainerItem">
@@ -25,12 +25,14 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <div className="botNavContainerItem botNavContainerItemCenter">
-          <AiOutlinePlus size={20} alt="" />
-        </div>
+        <Link to="/themelist">
+          <div className="botNavContainerItem botNavContainerItemCenter">
+            <AiOutlinePlus size={20} alt="" />
+          </div>
+        </Link>
 
         <NavLink
-          to="/home"
+          to="/profile"
           style={({ isActive }) => ({
             color: isActive ? "#ff0" : "#fff",
             fill: isActive ? "#ff0" : "#fff",
