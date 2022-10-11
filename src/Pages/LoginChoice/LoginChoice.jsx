@@ -10,10 +10,11 @@ const LoginChoice = () => {
   const [logoR, setLogoR] = useState(false);
   const [logoDiff, setLogoDiff] = useState(false);
   const [logoContainer, setContainer] = useState(false);
+  const [containerOut, setContainerOut] = useState(false);
 
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(false);
     setTimeout(() => {
       setLogoR(true)
       // this.logoR.classList.add("active");
@@ -29,21 +30,21 @@ const LoginChoice = () => {
       }, 600);
 
       setTimeout(() => {
-        setLogoR(false)
+        setContainerOut(true)
         
         // this.logoR.classList.remove("active");
       }, 1200);
     }, 500);
 
     setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+      setLoading(true);
+    }, 2500);
   }, []);
 
   return (
     <section className="sectionLoginChoice">
-      {loading ? (
-        <div className={`intro ${logoR ? "active" : "disapper"}`}>
+
+        <div className={`intro ${loading ? "displayIntro" : ""} ${containerOut ? "disapper" : ""}`}>
           <div className="logo-header">
             <div className = {`logoContainer ${logoContainer ? "movement" : ""}`}>
               <div className={`logoR ${logoR ? "active" : ""}`}>
@@ -64,7 +65,7 @@ const LoginChoice = () => {
             </div>
           </div>
         </div>
-      ) : (
+
         <div className="sectionLoginChoiceContainer">
           <Logo />
           <p className="sectionLoginChoiceContainerDescription">
@@ -100,7 +101,7 @@ const LoginChoice = () => {
             </p>
           </div>
         </div>
-      )}
+
     </section>
   );
 };
