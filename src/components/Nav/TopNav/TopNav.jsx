@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../../../Assets/img/reclamiSquareLogo.svg";
 import "./topnav.css";
-import Dropdown from "../../Dropdown/Dropdown";
 import { Link } from "react-router-dom";
 import NotificationSvg from "../../../Assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
+import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
 const TopNav = () => {
   return (
@@ -29,7 +29,9 @@ const TopNav = () => {
         <Link to={"/notifications"} className="notificationIcon">
           <img src={NotificationSvg} alt="" />
         </Link>
-        <Dropdown />
+        <Link to={"/perfil"}>
+          <AvatarIcon />
+        </Link>
       </ul>
     </nav>
   );

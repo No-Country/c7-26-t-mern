@@ -75,15 +75,8 @@
   color: #fff;
 }
 
-.iconImgAvatar {
-  width: 33px;
-  margin-right: 2.5rem;
-  display: none;
-}
-
-
 /* media queries */
-@media (min-width:579px) {
+/* @media (min-width:579px) {
   .iconImgEllipsis {
     display: none;
   }
@@ -103,4 +96,4 @@
   .iconImgAvatar {
     margin-right: 3rem;
   } 
-}
+} */

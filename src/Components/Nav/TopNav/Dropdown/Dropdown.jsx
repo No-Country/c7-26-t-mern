@@ -28,9 +28,9 @@ function NavItem(props) {
 
   return (
     <li className="navItem">
-      <a href="#" className="iconButton" onClick={() => setOpen(!open)}>
-        <img className="iconImgEllipsis" src={Ellipsis} alt="" />
-      </a>
+      {/* <a href="#" className="iconButton" onClick={() => setOpen(!open)}>
+                <img className="iconImgEllipsis" src={Ellipsis} alt="" />
+            </a> */}
       <a href="#" className="iconButton" onClick={() => setOpen(!open)}>
         <img className="iconImgAvatar" src={Avatar} alt="" />
       </a>

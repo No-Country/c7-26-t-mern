@@ -5,7 +5,8 @@ import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import Themelist from "./Components/ThemeList/ThemeList";
-import AppNotification from "./Components/AppNotification/AppNotification";
+import AppNotification from "./Pages/AppNotification/AppNotification";
+import Perfil from "./Pages/Perfil/Perfil";
 import { ClaimmerProvider } from "./context/context";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
+        <Route path="/perfil" element={<Perfil />}></Route>
         <Route path="/themelist" element={<Themelist />}></Route>
       </Routes>
       <ClaimmerProvider />

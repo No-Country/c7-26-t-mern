@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 // Icons bottom navbar
+<<<<<<< HEAD
+=======
+import iconCommunity from "../../../Assets/img/communityInactive.svg";
+>>>>>>> bf6a3d49489ffbc6f65b66b1580ecfe5fff8f230
 import iconClaims from "../../../Assets/img/claimsInactive.svg";
 
 function BotNav() {
