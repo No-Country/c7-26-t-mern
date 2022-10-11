@@ -25,7 +25,7 @@ export const themesData = [
     },
     {
         url: "https://i.ibb.co/MGBbjqj/calles-Veredas.jpg",
-        title: "Calles y verdes"
+        title: "Calles y veredas"
     },
     {
         url: "https://i.ibb.co/7YvBLPb/Reciclado.jpg",

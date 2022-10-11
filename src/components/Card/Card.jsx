@@ -1,34 +1,11 @@
 import React from "react";
 import "./card.css";
-import { MdKeyboardArrowUp} from "react-icons/md";
+import { MdKeyboardArrowUp } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
 import HiddenCard from "../HiddenCard/HiddenCard";
 
 const Card = () => {
-  const [claimTotalInfo, toggleHiddenCard] = HiddenCard(
-    <div>
-      <img
-        className="claimPrincipalImg"
-        src="https://http2.mlstatic.com/D_NQ_NP_676158-MLA44311719800_122020-O.jpg"
-        alt="imgClaim"
-      />
-      <div className="claimBottomInfo">
-        <p className="claimDescription">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-          laborum.
-        </p>
-        <div className="claimButtons">
-          <button className="seeProgressButton">Ver progreso</button>
-          <div className="claimIconsBottom">
-            <FaRegHeart />
-            <BsFillShareFill />
-          </div>
-        </div>
-      </div>
-    </div>,
-    true
-  );
   return (
     <div className="claimContainer">
       <div className="claimTopInfo">
@@ -41,12 +18,27 @@ const Card = () => {
           <h3 className="claimTitle">Lorem title</h3>
           <h5 className="claimSubtitle">lorem subtitle</h5>
         </div>
-        <MdKeyboardArrowUp
-          className="claimArrowUp"
-          onClick={toggleHiddenCard}
-        />
+        <div className="claimContent">
+          <img
+            className="claimPrincipalImg"
+            src="https://http2.mlstatic.com/D_NQ_NP_676158-MLA44311719800_122020-O.jpg"
+            alt="imgClaim"
+          />
+          <div className="claimBottomInfo">
+            <p className="claimDescription">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium, laborum.
+            </p>
+            <div className="claimButtons">
+              <button className="seeProgressButton">Ver progreso</button>
+              <div className="claimIconsBottom">
+                <FaRegHeart />
+                <BsFillShareFill />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      {claimTotalInfo}
     </div>
   );
 };

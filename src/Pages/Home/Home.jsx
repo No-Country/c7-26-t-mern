@@ -12,7 +12,6 @@ const Home = () => {
       <BotNav></BotNav>
       <SearchBar placeholder="Busca un reclamo" />
       <Card></Card>
-      <Card></Card>
       <ButtonClaim></ButtonClaim>
     </React.Fragment>
   );
