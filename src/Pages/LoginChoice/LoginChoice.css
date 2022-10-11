@@ -67,11 +67,11 @@
   width: 100%;
   height: 100vh;
   background-color: #8f0000;
-  transition: all 1s;
 }
 
-.logoIntro {
-  
+.intro.disapper {
+  opacity: 0;
+  transition: all .5s;
 }
 
 .logo-header {

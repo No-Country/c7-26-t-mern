@@ -32,7 +32,7 @@ const LoginChoice = () => {
         setLogoR(false)
         
         // this.logoR.classList.remove("active");
-      }, 1500);
+      }, 1200);
     }, 500);
 
     setTimeout(() => {
@@ -43,7 +43,7 @@ const LoginChoice = () => {
   return (
     <section className="sectionLoginChoice">
       {loading ? (
-        <div className="intro">
+        <div className={`intro ${logoR ? "active" : "disapper"}`}>
           <div className="logo-header">
             <div className = {`logoContainer ${logoContainer ? "movement" : ""}`}>
               <div className={`logoR ${logoR ? "active" : ""}`}>
