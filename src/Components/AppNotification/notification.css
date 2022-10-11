@@ -21,7 +21,6 @@
 .appNotificationIcon {
   color: #fff;
   font-size: 1.5em;
-  
 }
 
 .appNotificationTextMenu {
@@ -39,7 +38,7 @@
 }
 
 .notificationsContainerText {
-  font-family: 'Lexend';
+font-family: 'Lexend';
 font-style: normal;
 font-weight: 400;
 font-size: 1.24em;
@@ -47,3 +46,4 @@ line-height: 20px;
 text-align: center;
 letter-spacing: 0.25px;
 }
+

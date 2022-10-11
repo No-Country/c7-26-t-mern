@@ -1,0 +1,36 @@
+import * as React from "react";
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+
+
+function SearchBar() {
+    return (
+        <Paper
+            component="form"
+            className="searchBarNav"
+            sx={{
+                p: "2px 6px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 437,
+                ml: 0,
+                mt: 0,
+                mb: 0,
+            }}
+        >
+            <IconButton sx={{ p: "10px" }} aria-label="menu">
+                <SearchIcon />
+            </IconButton>
+            <InputBase
+                sx={{ ml: 1, flex: 1, fontSize: 13 }}
+                placeholder="Busca un reclamo"
+                inputProps={{ "aria-label": "Busca un reclamo" }}
+            />
+        </Paper>
+    );
+}
+
+export default SearchBar;

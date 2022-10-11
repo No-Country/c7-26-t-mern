@@ -3,6 +3,7 @@ import "./dropdown.css";
 import { CSSTransition } from "react-transition-group";
 import Backdrop from "../Backdrop/Backdrop";
 import Ellipsis from "../../assets/img/ellipsis.svg"
+import Avatar from "../../assets/img/iconAvatar.svg"
 
 function Dropdown() {
     return (
@@ -28,12 +29,16 @@ function NavItem(props) {
     return (
         <li className="navItem">
             <a href="#" className="iconButton" onClick={() => setOpen(!open)}>
-                <img className="iconImg" src={Ellipsis} alt="" />
+                <img className="iconImgEllipsis" src={Ellipsis} alt="" />
+            </a>
+            <a href="#" className="iconButton" onClick={() => setOpen(!open)}>
+                <img className="iconImgAvatar" src={Avatar} alt="" />
             </a>
             {open && <Backdrop onClick={() => setOpen(!open)}></Backdrop>}
             {open && props.children}
-
         </li>
+        
+        
     );
 }
 
