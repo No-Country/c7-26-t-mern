@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./login.css";
-import InputField from "../../../components/InputField/InputField";
-import PrimaryButton from "../../../components/PrimaryButton/PrimaryButton";
+import InputField from "../../../Components/InputField/InputField";
+import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 import HeaderLogin from "./Components/HeaderLogin";
 import LogoRounded from "../../../components/LogoRounded/LogoRounded";
 import LoginButtons from "./Components/loginButtons";

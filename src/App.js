@@ -4,8 +4,8 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
-import AppNotification from './components/AppNotification/AppNotification';
-import Perfil from "./components/Perfil/Perfil";
+import AppNotification from './Components/AppNotification/AppNotification';
+import Perfil from "./Components/Perfil/Perfil";
 
 function App() {
   return (

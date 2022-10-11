@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./loginButtons.css";
-import GoogleIcon from "../../../../assets/img/googleLogo.svg";
-import FacebookIcon from "../../../../assets/img/facebookLogo.svg";
+import GoogleIcon from "../../../../Assets/img/googleLogo.svg";
+import FacebookIcon from "../../../../Assets/img/facebookLogo.svg";
 
 const LoginButtons = (prop) => {
   return (
