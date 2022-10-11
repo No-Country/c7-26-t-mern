@@ -1,0 +1,31 @@
+.perfilTopNav {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+    flex-direction: row;
+    width: 100%;
+    flex-shrink: 0;
+    position: static;
+    background-color: #8f0000;
+    color: #fff;
+    font-family: var(--font-secundary);
+    padding: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+.perfilOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.perfilOptionsSession {
+    border-top: 1px solid #8f0000 ;
+}

@@ -5,6 +5,7 @@ import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from './components/AppNotification/AppNotification';
+import Perfil from "./components/Perfil/Perfil";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
+        <Route path="/perfil" element={<Perfil />}></Route>
       </Routes>
     </Router>
   );
