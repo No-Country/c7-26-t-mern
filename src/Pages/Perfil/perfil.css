@@ -24,8 +24,21 @@
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    gap: 2rem;
+
+}
+
+.perfilOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    gap: 1.5rem;
+    color: var(--color-black);
 }
 
 .perfilOptionsSession {
     border-top: 1px solid #8f0000 ;
+    width: 100%;
+    padding-top: 1rem;
 }

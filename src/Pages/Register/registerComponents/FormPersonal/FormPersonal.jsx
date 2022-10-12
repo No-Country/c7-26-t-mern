@@ -13,21 +13,21 @@ const FormPersonal = (props) => {
   };
 
   let buttonHandlerColor =
-    props.values["dni"] === "" || props.values["name"] === "";
+    props.values["password"] === "" || props.values["name"] === "";
 
   return (
     <React.Fragment>
       <InputField
         type={"text"}
-        label={"Nombre Completo"}
+        label={"Nombre de Usuario"}
         onChange={props.handleChange("name")}
         defaultValue={props.values.name}
       />
       <InputField
         type={"text"}
-        label={"DNI"}
-        onChange={props.handleChange("dni")}
-        defaultValue={props.values.dni}
+        label={"Contraseña"}
+        onChange={props.handleChange("password")}
+        defaultValue={props.values.password}
       />
       <PrimaryButton
         text="Siguiente"

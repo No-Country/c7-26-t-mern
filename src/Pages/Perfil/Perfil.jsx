@@ -16,10 +16,10 @@ const Perfil = () => {
                 <span className="appNotificationTextMenu">Perfil</span>
             </div>
             <div className="perfilOptionsContainer">
-                <p className="perfilOptions"><DiAptana/>Configuracion</p>
-                <p className="perfilOptions"><FaExchangeAlt/>Cambiar contraseña</p>
-                <p className="perfilOptions"><FiHelpCircle/>Ayuda</p>
-                <p className="perfilOptionsSession perfilOptions">Cerrar Sesion</p>
+                <Link to={"/configuracion"} className="perfilOptions"><DiAptana/>Configuracion</Link>
+                <Link to={"/password"} className="perfilOptions"><FaExchangeAlt/>Cambiar contraseña</Link>
+                <Link to={"/ayuda"} className="perfilOptions"><FiHelpCircle/>Ayuda</Link>
+                <Link to={"/"} className="perfilOptionsSession perfilOptions">Cerrar Sesion</Link>
             </div>
         </div>
     )

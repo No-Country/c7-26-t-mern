@@ -17,10 +17,9 @@ const Claims = sequelize.define(
       allowNule: false,
     },
     claimDate: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNule: false,
     },
-
     likes: {
       type: DataTypes.INTEGER,
       allowNule: false,
