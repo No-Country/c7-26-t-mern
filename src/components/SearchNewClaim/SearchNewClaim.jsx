@@ -29,9 +29,6 @@ function SearchNewClaim() {
         placeholder="Busca una categoria"
         inputProps={{ "aria-label": "Busca una categoria" }}
       />
-      <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-        <MicIcon />
-      </IconButton>
     </Paper>
   );
 }
