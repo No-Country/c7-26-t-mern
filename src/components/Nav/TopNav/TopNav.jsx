@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../../../Assets/img/reclamiSquareLogo.svg";
 import "./topnav.css";
-import Dropdown from "../../Dropdown/Dropdown";
-import { Link } from "react-router-dom";
-import NotificationSvg from "../../../Assets/img/notificacion.svg";
+import { Link } from 'react-router-dom';
+import NotificationSvg from "../../../assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
+import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
+
 
 const TopNav = () => {
   return (
@@ -26,10 +27,8 @@ const TopNav = () => {
         </div>
       </ul>
       <ul className="topNavList">
-        <Link to={"/notifications"} className="notificationIcon">
-          <img src={NotificationSvg} alt="" />
-        </Link>
-        <Dropdown />
+        <Link to={"/notifications"} className="notificationIcon"><img src={NotificationSvg} alt="" /></Link>
+        <Link to={"/perfil"}><AvatarIcon/></Link>
       </ul>
     </nav>
   );
