@@ -8,7 +8,7 @@ import LoginButtons from "./loginComponents/LoginButtons/loginButtons";
 
 import "./login.css";
 
-const Login = () => {
+const Login = (props) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,6 +20,8 @@ const Login = () => {
   const handleOnChangePassword = (e) => {
     setPassword(e.target.value);
   };
+
+  let buttonHandlerColor = name === "" || password === "";
 
   //function to botton
   const loginFunction = async () => {
@@ -76,7 +78,7 @@ const Login = () => {
           </a>
           <PrimaryButton
             text="Ingresar"
-            bg="#8E938D"
+            bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
             color="#F0F0F0"
             onClick={loginFunction}
             to={"/home"}
