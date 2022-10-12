@@ -87,13 +87,13 @@
   transform: translate(-50%, -50%);
   color: #ffffff;
   width: auto;
-  
+
 }
 
 .logoContainer {
   display: flex;
   flex-direction: row;
-  
+
 }
 
 .logoR {

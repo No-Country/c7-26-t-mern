@@ -28,6 +28,14 @@ const Claimmers = sequelize.define(
       type: DataTypes.STRING,
       allowNule: false,
     },
+    DNI: {
+      type: DataTypes.STRING,
+      allowNule: false,
+    },
+    profile: {
+      type: DataTypes.STRING,
+      allowNule: false,
+    },
   },
   {
     tableName: "claimmers",

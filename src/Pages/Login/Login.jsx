@@ -1,69 +1,89 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import axios from "axios";
 import InputField from "../../Components/InputField/InputField";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import LogoRounded from "../../Components/LogoRounded/LogoRounded";
-
 import HeaderLogin from "./loginComponents/HeaderLogin/HeaderLogin";
 import LoginButtons from "./loginComponents/LoginButtons/loginButtons";
 
 import "./login.css";
 
-const Login = () => {
-  const [state, setState] = useState({
-    email: "",
-    password: "",
-  });
+const Login = (props) => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    setState((state) => ({
-      ...state,
-      [name]: value,
-    }));
+  //fill inputs y obtain data value by onChange event
+  const handleOnChangeName = (e) => {
+    setName(e.target.value);
   };
 
-  let buttonHandlerColor = state["email"] === "" || state["password"] === "";
+  const handleOnChangePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  let buttonHandlerColor = name === "" || password === "";
+
+  //function to botton
+  const loginFunction = async () => {
+    axios({
+      method: "post",
+      url: "http://localhost:3000/login",
+      data: {
+        claimmerName: name,
+        password: password,
+      },
+    }).then(
+      function logear(response) {
+        console.log("Logeado correctamente");
+        window.localStorage.setItem("rol", response.data.rol);
+        window.localStorage.setItem("token", response.data.token);
+        window.localStorage.setItem("id", response.data.idClaimmer);
+        const idLogged = window.localStorage.getItem("id");
+        window.localStorage.setItem("path", "/home");
+      },
+      function error(params) {
+        console.error("Nombre o Contraseña incorrecta");
+        window.localStorage.setItem("path", "/login");
+      }
+    );
+  };
+
+  // NEED FIX THE PROBLEM ABOUT GETING LOCALSTORAGE PATH VALUE DINAMICALLY
+  // function getPathing() {
+  //   window.localStorage.getItem("path");
+  // }
 
   return (
     <section className="sectionLogin">
       <HeaderLogin />
       <section className="sectionLoginContainer">
         <LogoRounded />
-
-        <p className="sectionLoginContainerTitle">INICIA SESIÓN</p>
-
-        <InputField
-          type={"email"}
-          label={"Correo Electronico"}
-          value={state["email"]}
-          onChange={handleChange}
-          name="email"
-          disabled={""}
-        />
-        <InputField
-          type={"password"}
-          label={"Contraseña"}
-          class="inputMargin"
-          value={state["password"]}
-          onChange={handleChange}
-          name="password"
-        />
-        <a className="sectionLoginContainerRecoveyLink" href="/">
-          ¿Restablecer Contraseña?
-        </a>
-        <PrimaryButton
-          text="Ingresar"
-          bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
-          color="#F0F0F0"
-          to="/home"
-          disabled={buttonHandlerColor ? "false" : ""}
-        />
-
+        <form className="loginForm" action="">
+          <p className="sectionLoginContainerTitle">INICIA SESIÓN</p>
+          <InputField
+            className="claimmerName"
+            label="Usuario"
+            name="name"
+            onChange={handleOnChangeName}
+          />
+          <InputField
+            className="claimmerPassword"
+            label="Contraseña"
+            password="password"
+            value={password}
+            onChange={handleOnChangePassword}
+          />
+          <a className="sectionLoginContainerRecoveyLink" href="/">
+            ¿Restablecer Contraseña?
+          </a>
+          <PrimaryButton
+            text="Ingresar"
+            bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
+            color="#F0F0F0"
+            onClick={loginFunction}
+            to={"/home"}
+          />{" "}
+        </form>
         <p className="sectionLoginContainerHelperText">
           <span> O continuar con</span>
         </p>
