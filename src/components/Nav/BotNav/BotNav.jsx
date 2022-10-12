@@ -25,7 +25,7 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <Link to="/themelist">
+        <Link to="/list">
           <div className="botNavContainerItem botNavContainerItemCenter">
             <AiOutlinePlus size={20} alt="" />
           </div>
@@ -44,7 +44,7 @@ function BotNav() {
               src={iconClaims}
               alt="Profile"
             />
-            <p className="botNavContainerItemText">Perfil</p>
+            <p className="botNavContainerItemText">Reclamos</p>
           </div>
         </NavLink>
       </nav>

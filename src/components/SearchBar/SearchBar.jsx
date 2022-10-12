@@ -6,10 +6,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import axios from "axios";
 
+import "./searchbar.css";
+
 function SearchBar() {
   return (
     <Paper
       component="form"
+      className="homeSearch"
       sx={{
         p: "2px 6px",
         display: "flex",

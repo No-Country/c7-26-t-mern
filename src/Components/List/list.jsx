@@ -1,12 +1,12 @@
 import React from "react";
 import ThemeCard from "../ThemeCard/ThemeCard";
 import { themesData } from "../../datas/themesData";
-import "./themelist.css";
+import "./list.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import SearchNewClaim from "../SearchNewClaim/SearchNewClaim";
 
-const ThemeList = () => {
+const list = () => {
   //Llamar axios data
 
   return (
@@ -27,4 +27,4 @@ const ThemeList = () => {
   );
 };
 
-export default ThemeList;
+export default list;
