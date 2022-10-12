@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import InputField from "../../components/InputField/InputField";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
@@ -10,6 +11,24 @@ import LoginButtons from "./loginComponents/LoginButtons/loginButtons";
 import "./login.css";
 
 const Login = () => {
+  const [state, setState] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    setState((state) => ({
+      ...state,
+      [name]: value,
+    }));
+  };
+
+  let buttonHandlerColor = state["email"] === "" || state["password"] === "";
+
   return (
     <section className="sectionLogin">
       <HeaderLogin />
@@ -17,16 +36,32 @@ const Login = () => {
         <LogoRounded />
 
         <p className="sectionLoginContainerTitle">INICIA SESIÓN</p>
-        <InputField type={"text"} label={"Nombre Completo"} />
-        <InputField type={"text"} label={"DNI"} class="probando" />
+        
+        <InputField
+          type={"email"}
+          label={"Correo Electronico"}
+          value={state["email"]}
+          onChange={handleChange}
+          name="email"
+          disabled={""}
+        />
+        <InputField
+          type={"password"}
+          label={"Contraseña"}
+          class="inputMargin"
+          value={state["password"]}
+          onChange={handleChange}
+          name="password"
+        />
         <a className="sectionLoginContainerRecoveyLink" href="/">
           ¿Restablecer Contraseña?
         </a>
         <PrimaryButton
           text="Ingresar"
-          bg="#8E938D"
+          bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
           color="#F0F0F0"
           to="/home"
+          disabled={buttonHandlerColor ? "false" : ""}
         />
 
         <p className="sectionLoginContainerHelperText">
