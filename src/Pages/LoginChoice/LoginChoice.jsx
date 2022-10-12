@@ -93,14 +93,14 @@ const LoginChoice = (props) => {
             bg="#8F0000"
             color="#F0F0F0"
             to="/register"
-            onClick={goToSelectedOption}
+            /* onClick={goToSelectedOption} */
           />
           <PrimaryButton
             text="INICIA SESION"
             bg="#FFE9AC"
             color="#8F0000"
             to="/login"
-            onClick={goToSelectedOption}
+            /* onClick={goToSelectedOption} */
           />
         </div>
 
