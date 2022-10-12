@@ -7,10 +7,6 @@ import iconCommunity from "../../../Assets/img/communityInactive.svg";
 import iconClaims from "../../../Assets/img/claimsInactive.svg";
 
 function BotNav() {
-  return (
-    <nav>
-      
-    </nav>
-  );
+  return <nav></nav>;
 }
 export default BotNav;

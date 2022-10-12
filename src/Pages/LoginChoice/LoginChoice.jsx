@@ -5,15 +5,20 @@ import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
 import "./loginChoice.css";
 
-const LoginChoice = () => {
+const LoginChoice = (props) => {
   const [loading, setLoading] = useState(false);
   const [logoR, setLogoR] = useState(false);
   const [logoDiff, setLogoDiff] = useState(false);
   const [logoContainer, setContainer] = useState(false);
   const [containerOut, setContainerOut] = useState(false);
 
+  const setIntroRun = () => {
+    props.setIntroRun(false);
+  };
+
   useEffect(() => {
     setLoading(false);
+
     setTimeout(() => {
       setLogoR(true);
       // this.logoR.classList.add("active");
@@ -37,39 +42,44 @@ const LoginChoice = () => {
 
     setTimeout(() => {
       setLoading(true);
+      setIntroRun()
     }, 2500);
   }, []);
 
   return (
     <section className="sectionLoginChoice">
-      <div
-        className={`intro ${loading ? "displayIntro" : ""} ${
-          containerOut ? "disapper" : ""
-        }`}
-      >
-        <div className="logo-header">
-          <div className={`logoContainer ${logoContainer ? "movement" : ""}`}>
-            <div className={`logoR ${logoR ? "active" : ""}`}>
-              <img
-                className="logoIntro"
-                src={require("../../Assets/img/r.svg").default}
-                alt=""
-              />
-              <img
-                className="logoIntro"
-                src={require("../../Assets/img/circulo.svg").default}
-                alt=""
-              />
+      {props.introRun ? (
+        <div
+          className={`intro ${loading ? "displayIntro" : ""} ${
+            containerOut ? "disapper" : ""
+          }`}
+        >
+          <div className="logo-header">
+            <div className={`logoContainer ${logoContainer ? "movement" : ""}`}>
+              <div className={`logoR ${logoR ? "active" : ""}`}>
+                <img
+                  className="logoIntro"
+                  src={require("../../Assets/img/r.svg").default}
+                  alt=""
+                />
+                <img
+                  className="logoIntro"
+                  src={require("../../Assets/img/circulo.svg").default}
+                  alt=""
+                />
 
-              <img
-                className={`logoDiff ${logoDiff ? "active" : ""}`}
-                src={require("../../Assets/img/rCortada.svg").default}
-                alt=""
-              />
+                <img
+                  className={`logoDiff ${logoDiff ? "active" : ""}`}
+                  src={require("../../Assets/img/rCortada.svg").default}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
 
       <div className="sectionLoginChoiceContainer">
         <Logo />
