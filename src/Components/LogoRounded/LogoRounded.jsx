@@ -1,6 +1,6 @@
 import React from "react";
 
-import logoRoundedSvg from "../../assets/img/reclamiRounded.svg";
+import logoRoundedSvg from "../../Assets/img/reclamiRounded.svg";
 
 import "./logoRounded.css";
 

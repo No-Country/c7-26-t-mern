@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "./dropdown.css";
 import { CSSTransition } from "react-transition-group";
 import Backdrop from "../Backdrop/Backdrop";
-import Ellipsis from "../../assets/img/ellipsis.svg"
-import Avatar from "../../assets/img/iconAvatar.svg"
+import Ellipsis from "../../Assets/img/ellipsis.svg"
+import Avatar from "../../Assets/img/iconAvatar.svg"
 
 function Dropdown() {
     return (

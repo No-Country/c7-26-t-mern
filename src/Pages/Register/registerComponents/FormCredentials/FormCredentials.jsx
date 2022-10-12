@@ -1,7 +1,7 @@
 import React from "react";
 
-import InputField from "../../../../components/InputField/InputField";
-import PrimaryButton from "../../../../components/PrimaryButton/PrimaryButton";
+import InputField from "../../../../Components/InputField/InputField";
+import PrimaryButton from "../../../../Components/PrimaryButton/PrimaryButton";
 
 import "./formCredentials.css";
 
