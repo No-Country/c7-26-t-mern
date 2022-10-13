@@ -7,6 +7,7 @@ import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
 const TopNav = (props) => {
+  console.log(props);
   return (
     <nav className="topNav">
       <div className="topNavUser">
