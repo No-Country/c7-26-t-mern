@@ -57,6 +57,12 @@
 }
 
 
+
+.inputFileContainer {
+    width: 200px;
+}
+
+
 .labelFile {
     display: block;
     color: var(--color-black);
@@ -71,7 +77,7 @@
     right: 0; */
     font-size: 1.5em;
     display: flex;
-    padding-left: 2rem;
+    padding-left: 1rem;
     align-items: center;
     transition: background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
 }
@@ -150,7 +156,7 @@ input[type='file'] {
 }
 
 .fileContainer {
-    display: flex ;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
@@ -163,8 +169,41 @@ input[type='file'] {
 .ubicacionContainer {
     display: flex;
     gap: 2rem;
+    width: 250px;
 }
 
 .inputUbicacion {
-    width: 200px;
+    border: none;
+    padding: 19px 16px;
+}
+
+.inputUbicacion:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.inputUbicacion::placeholder {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 18px;
+    border: none;
+    color: #4e4f4c;
+}
+
+.inputUbicacion:not(:placeholder-shown) {
+    padding: 8px 16px;
+    padding-top: 30px;
+}
+
+.inputUbicacion:not(:placeholder-shown)~label {
+    display: block;
+    position: absolute;
+    z-index: 50;
+    padding: 8px 16px;
+    font-size: 12px;
+    top: 0;
+}
+
+.inputBoxReclamo:has(.inputUbicacion:focus-visible) {
+    border-bottom: 2px solid var(--color-bg-primary);
 }
