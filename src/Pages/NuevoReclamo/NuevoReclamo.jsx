@@ -7,8 +7,14 @@ import './nuevoreclamo.css';
 import image from '../../Assets/img/imagenes.svg';
 
 export const NuevoReclamo = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('reclamo creado')
+      }
+
     return (
-        <div className="nuevoReclamoContainer">
+        <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
             <div className="nuevoReclamoTopNav">
                 <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
                 <span className="appNotificationTextMenu">Nuevo Reclamo</span>
@@ -56,8 +62,8 @@ export const NuevoReclamo = () => {
                     <h3>*Opcional (hasta 4 archivos)</h3>
                 </div>
                 </div>
-                <button className='nuevoReclamoSubmit'>SIGUIENTE</button>
+                <input type='submit' value='CREAR RECLAMO' className='nuevoReclamoSubmit'/>
             </div>
-        </div>
+        </form>
     )
 }
