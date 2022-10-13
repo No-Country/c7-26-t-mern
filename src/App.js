@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
 import List from "./Components/List/List.jsx";
+import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
+        <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
       </Routes>
     </Router>
   );
