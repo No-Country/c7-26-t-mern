@@ -20,11 +20,11 @@
 .botNavContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
     height: 100%;
     align-items: center;
-    gap: 35px;
+    width: 100%;
 }
 
 .botNavContainerItem {
@@ -36,7 +36,7 @@
 }
 
 .botNavContainerItemImg {
-    height: 20px;
+    height: 23px;
 }
 
 

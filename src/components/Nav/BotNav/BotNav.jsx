@@ -17,6 +17,7 @@ function BotNav() {
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
+            width: "10%",
           })}
         >
           <div className="botNavContainerItem">
@@ -36,6 +37,7 @@ function BotNav() {
           style={({ isActive }) => ({
             color: isActive ? "#ff0" : "#fff",
             fill: isActive ? "#ff0" : "#fff",
+            width: "10%",
           })}
         >
           <div className="botNavContainerItem">
