@@ -35,7 +35,7 @@ const FormPersonal = (props) => {
         type={"text"}
         label={"DNI"}
         onChange={props.handleChange("dni")}
-        defaultValue={props.values.dni}
+        defaultValue={props.values["dni"]}
       />
       <PrimaryButton
         text="Siguiente"

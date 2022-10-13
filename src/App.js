@@ -12,7 +12,7 @@ import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
 import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
-import List from "./Components/List/List.jsx";
+import List from "./Components/List/list.jsx";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
