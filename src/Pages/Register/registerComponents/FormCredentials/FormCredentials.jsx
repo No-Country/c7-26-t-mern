@@ -1,16 +1,32 @@
 import React from "react";
 
+<<<<<<< HEAD
 import InputField from "../../../../Components/InputField/InputField";
 import PrimaryButton from "../../../../Components/PrimaryButton/PrimaryButton";
 
+=======
+import InputField from "../../../../components/InputField/InputField";
+import PrimaryButton from "../../../../components/PrimaryButton/PrimaryButton";
+import axios from "axios";
+>>>>>>> frontend
 import "./formCredentials.css";
 
 const FormCredentials = (props) => {
   const next = (e) => {
     e.preventDefault();
-    // BACKEND
-    props.nextStep();
+      axios.post('http://localhost:8000/signup', {
+        DNI: props.values.dni,
+        claimmerName: props.values.name,
+        claimmerLastname: props.values.lastName,
+        email: "pedro@gmail.com",
+        password: 123456
+      })
+
+      props.nextStep();
+    
   };
+
+  console.log(props.values)
 
   let buttonHandlerColor =
     props.values["email"] === "" ||
@@ -43,6 +59,7 @@ const FormCredentials = (props) => {
         color="#F0F0F0"
         to="/home"
         disabled={buttonHandlerColor ? "false" : ""}
+        onClick={next}
       />
     </React.Fragment>
   );

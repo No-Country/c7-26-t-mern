@@ -1,7 +1,11 @@
 import React from "react";
 import logo from "../../../Assets/img/reclamiSquareLogo.svg";
 import "./topnav.css";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> frontend
 import NotificationSvg from "../../../Assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
