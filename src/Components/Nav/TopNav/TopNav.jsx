@@ -7,16 +7,16 @@ import NotificationSvg from "../../../Assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
-const TopNav = () => {
+const TopNav = (props) => {
   return (
     <nav className="topNav">
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo image" />
           </picture>
         </Link>
-        <span className="topNavUserText">Hola, Moria!</span>
+        <span className="topNavUserText">{props.text}</span>
         <SearchBarNav />
       </div>
       <ul className="topNavListDesktopContainer">

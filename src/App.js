@@ -11,8 +11,9 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
+import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import List from './Components/List/List';
 import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
-import List from "./Components/List/list.jsx";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -24,10 +25,11 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/List" element={<List />}></Route>
+        <Route path="/List" element={<List/>}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
         <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
+        <Route path="/claims" element={<ClaimDetail />}></Route>
       </Routes>
     </Router>
   );

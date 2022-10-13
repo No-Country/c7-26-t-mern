@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const PrimaryButton = (prop) => {
   return (
     <Link
-      className="primaryButton"
+      className={`primaryButton ${prop.className}`}
       style={{
         backgroundColor: prop.bg,
         color: prop.color,

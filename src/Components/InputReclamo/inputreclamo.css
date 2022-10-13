@@ -17,11 +17,6 @@ body {
   padding: 19px 16px;
 }
 
-/* .inputBoxInput:focus {
-  padding: 8px 16px;
-  padding-top: 30px;
-} */
-
 .inputBoxInput:focus-visible {
   border: none;
   outline: none;
@@ -56,3 +51,4 @@ label {
 .inputBoxReclamo:has(.inputBoxInput:focus-visible) {
   border-bottom: 2px solid var(--color-bg-primary);
 }
+
