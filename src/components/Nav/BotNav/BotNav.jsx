@@ -26,7 +26,7 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <Link to="/list">
+        <Link to="/List">
           <div className="botNavContainerItem botNavContainerItemCenter">
             <AiOutlinePlus size={20} alt="" />
           </div>

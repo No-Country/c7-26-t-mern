@@ -1,19 +1,19 @@
 import React from "react";
-import "./card.css";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
+import "./card.css";
 
 // Image Claimmer
 import profileClaimmer from "../../Assets/img/imgClaimer.jpg";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="claimContainer">
       <div className="claimTopInfo">
         <img className="imgClaimmer" src={profileClaimmer} alt="imgClaimmer" />
         <div className="claimTitleAndSubtitle">
-          <h3 className="claimTitle">Titulo de reclamo</h3>
-          <h5 className="claimSubtitle">Categoria: "Agua e Higiene"</h5>
+          <h3 className="claimTitle">{props.title}</h3>
+          <h5 className="claimSubtitle">{props.subtitle}</h5>
         </div>
         <BsFillShareFill className="shareIcon" />
       </div>
