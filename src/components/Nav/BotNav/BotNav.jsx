@@ -1,51 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 import "./nav.css";
-import { BsGeoAltFill, BsFillHouseFill } from "react-icons/bs";
+import { BsFillHouseFill } from "react-icons/bs";
+import { AiOutlinePlus } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // Icons bottom navbar
-import iconCommunity from "../../../Assets/img/communityInactive.svg";
 import iconClaims from "../../../Assets/img/claimsInactive.svg";
 
 function BotNav() {
-  const [selected, setSelected] = useState(0);
-
-  const menus = [
-    {
-      icon: <BsFillHouseFill size={20} />,
-      name: "Home",
-    },
-    {
-      icon: <BsGeoAltFill size={20} />,
-      name: "Map",
-    },
-    {
-      icon: <img src={iconCommunity} alt="" size={20} />,
-      name: "Community",
-    },
-    {
-      icon: <img src={iconClaims} alt="" size={20} />,
-      name: "Claims",
-    },
-  ];
-
   return (
-    <div className="navigation">
-      <ul>
-        {menus.map((val, index) => {
-          return (
-            <li
-              onClick={() => setSelected(index)}
-              key={index}
-              className={index === selected ? "active" : ""}
-            >
-              <div className="icon">{val.icon}</div>
-              <div className="name">{val.name}</div>
-            </li>
-          );
-        })}
-        <div className="menu-bg" />
-      </ul>
-    </div>
+    <section className="botNav">
+      <nav className="botNavContainer">
+        <NavLink
+          to="/home"
+          style={({ isActive }) => ({
+            color: isActive ? "#ffe9ac" : "#fff",
+            fill: isActive ? "#ffe9ac" : "#fff",
+          })}
+        >
+          <div className="botNavContainerItem">
+            <BsFillHouseFill size={20} alt="" />
+            <p className="botNavContainerItemText">Inicio</p>
+          </div>
+        </NavLink>
+
+        <Link to="/list">
+          <div className="botNavContainerItem botNavContainerItemCenter">
+            <AiOutlinePlus size={20} alt="" />
+          </div>
+        </Link>
+
+        <NavLink
+          to="/profile"
+          style={({ isActive }) => ({
+            color: isActive ? "#ff0" : "#fff",
+            fill: isActive ? "#ff0" : "#fff",
+          })}
+        >
+          <div className="botNavContainerItem">
+            <img
+              className="botNavContainerItemImg"
+              src={iconClaims}
+              alt="Profile"
+            />
+            <p className="botNavContainerItemText">Reclamos</p>
+          </div>
+        </NavLink>
+      </nav>
+    </section>
   );
 }
 export default BotNav;
