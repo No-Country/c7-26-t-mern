@@ -6,7 +6,7 @@ import NotificationSvg from "../../../Assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
-const TopNav = () => {
+const TopNav = (props) => {
   return (
     <nav className="topNav">
       <div className="topNavUser">
@@ -15,7 +15,7 @@ const TopNav = () => {
             <img src={logo} alt="" />
           </picture>
         </Link>
-        <span className="topNavUserText">Hola, Moria!</span>
+        <span className="topNavUserText">{props.text}</span>
         <SearchBarNav />
       </div>
       <ul className="topNavListDesktopContainer">

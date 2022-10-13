@@ -1,9 +1,9 @@
 import React from 'react';
-import './nuevoreclamo.css';
 import { AiOutlineArrowLeft, AiFillFileAdd } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import InputReclamo from '../../Components/InputReclamo/InputReclamo';
 import ubication from '../../Assets/img/mapa.svg';
+import './nuevoreclamo.css';
 import image from '../../Assets/img/imagenes.svg';
 
 export const NuevoReclamo = () => {
@@ -17,6 +17,7 @@ export const NuevoReclamo = () => {
             <h2 className='nuevoReclamoTitle'>Adjuntá detalles de tu problema:</h2>
             <div className='nuevoReclamoInputs'>
             <InputReclamo
+                className='inputBoxInput'
                 type={"text"}
                 label={"Titulo"}
                 value={"titulo"}
@@ -33,7 +34,7 @@ export const NuevoReclamo = () => {
                 </div>
 
                 <div className='ubicacionContainer'>
-                    {/* <img className='iconInput' src={ubication} alt="" /> */}
+                    <img className='iconInput' src={ubication} alt="" />
                 <InputReclamo
                     className='inputUbicacion'
                     type={"text"}

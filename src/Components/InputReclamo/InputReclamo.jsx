@@ -6,7 +6,7 @@ const InputReclamo = (props) => {
   return (
     <div className={`inputBoxReclamo`}>
       <input
-        className="inputBoxInput inputBoxUbicacion"
+        className={props.className}
         type={props.type}
         id={props.type}
         placeholder={props.label}
