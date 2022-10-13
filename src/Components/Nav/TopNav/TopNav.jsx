@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../../Assets/img/reclamiSquareLogo.svg";
 import "./topnav.css";
 import { Link } from "react-router-dom";
+
 import NotificationSvg from "../../../Assets/img/notificacion.svg";
 import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";

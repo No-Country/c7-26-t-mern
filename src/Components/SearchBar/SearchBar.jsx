@@ -18,10 +18,10 @@ function SearchBar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: 250,
-        ml: 2,
-        mt: 2,
-        mb: 4,
+        width: "100%",
+        ml: 0,
+        mt: 0,
+        mb: 0,
       }}
     >
       <IconButton sx={{ p: "10px" }} aria-label="menu">
