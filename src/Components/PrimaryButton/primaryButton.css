@@ -16,3 +16,17 @@
   text-transform: uppercase;
   width: 100%;
 }
+
+.firstButton {
+  padding: 5% 6%;
+  font-size: 3vw;
+  width: 48%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.secondButton {
+  padding: 5% 5%;
+  width: 48%;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

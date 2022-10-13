@@ -7,13 +7,12 @@ import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
 const TopNav = (props) => {
-  console.log(props);
   return (
     <nav className="topNav">
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo image" />
           </picture>
         </Link>
         <span className="topNavUserText">{props.text}</span>
