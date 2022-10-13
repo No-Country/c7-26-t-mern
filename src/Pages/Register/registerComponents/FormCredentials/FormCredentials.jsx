@@ -1,14 +1,8 @@
 import React from "react";
 
-<<<<<<< HEAD
 import InputField from "../../../../Components/InputField/InputField";
 import PrimaryButton from "../../../../Components/PrimaryButton/PrimaryButton";
-
-=======
-import InputField from "../../../../components/InputField/InputField";
-import PrimaryButton from "../../../../components/PrimaryButton/PrimaryButton";
 import axios from "axios";
->>>>>>> frontend
 import "./formCredentials.css";
 
 const FormCredentials = (props) => {
@@ -19,7 +13,7 @@ const FormCredentials = (props) => {
         claimmerName: props.values.name,
         claimmerLastname: props.values.lastName,
         email: "pedro@gmail.com",
-        password: 123456
+        password: props.values.password
       })
 
       props.nextStep();
