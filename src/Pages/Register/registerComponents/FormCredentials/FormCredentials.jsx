@@ -53,7 +53,6 @@ const FormCredentials = (props) => {
         color="#F0F0F0"
         to="/home"
         disabled={buttonHandlerColor ? "false" : ""}
-        onClick={next}
       />
     </React.Fragment>
   );
