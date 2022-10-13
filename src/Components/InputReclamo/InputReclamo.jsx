@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./inputField.css";
+import "./inputreclamo.css";
 
-const InputField = (props) => {
+const InputReclamo = (props) => {
   return (
-    <div className={`inputBox`}>
+    <div className={`inputBoxReclamo`}>
       <input
-        className="inputBoxInput"
+        className="inputBoxInput inputBoxUbicacion"
         type={props.type}
         id={props.type}
         placeholder={props.label}
@@ -20,4 +20,4 @@ const InputField = (props) => {
   );
 };
 
-export default InputField;
+export default InputReclamo;
