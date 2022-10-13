@@ -12,7 +12,7 @@ const TopNav = (props) => {
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo image" />
           </picture>
         </Link>
         <span className="topNavUserText">{props.text}</span>

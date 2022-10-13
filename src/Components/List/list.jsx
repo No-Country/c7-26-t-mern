@@ -1,12 +1,12 @@
 import React from "react";
 import ThemeCard from "../ThemeCard/ThemeCard";
 import { themesData } from "../../datas/themesData";
-import "./list.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import SearchNewClaim from "../SearchNewClaim/SearchNewClaim";
+import "./list.css";
 
-const list = () => {
+const List = () => {
   //Llamar axios data
 
   return (
@@ -18,13 +18,15 @@ const list = () => {
         <span className="appNotificationTextMenu">Nuevo Reclamo</span>
       </div>
       <SearchNewClaim />
-      <div className="themeCardContent">
-        {themesData.map((card, idx) => (
-          <ThemeCard url={card.url} title={card.title} key={idx} />
-        ))}
-      </div>
+      <Link to={"/nuevoreclamo"}>
+        <div className="themeCardContent">
+          {themesData.map((card, idx) => (
+            <ThemeCard url={card.url} title={card.title} key={idx} />
+          ))}
+        </div>
+      </Link>
     </>
   );
 };
 
-export default list;
+export default List;
