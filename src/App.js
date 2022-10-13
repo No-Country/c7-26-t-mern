@@ -4,8 +4,9 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
-import AppNotification from './components/AppNotification/AppNotification';
-import Perfil from "./components/Perfil/Perfil";
+import AppNotification from './Pages/AppNotification/AppNotification';
+import Perfil from "./Pages/Perfil/Perfil";
+import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
+        <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
       </Routes>
     </Router>
   );

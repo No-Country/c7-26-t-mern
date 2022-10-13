@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../../components/Card/Card";
-import TopNav from "../../components/Nav/BotNav/BotNav";
-import BotNav from "../../components/Nav/TopNav/TopNav";
+import Card from "../../Components/Card/Card";
+import TopNav from "../../Components/Nav/BotNav/BotNav";
+import BotNav from "../../Components/Nav/TopNav/TopNav";
 
 const Home = () => {
   return (
