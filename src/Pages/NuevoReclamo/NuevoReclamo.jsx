@@ -11,7 +11,7 @@ export const NuevoReclamo = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('reclamo creado')
-      }
+    }
 
     return (
         <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
@@ -22,47 +22,47 @@ export const NuevoReclamo = () => {
 
             <h2 className='nuevoReclamoTitle'>Adjuntá detalles de tu problema:</h2>
             <div className='nuevoReclamoInputs'>
-            <InputReclamo
-                className='inputBoxInput'
-                type={"text"}
-                label={"Titulo"}
-                value={"titulo"}
-                //   onChange={handleChange}
-                name="titulo"
-                disabled={""}
-            />
+                <InputReclamo
+                    className='inputBoxInput'
+                    type={"text"}
+                    label={"Titulo"}
+                    value={"titulo"}
+                    //   onChange={handleChange}
+                    name="titulo"
+                    disabled={""}
+                />
                 <div className='textAreaContainer'>
                     <div>
-                    <textarea className='textAreaReclamo' placeholder='Descripción del problema...'></textarea>
-                    <label>Descripción del problema...</label>
+                        <textarea className='textAreaReclamo' placeholder='Descripción del problema...'></textarea>
+                        <label>Descripción del problema...</label>
                     </div>
                     <h3 className='textAreaSubtitle'>Hacelo de la forma más detallada posible.</h3>
                 </div>
 
                 <div className='ubicacionContainer'>
                     <img className='iconInput' src={ubication} alt="" />
-                <InputReclamo
-                    className='inputUbicacion'
-                    type={"text"}
-                    label={"Ubicación"}
-                    value={"ubicacion"}
-                    //   onChange={handleChange}
-                    name="ubicacion"
-                    disabled={""}
-                />
+                    <InputReclamo
+                        className='inputUbicacion'
+                        type={"text"}
+                        label={"Ubicación"}
+                        value={"ubicacion"}
+                        //   onChange={handleChange}
+                        name="ubicacion"
+                        disabled={""}
+                    />
                 </div>
                 <div className='fileContainer'>
-                    <img  className='iconInput' src={image} alt="" />
-                <div className='inputFileContainer'>
-                    <input type="file" id='file' accept='image/*' />
-                    <label className='labelFile' htmlFor="file">
-                        Adjuntá fotos/videos &nbsp;
-                        <AiFillFileAdd className='labelIcon' />
-                    </label>
-                    <h3>*Opcional (hasta 4 archivos)</h3>
+                    <img className='iconInput' src={image} alt="" />
+                    <div className='inputFileContainer'>
+                        <input type="file" id='file' accept='image/*' />
+                        <label className='labelFile' htmlFor="file">
+                            Adjuntá fotos/videos &nbsp;
+                            <AiFillFileAdd className='labelIcon' />
+                        </label>
+                        <h3>*Opcional (hasta 4 archivos)</h3>
+                    </div>
                 </div>
-                </div>
-                <input type='submit' value='CREAR RECLAMO' className='nuevoReclamoSubmit'/>
+                <input type='submit' value='CREAR RECLAMO' className='nuevoReclamoSubmit' />
             </div>
         </form>
     )
