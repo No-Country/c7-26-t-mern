@@ -10,7 +10,7 @@ const Home = () => {
       <TopNav></TopNav>
       <BotNav></BotNav>
       <SearchBar placeholder="Busca un reclamo" />
-      <Card></Card>
+      <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
       {/* <ButtonClaim></ButtonClaim> */}
     </React.Fragment>
   );
