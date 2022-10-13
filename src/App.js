@@ -6,6 +6,7 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
+import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
+        <Route path="/claimDetail" element={<ClaimDetail />}></Route>
       </Routes>
     </Router>
   );
