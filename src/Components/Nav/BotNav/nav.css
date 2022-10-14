@@ -10,7 +10,7 @@
 .botNav {
     width: 100%;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: var(--color-secondary);
     display: grid;
@@ -20,11 +20,11 @@
 .botNavContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
     height: 100%;
     align-items: center;
-    gap: 35px;
+    width: 100%;
 }
 
 .botNavContainerItem {
@@ -36,11 +36,9 @@
 }
 
 .botNavContainerItemImg {
-    height: 20px;
+    height: 23px;
 }
 
-
-.botNavContainerItemText {}
 
 .botNavContainerItemCenter {
     color: var(--color-primary);

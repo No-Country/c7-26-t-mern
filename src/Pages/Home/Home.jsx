@@ -1,16 +1,29 @@
 import React from "react";
 import Card from "../../Components/Card/Card";
-import TopNav from "../../Components/Nav/BotNav/BotNav";
-import BotNav from "../../Components/Nav/TopNav/TopNav";
+import TopNav from "../../Components/Nav/TopNav/TopNav";
+import BotNav from "../../Components/Nav/BotNav/BotNav";
 import SearchBar from "../../Components/SearchBar/SearchBar";
+import "./home.css";
+
 
 const Home = () => {
   return (
     <React.Fragment>
-      <TopNav></TopNav>
+      <TopNav text={"Hola Moria!"}></TopNav>
       <BotNav></BotNav>
-      <SearchBar placeholder="Busca un reclamo" />
-      <Card></Card>
+      <section className="sectionHome">
+        <SearchBar placeholder="Busca un reclamo" />
+
+        <div className="sectionHomeContainerCards">
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+        </div>
+      </section>
+
       {/* <ButtonClaim></ButtonClaim> */}
     </React.Fragment>
   );

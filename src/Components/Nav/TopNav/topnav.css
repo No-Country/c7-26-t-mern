@@ -15,7 +15,7 @@
     color: #fff;
     /* padding: 0.2rem 1.5rem 0.2rem 0; */
     font-family: var(--font-secundary);
-    padding: 1.2rem;
+    padding: 16px;
 }
 
 .topNavLogo {
@@ -76,9 +76,7 @@
         margin-right: 2rem;
     }
 
-    .topNav {
-        padding: 1.2rem;
-    }
+
 }
 
 @media (min-width:768px) {

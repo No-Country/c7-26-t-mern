@@ -1,0 +1,131 @@
+.claimPrimaryInfo {
+  width: 100%;
+  position: relative;
+}
+
+.claimCategoryImage {
+  width: 100%;
+  height: 55vw;
+  border-radius: 0 0 1.5vw 1.5vw;
+  background: linear-gradient(180deg, rgba(38, 39, 36, 0) 37.5%, #262724 100%);
+}
+
+.titlesAndProfileImg {
+  position: absolute;
+  width: 97%;
+  top: 62%;
+  display: flex;
+  margin-left: 2%;
+  justify-content: space-around;
+}
+
+.titles {
+  width: 77%;
+  font-size: 5.5vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secudnaryTitle {
+  font-weight: 500;
+}
+
+.principalTitle {
+  font-weight: 600;
+}
+
+.imgClaimmerDetail {
+  border: 2px solid white;
+}
+
+.progressBar {
+  margin-top: 5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 92%;
+  height: 10px;
+  background-color: rgb(184, 184, 184);
+  border-radius: 5vw;
+  margin-left: 4%;
+}
+
+.barPainted {
+  width: 15%;
+  height: 10px;
+  background-color: var(--color-bg-primary);
+  border-radius: 5vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.point {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-bg-secondary);
+  margin-top: 2px;
+  margin-right: 2px;
+  border-radius: 5vw;
+}
+
+.progressTitlesDiv {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2%;
+}
+
+.progressTitle {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+.institutionAndButtons {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+  margin-top: 5%;
+}
+
+.institutionInfo {
+  border: 1px solid rgb(184, 184, 184);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1.3vw;
+}
+
+.institutionInfoTitles {
+  width: 62%;
+}
+
+.imgTakeDecisionsDetail {
+  border: 2px solid #1877f2;
+}
+
+.institutionName {
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.institutionAddress {
+  font-weight: 500;
+}
+
+.verifyIcon {
+  color: #1877f2;
+  height: 6vw;
+  width: 6vw;
+}
+
+.buttonsInstitutions {
+  display: flex;
+  margin-top: 3%;
+  justify-content: space-between;
+}
