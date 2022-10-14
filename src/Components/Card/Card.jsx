@@ -30,7 +30,7 @@ const Card = (props) => {
             porro.
           </p>
           <div className="claimButtons">
-            <Link className="seeProgressLink" to={"/claimDetail"}>
+            <Link className="seeProgressLink" to={"/claimdetail"}>
               <button className="seeProgressButton">VER PROGRESO</button>
             </Link>
             <div className="claimIconsBottom">

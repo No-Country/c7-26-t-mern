@@ -13,7 +13,7 @@ const ClaimDetail = () => {
       <div className="claimPrimaryInfo">
         <img
           src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/01/mantener-verde-el-pasto-hans.jpg"
-          alt="claim category image"
+          alt=""
           className="claimCategoryImage"
         />
         <div className="titlesAndProfileImg">

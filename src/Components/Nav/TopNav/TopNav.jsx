@@ -30,7 +30,7 @@ const TopNav = (props) => {
         <Link to={"/notifications"} className="notificationIcon">
           <img src={NotificationSvg} alt="" />
         </Link>
-        <Link to={"/perfil"}>
+        <Link to={"/profile"}>
           <AvatarIcon />
         </Link>
       </ul>

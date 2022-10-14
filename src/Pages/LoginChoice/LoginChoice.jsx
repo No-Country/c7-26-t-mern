@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../Components/Logo/Logo";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
-import "./loginChoice.css";
+import "./LoginChoice.css";
 
 const LoginChoice = (props) => {
   const [loading, setLoading] = useState(false);
@@ -42,7 +42,7 @@ const LoginChoice = (props) => {
 
     setTimeout(() => {
       setLoading(true);
-      setIntroRun()
+      setIntroRun();
     }, 2500);
   }, []);
 
