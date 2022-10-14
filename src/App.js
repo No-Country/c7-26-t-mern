@@ -25,11 +25,11 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/List" element={<List/>}></Route>
+        <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
         <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
-        <Route path="/claims" element={<ClaimDetail />}></Route>
+        <Route path="/claimDetail" element={<ClaimDetail />}></Route>
       </Routes>
     </Router>
   );

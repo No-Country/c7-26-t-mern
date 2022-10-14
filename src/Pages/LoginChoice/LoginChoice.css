@@ -78,8 +78,6 @@
   display: none;
 }
 
-
-
 .logo-header {
   position: absolute;
   top: 50%;
@@ -87,13 +85,11 @@
   transform: translate(-50%, -50%);
   color: #ffffff;
   width: auto;
-
 }
 
 .logoContainer {
   display: flex;
   flex-direction: row;
-
 }
 
 .logoR {
@@ -118,7 +114,7 @@
   opacity: 0;
   scale: 0;
   transform-origin: 0% 50%;
-  transition: all .4s;
+  transition: all 0.4s;
   width: 168px;
 }
 
