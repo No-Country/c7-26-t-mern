@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-
-/* import BotNav from "./components/Nav/BotNav/BotNav";
-import TopNav from "./components/Nav/TopNav/TopNav"; */
-import Login from "./Pages/Login/Login.jsx";
-
+import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register.jsx";
-import LoginChoice from "./Pages/LoginChoice/LoginChoice.jsx";
+import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
-import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
-import List from './Components/List/List';
+import List from "./Components/List/List.jsx";
 import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
+import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims'
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -25,11 +20,11 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/List" element={<List/>}></Route>
+        <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/perfil" element={<Perfil />}></Route>
         <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
-        <Route path="/claims" element={<ClaimDetail />}></Route>
+        <Route path="/cnstitutionclaims" element={<InstitutionClaims />}></Route>
       </Routes>
     </Router>
   );
