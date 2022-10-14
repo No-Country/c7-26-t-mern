@@ -1,111 +1,118 @@
 .claimContainer {
-    width: 100%;
-    border: none;
-    margin: 16px 0;
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 5%;
+  width: 89.5%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .claimTopInfo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2%;
-    gap: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .shareIcon {
-    height: 1.3em;
-    width: 1.3em;
+  height: 1.3em;
+  width: 1.3em;
+  margin-bottom: 2%;
+  margin-left: 2.5%;
 }
 
 .imgClaimmer {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--color-bg-primary);
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-primary);
+  margin: 3% 0% 3% 3%;
 }
 
 .claimTitleAndSubtitle {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: 2% 0 0 3%;
+  padding-top: 1%;
+  margin-bottom: 2%;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .claimTitle {
-    font-size: var(--text-subtitle-primary);
-    font-weight: 500;
-    font-family: var(--font-secundary);
-    margin-bottom: 1%;
-    font-size: 1.4rem;
+  font-size: var(--text-subtitle-primary);
+  font-weight: 500;
+  font-family: var(--font-secundary);
+  margin-bottom: 1%;
 }
 
 .claimSubtitle {
-    font-size: var(--text-caption);
-    font-weight: 500;
-    font-family: var(--font-primary);
-    font-size: 1.2rem;
+  font-size: var(--text-caption);
+  font-weight: 500;
+  font-family: var(--font-primary);
 }
 
 .claimArrowUp {
-    font-size: 4vw;
-    margin-left: 5%;
+  font-size: 4vw;
+  margin-left: 5%;
 }
 
 .claimPrincipalImg {
-    width: 100%;
-    aspect-ratio: 1/1;
+  height: 50vw;
 }
 
 .claimBottomInfo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .claimDescription {
-    margin-top: 5%;
-    margin-left: 5%;
-    font-weight: 400;
-    font-size: 1.2em;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
 .claimButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 3.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3.5%;
+}
+
+.seeProgressLink {
+  width: 42%;
+  margin-left: 3%;
+  margin-bottom: 2%;
+  font-size: 3vw;
 }
 
 .seeProgressButton {
-    border: none;
-    width: 42%;
-    border-radius: 15%;
-    font-weight: 500;
-    color: var(--color-secondary);
-    background-color: var(--color-bg-secondary);
-    margin-left: 3%;
-    margin-bottom: 2%;
-    font-family: var(--font-secundary);
-    font-size: var(--text-caption);
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 3vw;
+  color: var(--color-secondary);
+  background-color: var(--color-bg-secondary);
+  font-family: var(--font-secundary);
+  font-size: var(--text-caption);
 }
 
 .claimIconsBottom {
-    display: flex;
-    align-items: center;
-    width: 30%;
-    justify-content: space-around;
-    margin: 5% 5% 5% 0;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-around;
+  margin: 5% 5% 5% 0;
 }
 
 .vote {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .heartIcon {
-    height: 1.4em;
-    width: 1.4em;
-    margin-left: 2.5%;
+  height: 1.4em;
+  width: 1.4em;
+  margin-left: 2.5%;
 }

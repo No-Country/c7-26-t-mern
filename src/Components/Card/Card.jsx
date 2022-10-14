@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
 import "./card.css";
@@ -29,7 +30,9 @@ const Card = (props) => {
             porro.
           </p>
           <div className="claimButtons">
-            <button className="seeProgressButton">VER PROGRESO</button>
+            <Link className="seeProgressLink" to={"/claimDetail"}>
+              <button className="seeProgressButton">VER PROGRESO</button>
+            </Link>
             <div className="claimIconsBottom">
               <p className="vote">
                 <span>150</span> VOTOS

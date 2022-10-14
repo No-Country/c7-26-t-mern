@@ -5,7 +5,6 @@ import BotNav from "../../Components/Nav/BotNav/BotNav";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import "./home.css";
 
-
 const Home = () => {
   return (
     <React.Fragment>
