@@ -2,15 +2,25 @@ import React from "react";
 
 import InputField from "../../../../Components/InputField/InputField";
 import PrimaryButton from "../../../../Components/PrimaryButton/PrimaryButton";
-
+import axios from "axios";
 import "./formCredentials.css";
 
 const FormCredentials = (props) => {
   const next = (e) => {
     e.preventDefault();
-    // BACKEND
-    props.nextStep();
+      axios.post('http://localhost:8000/signup', {
+        DNI: props.values.dni,
+        claimmerName: props.values.name,
+        claimmerLastname: props.values.lastName,
+        email: "pedro@gmail.com",
+        password: props.values.password
+      })
+
+      props.nextStep();
+    
   };
+
+  console.log(props.values)
 
   let buttonHandlerColor =
     props.values["email"] === "" ||

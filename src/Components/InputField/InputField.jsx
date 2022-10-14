@@ -9,7 +9,7 @@ const InputField = (props) => {
         type={props.type}
         placeholder={props.label}
         onChange={props.onChange}
-        defaultValue={props.value}
+        defaultValue={props.defaultValue}
       />
       <label>{props.label}</label>
     </div>
