@@ -3,13 +3,13 @@ import "./inputField.css";
 
 const InputField = (props) => {
   return (
-    <div className={`inputBox ${props.class}`}>
+    <div className={`inputBox`}>
       <input
         className="inputBoxInput"
         type={props.type}
         placeholder={props.label}
         onChange={props.onChange}
-        defaultValue={props.value}
+        defaultValue={props.defaultValue}
       />
       <label>{props.label}</label>
     </div>

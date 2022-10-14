@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../Components/Logo/Logo";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
-import "./LoginChoice.css";
+import "./loginChoice.css";
 
 const LoginChoice = (props) => {
   const [loading, setLoading] = useState(false);
@@ -42,7 +42,7 @@ const LoginChoice = (props) => {
 
     setTimeout(() => {
       setLoading(true);
-      setIntroRun();
+      setIntroRun()
     }, 2500);
   }, []);
 
@@ -93,14 +93,12 @@ const LoginChoice = (props) => {
             bg="#8F0000"
             color="#F0F0F0"
             to="/register"
-            /* onClick={goToSelectedOption} */
           />
           <PrimaryButton
             text="INICIA SESION"
             bg="#FFE9AC"
             color="#8F0000"
             to="/login"
-            /* onClick={goToSelectedOption} */
           />
         </div>
 

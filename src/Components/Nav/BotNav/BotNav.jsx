@@ -1,0 +1,56 @@
+import React from "react";
+import "./nav.css";
+import { BsFillHouseFill } from "react-icons/bs";
+import { AiOutlinePlus } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+// Icons bottom navbar
+import iconClaims from "../../../Assets/img/claimsInactive.svg";
+
+function BotNav() {
+  return (
+    <section className="botNav">
+      <nav className="botNavContainer">
+        <NavLink
+          to="/home"
+          style={({ isActive }) => ({
+            color: isActive ? "#ffe9ac" : "#fff",
+            fill: isActive ? "#ffe9ac" : "#fff",
+            width: "10%",
+          })}
+        >
+          <div className="botNavContainerItem">
+            <BsFillHouseFill size={20} alt="" />
+            <p className="botNavContainerItemText">Inicio</p>
+          </div>
+        </NavLink>
+
+        <Link to="/List">
+          <div className="botNavContainerItem botNavContainerItemCenter">
+            <AiOutlinePlus size={20} alt="" />
+          </div>
+        </Link>
+
+        <NavLink
+          to="/claims"
+          style={({ isActive }) => ({
+            color: isActive ? "#ffe9ac" : "#fff",
+            fill: isActive ? "#ffe9ac" : "#fff",
+            width: "10%",
+          })}
+        >
+          <div className="botNavContainerItem">
+            <img
+              className="botNavContainerItemImg"
+              src={iconClaims}
+              alt="Profile"
+            />
+            <p className="botNavContainerItemText">Reclamos</p>
+          </div>
+        </NavLink>
+      </nav>
+    </section>
+  );
+}
+export default BotNav;
