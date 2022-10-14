@@ -8,7 +8,7 @@ import "./home.css";
 const Home = () => {
   return (
     <React.Fragment>
-      <TopNav text={"Hola Moria!"}></TopNav>
+      <TopNav text={"Hello Bitchies!!"}></TopNav>
       <BotNav></BotNav>
       <section className="sectionHome">
         <SearchBar placeholder="Busca un reclamo" />

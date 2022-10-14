@@ -1,7 +1,7 @@
 .claimContainer {
-  margin: 5%;
-  width: 89.5%;
+  width: 100%;
   border: none;
+  margin: 16px 0;
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -11,30 +11,26 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 2%;
+  gap: 2%;
 }
 
 .shareIcon {
   height: 1.3em;
   width: 1.3em;
-  margin-bottom: 2%;
-  margin-left: 2.5%;
 }
 
 .imgClaimmer {
-  width: 14vw;
-  height: 14vw;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid var(--color-bg-primary);
-  margin: 3% 0% 3% 3%;
 }
 
 .claimTitleAndSubtitle {
   display: flex;
   flex-direction: column;
   width: 65%;
-  margin: 2% 0 0 3%;
-  padding-top: 1%;
-  margin-bottom: 2%;
   justify-content: center;
   align-items: flex-start;
 }
@@ -44,12 +40,14 @@
   font-weight: 500;
   font-family: var(--font-secundary);
   margin-bottom: 1%;
+  font-size: 1.4rem;
 }
 
 .claimSubtitle {
   font-size: var(--text-caption);
   font-weight: 500;
   font-family: var(--font-primary);
+  font-size: 1.2rem;
 }
 
 .claimArrowUp {
@@ -58,7 +56,8 @@
 }
 
 .claimPrincipalImg {
-  height: 50vw;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .claimBottomInfo {
@@ -84,19 +83,19 @@
   width: 42%;
   margin-left: 3%;
   margin-bottom: 2%;
-  font-size: 3vw;
 }
 
 .seeProgressButton {
   border: none;
-  height: 100%;
   width: 100%;
-  font-weight: 500;
+  height: 100%;
   border-radius: 3vw;
+  font-weight: 500;
   color: var(--color-secondary);
   background-color: var(--color-bg-secondary);
   font-family: var(--font-secundary);
   font-size: var(--text-caption);
+  word-break: none;
 }
 
 .claimIconsBottom {

@@ -13,7 +13,7 @@ const TopNav = (props) => {
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
-            <img src={logo} alt="logo image" />
+            <img src={logo} alt="logo" />
           </picture>
         </Link>
         <span className="topNavUserText">{props.text}</span>
@@ -30,7 +30,7 @@ const TopNav = (props) => {
         <Link to={"/notifications"} className="notificationIcon">
           <img src={NotificationSvg} alt="" />
         </Link>
-        <Link to={"/perfil"}>
+        <Link to={"/profile"}>
           <AvatarIcon />
         </Link>
       </ul>

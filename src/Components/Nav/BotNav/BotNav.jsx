@@ -17,7 +17,6 @@ function BotNav() {
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
-            width: "10%",
           })}
         >
           <div className="botNavContainerItem">
@@ -37,16 +36,15 @@ function BotNav() {
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
-            width: "10%",
           })}
         >
           <div className="botNavContainerItem">
             <img
               className="botNavContainerItemImg"
               src={iconClaims}
-              alt="Profile"
+              alt="Reclamos"
             />
-            <p className="botNavContainerItemText">Reclamos</p>
+            <p className="botNavContainerItemText"> Mis Reclamos</p>
           </div>
         </NavLink>
       </nav>
