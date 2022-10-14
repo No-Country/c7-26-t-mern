@@ -22,8 +22,8 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
-        <Route path="/perfil" element={<Perfil />}></Route>
-        <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
+        <Route path="/profile" element={<Perfil />}></Route>
+        <Route path="/newclaim" element={<NuevoReclamo />}></Route>
         <Route path="/cnstitutionclaims" element={<InstitutionClaims />}></Route>
       </Routes>
     </Router>

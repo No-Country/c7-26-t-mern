@@ -42,7 +42,7 @@ function BotNav() {
             <img
               className="botNavContainerItemImg"
               src={iconClaims}
-              alt="Profile"
+              alt="Reclamos"
             />
             <p className="botNavContainerItemText">Reclamos</p>
           </div>
