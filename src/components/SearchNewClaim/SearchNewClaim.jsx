@@ -1,12 +1,18 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import MicIcon from "@mui/icons-material/Mic";
 import axios from "axios";
 
 function SearchNewClaim() {
+  const [handleOnInput, setHandleOnInput] = useState("");
+
+  const handleOnSearch = (e) => {
+    setHandleOnInput(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <Paper
       component="form"
@@ -28,6 +34,7 @@ function SearchNewClaim() {
         sx={{ ml: 1, flex: 1, fontSize: 13 }}
         placeholder="Busca una categoria"
         inputProps={{ "aria-label": "Busca una categoria" }}
+        onChange={handleOnSearch}
       />
     </Paper>
   );
