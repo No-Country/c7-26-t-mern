@@ -44,7 +44,7 @@ function BotNav() {
               src={iconClaims}
               alt="Reclamos"
             />
-            <p className="botNavContainerItemText">Reclamos</p>
+            <p className="botNavContainerItemText"> Mis Reclamos</p>
           </div>
         </NavLink>
       </nav>

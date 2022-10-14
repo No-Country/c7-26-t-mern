@@ -11,11 +11,14 @@ const ClaimDetail = () => {
     <div>
       <TopNav text={"Proceso del reclamo"} />
       <div className="claimPrimaryInfo">
-        <img
-          src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/01/mantener-verde-el-pasto-hans.jpg"
-          alt=""
-          className="claimCategoryImage"
-        />
+        <div className="claimCategoryImageContainer">
+          <img
+            src="https://i.ibb.co/yVyNQ7w/postAgua.jpg"
+            alt="claimCategoryImage"
+            className="claimCategoryImage"
+          />
+        </div>
+
         <div className="titlesAndProfileImg">
           <div className="titles">
             <h5 className="secudnaryTitle">Categoria: Ague e Higiene</h5>

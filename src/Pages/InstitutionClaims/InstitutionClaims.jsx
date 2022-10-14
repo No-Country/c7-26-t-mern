@@ -8,10 +8,11 @@ const InstitutionClaims = () => {
   return (
     <>
       <div className="institutionClaimsContainer">
-        <div className="institutionClaims">
+        <div className="appNotificationMenu">
           <Link to={"/list"} className="appNotificationIcon">
             <AiOutlineArrowLeft />
           </Link>
+          <span className="appNotificationTextMenu">Reclamos</span>
         </div>
       </div>
       <Card />

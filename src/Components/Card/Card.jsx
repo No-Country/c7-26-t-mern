@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { BsFillShareFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import "./card.css";
 
 // Image Claimmer
@@ -30,7 +30,7 @@ const Card = (props) => {
             porro.
           </p>
           <div className="claimButtons">
-            <Link className="seeProgressLink" to={"/claimdetail"}>
+            <Link className="seeProgressLink" to="/claimdetail">
               <button className="seeProgressButton">VER PROGRESO</button>
             </Link>
             <div className="claimIconsBottom">

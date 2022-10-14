@@ -1,3 +1,9 @@
 .homeSearch {
     width: 100%;
 }
+
+@media (min-width:768px) {
+    .homeSearch {
+        display: none !important;
+    }
+}

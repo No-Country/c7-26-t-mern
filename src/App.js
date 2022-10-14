@@ -7,7 +7,7 @@ import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
 import List from "./Components/List/List.jsx";
-import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
+import { NewClaim } from "./Pages/NewClaim/NewClaim";
 import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
 import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail"
 
@@ -24,7 +24,7 @@ function App() {
         <Route path="/list" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/profile" element={<Perfil />}></Route>
-        <Route path="/newclaim" element={<NuevoReclamo />}></Route>
+        <Route path="/newclaim" element={<NewClaim />}></Route>
         <Route path="/institutionclaims" element={<InstitutionClaims />}></Route>
         <Route path="/claimdetail" element={<ClaimDetail />}></Route>
 

@@ -24,7 +24,13 @@
     margin: 0 auto;
     height: 100%;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 40px);
+}
+
+.botNavContainer a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .botNavContainerItem {
@@ -33,7 +39,8 @@
     align-items: center;
     justify-content: center;
     height: 30px;
-    width: 50px;
+    width: auto;
+
 }
 
 .botNavContainerItemImg {
@@ -55,4 +62,12 @@
 
 .navlinkActive {
     color: yellow;
+}
+
+
+
+@media (min-width:768px) {
+    .botNav {
+        display: none;
+    }
 }
