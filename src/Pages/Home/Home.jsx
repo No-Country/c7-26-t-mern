@@ -14,7 +14,13 @@ const Home = () => {
         <SearchBar placeholder="Busca un reclamo" />
 
         <div className="sectionHomeContainerCards">
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card
+            title={"No hay agua en el barrio"}
+            subtitle={"AGUA"}
+            description={
+              "La ciudad está sin agua, vecinos apoyemos esta moción para que el intendente haga algo."
+            }
+          ></Card>
           <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
           <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
           <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
