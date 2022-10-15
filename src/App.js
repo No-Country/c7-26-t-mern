@@ -7,9 +7,10 @@ import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Perfil from "./Pages/Perfil/Perfil";
 import List from "./Components/List/List.jsx";
-import { NewClaim } from "./Pages/NewClaim/NewClaim";
+import NewClaim from "./Pages/NewClaim/NewClaim";
 import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
-import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail"
+import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -23,11 +24,12 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
-        <Route path="/perfil" element={<Perfil />}></Route>
-        <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
+        <Route path="/profile" element={<Perfil />}></Route>
+        <Route path="/institutionClaims" element={<InstitutionClaims />}></Route>
+        <Route path="/newclaim" element={<NewClaim />}></Route>
         <Route path="/claimDetail" element={<ClaimDetail />}></Route>
       </Routes>
-    </Router>
+    </Router >
   );
 }
 

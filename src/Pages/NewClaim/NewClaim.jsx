@@ -6,7 +6,7 @@ import ubication from "../../Assets/img/mapa.svg";
 import "./newclaim.css";
 import image from "../../Assets/img/imagenes.svg";
 
-export const NewClaim = () => {
+const NewClaim = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("reclamo creado");
@@ -77,3 +77,4 @@ export const NewClaim = () => {
     </form>
   );
 };
+export default NewClaim;
