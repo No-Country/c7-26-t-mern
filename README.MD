@@ -5,7 +5,7 @@
 - Stiven Morales Meza
 
 ### Integrantes
-
+- Alex Terrones (Full Stack | System Engineer)
 - Andrea Abdala (UX/UI)
 - André Umbert (Full Stack)
 - Bautista Sierra Lacosta (UX/UI)
