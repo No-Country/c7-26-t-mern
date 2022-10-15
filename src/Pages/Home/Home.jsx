@@ -21,11 +21,31 @@ const Home = () => {
               "La ciudad está sin agua, vecinos apoyemos esta moción para que el intendente haga algo."
             }
           ></Card>
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
-          <Card title={"Titulo del reclamo"} subtitle={"subtitulo"}></Card>
+          <Card
+            title={"Titulo del reclamo"}
+            subtitle={"subtitulo"}
+            description={"Lorem ipsum dolor sit amet."}
+          ></Card>
+          <Card
+            title={"Titulo del reclamo"}
+            subtitle={"subtitulo"}
+            description={"Lorem ipsum dolor sit amet."}
+          ></Card>
+          <Card
+            title={"Titulo del reclamo"}
+            subtitle={"subtitulo"}
+            description={"Lorem ipsum dolor sit amet."}
+          ></Card>
+          <Card
+            title={"Titulo del reclamo"}
+            subtitle={"subtitulo"}
+            description={"Lorem ipsum dolor sit amet."}
+          ></Card>
+          <Card
+            title={"Titulo del reclamo"}
+            subtitle={"subtitulo"}
+            description={"Lorem ipsum dolor sit amet."}
+          ></Card>
         </div>
       </section>
 
