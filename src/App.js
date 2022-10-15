@@ -5,7 +5,7 @@ import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
-import Perfil from "./Pages/Perfil/Perfil";
+import Profile from "./Pages/Profile/Profile";
 import List from "./Components/List/List.jsx";
 import { NewClaim } from "./Pages/NewClaim/NewClaim";
 import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
@@ -23,7 +23,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/list" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
-        <Route path="/profile" element={<Perfil />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/newclaim" element={<NewClaim />}></Route>
         <Route path="/institutionclaims" element={<InstitutionClaims />}></Route>
         <Route path="/claimdetail" element={<ClaimDetail />}></Route>
