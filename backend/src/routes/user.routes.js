@@ -7,6 +7,7 @@ const {
 	updateUser,
 	deleteUser,
 	login,
+	loaderBD
 } = require('../controllers/user.controller');
 
 // Middlewares
@@ -25,6 +26,7 @@ const userRouter = express.Router();
 userRouter.post('/', createUserValidators, createUser);
 
 userRouter.post('/login', login);
+userRouter.post('/loaderBD', loaderBD);
 
 // Protecting below endpoints
 userRouter.use(protectSession);

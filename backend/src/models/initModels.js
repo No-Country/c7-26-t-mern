@@ -22,30 +22,34 @@ const initModels = () => {
    Institution.belongsTo(City)
 
    //4.- Institution N <=> M Category
-   Institution.belongsToMany(Category, { through: "institution_categories" }, { as: "Categories" })
-   Category.belongsToMany(Institution, { through: "institution_categories" }, { as: "Institutions" })
+   Institution.belongsToMany(Category, { through: "institution_categories" })
+   Category.belongsToMany(Institution, { through: "institution_categories" })
 
-   //5.- Claimmer N <=> M Category
-   Claimmer.belongsToMany(Category, { through: Claim })
-   Category.belongsToMany(Claimmer, { through: Claim })
+   //5.- Claimmer 1 <=> N Claim
+   Claimmer.hasMany(Claim)
+   Claim.belongsTo(Claimmer)
 
-   //6.- Claimmer N <=> M Claim
-   Claimmer.belongsToMany(Claim, { through: "favours" })
-   Claim.belongsToMany(Claimmer, { through: "favours" })
+   //6.- Category 1 <=> M Claim
+   Category.hasMany(Claim)
+   Claim.belongsTo(Category)
 
-   //7.- Claim 1 <=> N Picture
+   //7.- Claimmer N <=> M Claim
+   Claimmer.belongsToMany(Claim, { through: "favours", as: "Favorite" })
+   Claim.belongsToMany(Claimmer, { through: "favours", as: "Favorite" })
+
+   //8.- Claim 1 <=> N Picture
    Claim.hasMany(Picture)
    Picture.belongsTo(Claim)
 
-   //8.- Claimmer 1 <=> 1 Picture
+   //9.- Claimmer 1 <=> 1 Picture
    Claimmer.hasOne(Picture)
    Picture.belongsTo(Claimmer)
 
-   //9.- Institution 1 <=> 1 Picture
+   //10.- Institution 1 <=> 1 Picture
    Institution.hasOne(Picture)
    Picture.belongsTo(Institution)
 
-   //10.- Category 1 <=> 1 Picture
+   //11.- Category 1 <=> 1 Picture
    Category.hasOne(Picture)
    Picture.belongsTo(Category)
 };

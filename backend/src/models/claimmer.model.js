@@ -22,8 +22,7 @@ const Claimmer = db.define("claimmer", {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
-   },
-   avatar: DataTypes.STRING
+   }
 })
 
 module.exports = { Claimmer }
