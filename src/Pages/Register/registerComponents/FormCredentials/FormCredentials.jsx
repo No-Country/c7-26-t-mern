@@ -52,7 +52,19 @@ const FormCredentials = (props) => {
     return false
   }
 
-  console.log(samePassword())
+  const buttonDisable = () => {
+    let email = emailValidation()
+    let password = passwordValidation()
+    let repeatPassword = samePassword()
+
+    if (email && password && repeatPassword && !buttonHandlerColor){
+      return true
+    }
+    return false
+  }
+
+  console.log(buttonDisable())
+  console.log(buttonHandlerColor)
 
 
   return (
@@ -87,10 +99,10 @@ const FormCredentials = (props) => {
 
       <PrimaryButton
         text="Siguiente"
-        bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
+        bg={!buttonDisable() ? "#8E938D" : "#8f0000"}
         color="#F0F0F0"
         to="/home"
-        disabled={buttonHandlerColor ? "false" : ""}
+        disabled={!buttonDisable() ? "false" : ""}
       />
     </React.Fragment>
   );
