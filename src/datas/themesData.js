@@ -50,3 +50,44 @@ export const themesData = [
         category: "corrupcion"
     }
 ]
+
+export const institutionData = [
+    {
+        title: 'Secretaria del agua',
+        category:'asd'
+    },
+    {
+        title: 'Secretaria de luz ',
+        category:'asdsad'
+        
+    },
+    
+    {
+        title: 'Secretaria de salud',
+        category:'asdasd'
+    },
+    
+    {
+        title: 'Secretaria cloacal ',
+        category:'asdsadaa'
+    },
+    
+    {
+        title: 'Secretaria de reciclado',
+        category:'aaaaaa'
+    },
+    {
+        title: 'Secretaria de pavimentado',
+        category:'sssssssss'
+    },
+    
+    {
+        title: 'Secretaria policial',
+        category:'eeeeeeeeee'
+    },
+    
+    {
+        title: 'Secretaria de servicios',
+        category:'eeeeeeeeeasd'
+    }
+]

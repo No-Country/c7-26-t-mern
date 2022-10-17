@@ -2,7 +2,7 @@ import Filter from "./Filter";
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 // import asd from '../../Assets/img/verified.svg'
-import { themesData } from "../../datas/themesData";
+import { institutionData } from "../../datas/themesData";
 
 
 const FilterClaim = () => {
@@ -14,7 +14,7 @@ const FilterClaim = () => {
             </div>
 
             <div className="themesDataContainer">
-                {themesData.map((item, index) => {
+                {institutionData.map((item, index) => {
                     return (
                         <Filter
                             category={item.category}

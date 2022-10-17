@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Filter from "./Filter";
 import { useParams } from 'react-router-dom';
-import { themesData } from '../../datas/themesData';
+import { themesData, institutionData } from '../../datas/themesData';
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Category from "./Category/Category";
@@ -15,7 +15,7 @@ const FilterSingleCategory = () => {
 
 
     useEffect(() => {
-        setItems(themesData.filter((item) => {
+        setItems(institutionData.filter((item) => {
             return item.category === idInstitucion
         }))
     }, [idInstitucion])
