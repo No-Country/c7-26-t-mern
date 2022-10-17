@@ -6,6 +6,7 @@ const InputField = (props) => {
     <div className={`inputBox`}>
       <input
         className="inputBoxInput"
+        onBlur={() => props.eventBlur}
         type={props.type}
         placeholder={props.label}
         onChange={props.onChange}

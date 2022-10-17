@@ -1,31 +1,31 @@
 import React, { useState, createContext } from "react";
 
 //1- Importamos y inicializamos nuestro CreateContext
-const claimmerContext = createContext();
+export const Context = createContext();
 
 // 2. Definimos nuestro Provider
-export const ClaimmerProvider = ({ children }) => {
-    const [name, setName] = useState("");
-    const [password, setPassword] = useState("");
+export const ContextProvider = ({ children }) => {
+    const [email, setEmail] = useState("");
+    //const [password, setPassword] = useState("");
 
-    function authUser(name, password) {
-        setName(name)
-        setPassword(password)
-    }
+    const emailValidation = (value) => {
+        let emailValue = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)
+        if(emailValue){
+          setEmail(true)
+        }
+        setEmail(false)
+      }
 
-    console.log("Tenemos context provider!")
-    console.log(name);
-    console.log(password);
 
     return (
         //3. pasamos al Provider el "value" para los componentes que consuman el context
-        <claimmerContext.Provider value={{
-            password,
-            name,
-            authUser
+        <Context.Provider value={{
+            emailValidation,
+            email,
+            
         }
         }>
             {children}
-        </claimmerContext.Provider>
+        </Context.Provider>
     )
 }
