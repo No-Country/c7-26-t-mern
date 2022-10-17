@@ -18,9 +18,8 @@
     padding: 1.2rem;
 }
 
-.topNavLogo {
-    width: 30px;
-    display: none;
+.topNavLogo img {
+    width: 100px;
 }
 
 .topNavUser {
@@ -77,7 +76,7 @@
     }
 
     .topNav {
-        padding: 1.2rem;
+        padding-left: 3.3rem;
     }
 }
 
@@ -108,14 +107,18 @@
         line-height: 30px;
     }
 
-    .notificationIcon {
-        display: none;
+    .topNav {
+        padding-left: 3.3rem;
     }
 }
 
 @media (min-width:1024px) {
     .notificationIcon {
-        display: none;
+        display: block;
+    }
+
+    .topNav {
+        padding: 1.2rem 1rem 1.2rem 3.4rem;
     }
 
     .topNavListDesktop {

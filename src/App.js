@@ -5,10 +5,12 @@ import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
-import Perfil from "./Pages/Perfil/Perfil";
-import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import Profile from "./Pages/Profile/Profile";
+// import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
 import List from './Components/List/List';
-import { NuevoReclamo } from "./Pages/NuevoReclamo/NuevoReclamo";
+import { NewClaim } from "./Pages/NewClaim/NewClaim";
+import FilterClaim from "./Pages/NewClaim/FilterClaim";
+import FilterSingleCategory from "./Pages/NewClaim/FilterSingleCategory";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -20,11 +22,16 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/List" element={<List/>}></Route>
+        <Route path="/list" element={<List/>}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
-        <Route path="/perfil" element={<Perfil />}></Route>
-        <Route path="/nuevoreclamo" element={<NuevoReclamo />}></Route>
-        <Route path="/claims" element={<ClaimDetail />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/newclaim" element={<NewClaim />}></Route>
+        <Route path="filterclaim" element={<FilterClaim />}></Route>
+        <Route path="institution/:idInstitucion" element={<FilterSingleCategory/>}>
+          {/* <Route path="categoria/:idCategoria" element={<Categorias />}></Route>
+          Crear componente categorias */}
+        </Route>
+
       </Routes>
     </Router>
   );

@@ -18,7 +18,7 @@ const List = () => {
         <span className="appNotificationTextMenu">Nuevo Reclamo</span>
       </div>
       <SearchNewClaim />
-      <Link to={"/nuevoreclamo"}>
+      <Link to={"/newclaim"}>
         <div className="themeCardContent">
           {themesData.map((card, idx) => (
             <ThemeCard url={card.url} title={card.title} key={idx} />

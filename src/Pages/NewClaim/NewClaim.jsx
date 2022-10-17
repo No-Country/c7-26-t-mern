@@ -1,12 +1,11 @@
-import React from 'react';
 import { AiOutlineArrowLeft, AiFillFileAdd } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import InputReclamo from '../../Components/InputReclamo/InputReclamo';
 import ubication from '../../Assets/img/mapa.svg';
-import './nuevoreclamo.css';
+import './newclaim.css';
 import image from '../../Assets/img/imagenes.svg';
 
-export const NuevoReclamo = () => {
+export const NewClaim = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
