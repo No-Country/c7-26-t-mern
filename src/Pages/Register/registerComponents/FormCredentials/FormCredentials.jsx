@@ -76,7 +76,7 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("email")}
         defaultValue={props.values.email}
       />
-      {!emailValidation() && <span>Por favor, introduzca un email valido</span>}
+      {!emailValidation() && <span>*Por favor, introduzca un email valido</span>}
 
       <InputField
         eventBlur={passwordValidation}
@@ -85,7 +85,7 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("password")}
         defaultValue={props.values.password}
       />
-      {!passwordValidation() && <span>La contraseña debe contener al menos:
+      {!passwordValidation() && <span>*La contraseña debe contener al menos:
          Una letra mayuscula, Una letra minuscula y tener una longitud de 8 a 16 caracteres
          </span>}
 
@@ -95,7 +95,7 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("passwordRepited")}
         defaultValue={props.values.passwordRepited}
       />
-      {!samePassword() && <span>No coincide con la contraseña</span>}
+      {!samePassword() && <span>*No coincide con la contraseña</span>}
 
       <PrimaryButton
         text="Siguiente"
