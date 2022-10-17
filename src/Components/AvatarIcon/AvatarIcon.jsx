@@ -4,7 +4,7 @@ import Avatar from "../../Assets/img/iconAvatar.svg";
 
 export const AvatarIcon = () => {
   return (
-    <div>
+    <div className="avatarIcon">
       <img className="iconImgAvatar" src={Avatar} alt="" />
     </div>
   );

@@ -18,10 +18,10 @@ const List = () => {
         <span className="appNotificationTextMenu">Nuevo Reclamo</span>
       </div>
       <SearchNewClaim />
-      <Link to={"/newclaim"}>
+      <Link to={"/institutionclaims"}>
         <div className="themeCardContent">
-          {themesData.map((card, idx) => (
-            <ThemeCard url={card.url} title={card.title} key={idx} />
+          {themesData.map(({ url, title, id }, idx) => (
+            <ThemeCard url={url} title={title} key={idx} id={id} />
           ))}
         </div>
       </Link>

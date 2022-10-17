@@ -42,7 +42,7 @@ const LoginChoice = (props) => {
 
     setTimeout(() => {
       setLoading(true);
-      setIntroRun()
+      setIntroRun();
     }, 2500);
   }, []);
 

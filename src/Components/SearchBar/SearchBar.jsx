@@ -6,19 +6,22 @@ import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import axios from "axios";
 
-function SearchNewClaim() {
+import "./searchbar.css";
+
+function SearchBar() {
   return (
     <Paper
       component="form"
+      className="homeSearch"
       sx={{
         p: "2px 6px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: 255,
-        ml: 1.6,
-        mt: 2,
-        mb: 1.5,
+        width: "100%",
+        ml: 0,
+        mt: 0,
+        mb: 0,
       }}
     >
       <IconButton sx={{ p: "10px" }} aria-label="menu">
@@ -26,11 +29,14 @@ function SearchNewClaim() {
       </IconButton>
       <InputBase
         sx={{ ml: 1, flex: 1, fontSize: 13 }}
-        placeholder="Busca una categoria"
-        inputProps={{ "aria-label": "Busca una categoria" }}
+        placeholder="Busca un reclamo"
+        inputProps={{ "aria-label": "Busca un reclamo" }}
       />
+      <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+        <MicIcon />
+      </IconButton>
     </Paper>
   );
 }
 
-export default SearchNewClaim;
+export default SearchBar;

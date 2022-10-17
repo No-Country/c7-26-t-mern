@@ -17,7 +17,6 @@ function BotNav() {
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
-            width: "10%",
           })}
         >
           <div className="botNavContainerItem">
@@ -26,7 +25,7 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <Link to="/List">
+        <Link to="/filterclaim">
           <div className="botNavContainerItem botNavContainerItemCenter">
             <AiOutlinePlus size={20} alt="" />
           </div>
@@ -35,18 +34,17 @@ function BotNav() {
         <NavLink
           to="/filterclaim"
           style={({ isActive }) => ({
-            color: isActive ? "#ff0" : "#fff",
-            fill: isActive ? "#ff0" : "#fff",
-            width: "10%",
+            color: isActive ? "#ffe9ac" : "#fff",
+            fill: isActive ? "#ffe9ac" : "#fff",
           })}
         >
           <div className="botNavContainerItem">
             <img
               className="botNavContainerItemImg"
               src={iconClaims}
-              alt="Profile"
+              alt="Reclamos"
             />
-            <p className="botNavContainerItemText">Reclamos</p>
+            <p className="botNavContainerItemText"> Mis Reclamos</p>
           </div>
         </NavLink>
       </nav>
