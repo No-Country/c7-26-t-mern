@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegHeart } from "react-icons/fa";
+import { BiUpvote } from "react-icons/bi";
 import { BsFillShareFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./card.css";
@@ -21,23 +21,25 @@ const Card = (props) => {
       <div className="claimContent">
         <img
           className="claimPrincipalImg"
-          src="https://i.ibb.co/q9yfYSv/postimg.png"
+          src="https://i.ibb.co/ZGCXT4D/agua2.jpg"
           alt="imgClaim"
         />
         <div className="claimBottomInfo">
-          <p className="claimDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus,
-            porro.
-          </p>
+          <p className="claimDescription">{props.description}</p>
+          <div className="barVote">
+            <div className="barPaintedVoted">
+              <div className="lineVoteProgress"></div>
+            </div>
+          </div>
           <div className="claimButtons">
             <Link className="seeProgressLink" to="/claimdetail">
-              <button className="seeProgressButton">VER PROGRESO</button>
+              <button className="seeProgressButton">ESTADO</button>
             </Link>
             <div className="claimIconsBottom">
               <p className="vote">
                 <span>150</span> VOTOS
               </p>
-              <FaRegHeart className="heartIcon" />
+              <BiUpvote className="upVoteIcon" />
             </div>
           </div>
         </div>

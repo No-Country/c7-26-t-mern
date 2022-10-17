@@ -5,7 +5,7 @@ import Register from "./Pages/Register/Register.jsx";
 import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
-import Perfil from "./Pages/Perfil/Perfil";
+import Profile from "./Pages/Profile/Profile";
 import List from "./Components/List/List.jsx";
 import NewClaim from "./Pages/NewClaim/NewClaim";
 import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
