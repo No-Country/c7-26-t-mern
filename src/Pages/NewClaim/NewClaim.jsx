@@ -1,5 +1,5 @@
 import { AiOutlineArrowLeft, AiFillFileAdd } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import InputReclamo from "../../Components/InputReclamo/InputReclamo";
 import ubication from "../../Assets/img/mapa.svg";
 import "./newclaim.css";
@@ -73,6 +73,8 @@ export const NewClaim = () => {
           className="nuevoReclamoSubmit"
         />
       </div>
+      <Outlet></Outlet>
     </form>
+   
   );
 };

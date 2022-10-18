@@ -2,10 +2,9 @@ import verified from "../../Assets/img/verified.svg";
 import { Link } from "react-router-dom";
 
 const Filter = (props) => {
-  const urlFilter = `/institution/${props.category}`;
 
   return (
-    <Link to={urlFilter}>
+    <Link to="/newClaim/category" state={{ Title: "Categoria", Institution: props}} >
       <div className="filterContainer">
         <div className="filterItemContainer">
           <img className="filterIconRounded" src={props.src} alt={props.alt} />

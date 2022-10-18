@@ -25,14 +25,13 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <Link to="/filterclaim">
+        <Link to="/newClaim/institution" state={{ Title: "Institución" }}>
           <div className="botNavContainerItem botNavContainerItemCenter">
             <AiOutlinePlus size={20} alt="" />
           </div>
         </Link>
 
         <NavLink
-          to="/filterclaim"
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
