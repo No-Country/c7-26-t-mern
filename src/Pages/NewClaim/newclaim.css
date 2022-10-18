@@ -29,7 +29,7 @@
 }
 
 
- /*inputs container */ 
+/*inputs container */
 
 .nuevoReclamoTitle {
     font-size: 1.5em;
@@ -137,11 +137,11 @@
 }
 
 .inputFile {
- font-size: 1.1em;
- background-color: var(--color-white);
- border-radius: 4px;
- box-shadow: 5px 5px 10px rgb(175, 175, 175);
- margin-bottom: 0.3rem;
+    font-size: 1.1em;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgb(175, 175, 175);
+    margin-bottom: 0.3rem;
 }
 
 ::-webkit-file-upload-button {
@@ -155,56 +155,12 @@
 }
 
 ::-webkit-file-upload-button:hover {
-   background: var(--color-bg-primary);
+    background: var(--color-bg-primary);
 }
 
 ::-webkit-file-upload-button:active {
     background: var(--color-bg-primary);
- }
- 
-
-
-
-
-
-/* .labelFile {
-    display: block;
-    color: var(--color-black);
-    height: 40px;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.06);
-    position: absolute;
-    margin: auto;
-    top: 100px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 1.5em;
-    display: flex;
-    padding-left: 1rem;
-    align-items: center;
-    transition: background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
-} */
-
-/* input file viejo */
-
-/* .labelFile:hover {
-    background-color: rgba(0, 0, 0, 0.09);
 }
-
-input[type='file'] {
-    display: none;
-}
-
-.labelIcon {
-    font-size: 1.2em;
-}
-
-
-
-.fileContainer .iconInput {
-    margin-bottom: 1rem;
-} */
 
 
 /* input ubicacion */
@@ -294,4 +250,12 @@ input[type='file'] {
 
 .themesDataContainer {
     width: 100%;
+}
+
+/* media querie */
+
+@media (min-width:768px) {
+    .nuevoReclamoTopNav {
+        background-color: #262724;;
+    }
 }

@@ -42,3 +42,9 @@
     width: 100%;
     padding-top: 1rem;
 }
+
+@media (min-width:768px) {
+    .perfilTopNav {
+        background-color: #262724;;
+    }
+}

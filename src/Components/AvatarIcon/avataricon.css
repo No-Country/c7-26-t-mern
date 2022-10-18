@@ -3,3 +3,9 @@
     background-color: #fff;
     border-radius: 50%;
   }
+
+  @media (min-width:768px) {
+    .iconImgAvatar {
+      width: 35px;
+    }
+  }

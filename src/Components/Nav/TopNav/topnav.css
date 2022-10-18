@@ -79,6 +79,9 @@
 }
 
 @media (min-width:768px) {
+    .topNav {
+        background-color: #262724;
+    }
     .searchBarNav {
         display: block !important;
         width: 35vw !important;
@@ -108,11 +111,16 @@
     .topNav {
         padding-left: 3.3rem;
     }
+
+    .notificationIcon {
+        margin-right: 2rem;
+    }
 }
 
 @media (min-width:1024px) {
     .notificationIcon {
         display: block;
+        margin-right: 2rem;
     }
 
     .topNav {
