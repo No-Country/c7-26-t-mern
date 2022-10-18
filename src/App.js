@@ -6,12 +6,12 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Profile from "./Pages/Profile/Profile";
-// import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
 import List from "./Components/List/List";
 import NewClaim from "./Pages/NewClaim/NewClaim";
 import FilterClaim from "./Pages/NewClaim/FilterClaim";
 import FilterSingleCategory from "./Pages/NewClaim/FilterSingleCategory";
-import NewClaimIndex from "./Pages/NewClaim/NewClaimIndex";;
+import NewClaimIndex from "./Pages/NewClaim/NewClaimIndex";
 import MyClaims from "./Pages/MyClaims/MyClaims";
 
 
@@ -38,8 +38,10 @@ function App() {
           <Route path="institution" element={<FilterClaim />}></Route>
           <Route path="category" element={<FilterSingleCategory />}></Route>
         </Route>
-      </Routes>
-    </Router>
+        <Route path="claimdetail" element={<ClaimDetail />}></Route>
+        <Route path="myClaims" element={<MyClaims />}></Route>
+      </Routes >
+    </Router >
   );
 }
 
