@@ -4,6 +4,7 @@ const { categoryRouter } = require("./category.routes");
 const { cityRouter } = require("./city.routes");
 const { claimmerRouter } = require("./claimmer.routes");
 const { institutionRouter } = require("./institution.routes");
+const { pictureRouter } = require("./picture.routes");
 const { userRouter } = require("./user.routes");
 
 const routersApp = express.Router();
@@ -14,7 +15,6 @@ routersApp
    .use("/categories", categoryRouter)
    .use("/cities", cityRouter)
    .use("/claimmers", claimmerRouter)
+  .use("/pictures", pictureRouter);
 
-module.exports = { routersApp }
-
-//arquitectura MVC
+module.exports = { routersApp };
