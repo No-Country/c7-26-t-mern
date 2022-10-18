@@ -27,7 +27,6 @@ function App() {
         <Route path="/newclaim" element={<NewClaim />}></Route>
         <Route path="/institutionclaims" element={<InstitutionClaims />}></Route>
         <Route path="/claimdetail" element={<ClaimDetail />}></Route>
-
       </Routes>
     </Router>
   );

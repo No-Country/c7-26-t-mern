@@ -32,7 +32,7 @@ function BotNav() {
         </Link>
 
         <NavLink
-          to="/claims"
+          to="/newclaim"
           style={({ isActive }) => ({
             color: isActive ? "#ffe9ac" : "#fff",
             fill: isActive ? "#ffe9ac" : "#fff",
