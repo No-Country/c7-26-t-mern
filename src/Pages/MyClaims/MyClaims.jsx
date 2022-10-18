@@ -17,9 +17,6 @@ const MyClaims = () => {
           alt="No results found illustration"
         />
         <p className="noResultsText">Aún no tienes ningún reclamo</p>
-        <p className="noResultsText">
-          Crea un nuevo reclamo tocando el botón flotante
-        </p>
       </div>
       <BotNav />
     </div>
