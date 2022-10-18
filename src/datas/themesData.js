@@ -1,42 +1,93 @@
 export const themesData = [
     {
         url: "https://i.ibb.co/2NgKpFN/educacion.jpg",
-        title: "Educación"
+        title: "Educación",
+        category: "educacion"
     },
     {
         url: "https://i.ibb.co/7rpmB40/agua.jpg",
-        title: "Agua e Higiene"
+        title: "Agua e Higiene",
+        category: "agua"
     },
     {
         url: "https://i.ibb.co/Lz0YNsX/pluviales.jpg",
-        title: "Pluviales"
+        title: "Pluviales",
+        category: "pluviales"
     },
     {
         url: "https://i.ibb.co/HCPhD86/alumbrado.jpg",
-        title: "Alumbrado"
+        title: "Alumbrado",
+        category: "alumbrado",
     },
     {
         url: "https://i.ibb.co/mGRNVr8/espacios-Verdes.jpg",
-        title: "Espacios verdes"
+        title: "Espacios verdes",
+        category: "espaciosverdes"
     },
     {
         url: "https://i.ibb.co/bbdfqBZ/salud.jpg",
-        title: "Salud"
+        title: "Salud",
+        category: "salud"
     },
     {
         url: "https://i.ibb.co/MGBbjqj/calles-Veredas.jpg",
-        title: "Calles y veredas"
+        title: "Calles y veredas",
+        category: "calles"
     },
     {
         url: "https://i.ibb.co/7YvBLPb/Reciclado.jpg",
-        title: "Reciclado"
+        title: "Reciclado",
+        category: "reciclado"
     },
     {
         url: "https://i.ibb.co/K7hDTZr/servicios-Municipales.jpg",
-        title: "Servicios municipales"
+        title: "Servicios municipales",
+        category: "servicios"
     },
     {
         url: "https://i.ibb.co/DbG16S8/corrupcion.jpg",
-        title: "Corrupción"
+        title: "Corrupción",
+        category: "corrupcion"
+    }
+]
+
+export const institutionData = [
+    {
+        title: 'Secretaria del agua',
+        category:'asd'
+    },
+    {
+        title: 'Secretaria de luz ',
+        category:'asdsad'
+        
+    },
+    
+    {
+        title: 'Secretaria de salud',
+        category:'asdasd'
+    },
+    
+    {
+        title: 'Secretaria cloacal ',
+        category:'asdsadaa'
+    },
+    
+    {
+        title: 'Secretaria de reciclado',
+        category:'aaaaaa'
+    },
+    {
+        title: 'Secretaria de pavimentado',
+        category:'sssssssss'
+    },
+    
+    {
+        title: 'Secretaria policial',
+        category:'eeeeeeeeee'
+    },
+    
+    {
+        title: 'Secretaria de servicios',
+        category:'eeeeeeeeeasd'
     }
 ]

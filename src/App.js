@@ -6,10 +6,11 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Profile from "./Pages/Profile/Profile";
-import List from "./Components/List/List.jsx";
+// import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import List from "./Components/List/List";
 import { NewClaim } from "./Pages/NewClaim/NewClaim";
-import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
-import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail"
+import FilterClaim from "./Pages/NewClaim/FilterClaim";
+import FilterSingleCategory from "./Pages/NewClaim/FilterSingleCategory";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -17,7 +18,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginChoice introRun={introRun} setIntroRun={setIntroRun} />}></Route>
+        <Route
+          path="/"
+          element={
+            <LoginChoice introRun={introRun} setIntroRun={setIntroRun} />
+          }
+        ></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -25,8 +31,14 @@ function App() {
         <Route path="/notifications" element={<AppNotification />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/newclaim" element={<NewClaim />}></Route>
-        <Route path="/institutionclaims" element={<InstitutionClaims />}></Route>
-        <Route path="/claimdetail" element={<ClaimDetail />}></Route>
+        <Route path="filterclaim" element={<FilterClaim />}></Route>
+        <Route
+          path="institution/:idInstitucion"
+          element={<FilterSingleCategory />}
+        >
+          {/* <Route path="categoria/:idCategoria" element={<Categorias />}></Route>
+          Crear componente categorias */}
+        </Route>
       </Routes>
     </Router>
   );

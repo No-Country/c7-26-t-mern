@@ -1,23 +1,25 @@
 import React from "react";
-import logo from "../../../Assets/img/reclamiSquareLogo.svg";
+import logo from "../../../Assets/img/reclamiNewLogo.svg";
 import "./topnav.css";
 import { Link } from "react-router-dom";
 
 import NotificationSvg from "../../../Assets/img/notificacion.svg";
-import SearchBarNav from "./SearchBarNav";
+// import SearchBarNav from "./SearchBarNav";
 import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
 const TopNav = (props) => {
   return (
     <nav className="topNav">
+        <Link to={"/profile"}>
+          <AvatarIcon />
+        </Link>
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
             <img src={logo} alt="logo" />
           </picture>
         </Link>
-        <span className="topNavUserText">{props.text}</span>
-        <SearchBarNav />
+        {/* <SearchBarNav /> */}
       </div>
       <ul className="topNavListDesktopContainer">
         <div className="topNavListDesktop">
@@ -29,9 +31,6 @@ const TopNav = (props) => {
       <ul className="topNavList">
         <Link to={"/notifications"} className="notificationIcon">
           <img src={NotificationSvg} alt="" />
-        </Link>
-        <Link to={"/profile"}>
-          <AvatarIcon />
         </Link>
       </ul>
     </nav>
