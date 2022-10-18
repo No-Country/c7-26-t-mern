@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 // Icons bottom navbar
-import iconClaims from "../../../Assets/img/claimsInactive.svg";
+import iconClaims from "../../../Assets/img/testing.svg";
 
 function BotNav() {
   return (
