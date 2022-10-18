@@ -1,0 +1,13 @@
+.toggleViewTopNav {
+  box-shadow: none;
+}
+
+.noResultsImg {
+  z-index: -1;
+  padding: 5%;
+}
+
+.noResultsText {
+  font-size: 5vw;
+  text-align: center;
+}
