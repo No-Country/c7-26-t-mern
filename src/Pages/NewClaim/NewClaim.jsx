@@ -51,13 +51,15 @@ export const NewClaim = () => {
                     />
                 </div>
                 <div className='fileContainer'>
-                    <img className='iconInput' src={image} alt="" />
+                    {/* <img className='iconInput' src={image} alt="" /> */}
                     <div className='inputFileContainer'>
-                        <input type="file" id='file' accept='image/*' />
-                        <label className='labelFile' htmlFor="file">
-                            Adjuntá fotos/videos &nbsp;
-                            <AiFillFileAdd className='labelIcon' />
-                        </label>
+                        <input 
+                        className="inputFile" 
+                        type="file" 
+                        id='file' 
+                        accept='image/*, video/*' 
+                        multiple
+                        capture="environment, user" />
                         <h3>*Opcional (hasta 4 archivos)</h3>
                     </div>
                 </div>
