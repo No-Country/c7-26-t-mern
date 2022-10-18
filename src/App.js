@@ -37,6 +37,7 @@ function App() {
         <Route path="newClaim" element={<NewClaimIndex />}>
           <Route path="institution" element={<FilterClaim />}></Route>
           <Route path="category" element={<FilterSingleCategory />}></Route>
+          <Route path="claim" element={<NewClaim />}></Route>
         </Route>
         <Route path="claimdetail" element={<ClaimDetail />}></Route>
         <Route path="myClaims" element={<MyClaims />}></Route>

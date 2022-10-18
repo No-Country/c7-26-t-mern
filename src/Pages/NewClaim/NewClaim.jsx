@@ -13,12 +13,6 @@ const NewClaim = () => {
 
   return (
     <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
-      <div className="nuevoReclamoTopNav">
-        <Link to={"/home"} className="appNotificationIcon">
-          <AiOutlineArrowLeft />
-        </Link>
-        <h2 className="appNotificationTextMenu">Nuevo Reclamo</h2>
-      </div>
 
       <h2 className="nuevoReclamoTitle">Adjuntá detalles de tu problema:</h2>
       <div className="nuevoReclamoInputs">
