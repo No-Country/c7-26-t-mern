@@ -16,7 +16,7 @@ const FilterSingleCategory = () => {
   //     }))
   // }, [idInstitucion])
 
-  function Profile() {
+  function InstitutionGetter() {
     const location = useLocation();
     try {
       const { Institution } = location.state;
@@ -26,7 +26,7 @@ const FilterSingleCategory = () => {
     }
   }
 
-  let item = Profile();
+  let item = InstitutionGetter();
   console.log(item);
 
   return (
