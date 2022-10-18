@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import ThemeCard from "../../Components/ThemeCard/ThemeCard";
 import Filter from "./Filter";
 
-export const NewClaim = () => {
+const NewClaim = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("reclamo creado");
@@ -98,3 +98,4 @@ export const NewClaim = () => {
     </div>
   );
 };
+export default NewClaim;

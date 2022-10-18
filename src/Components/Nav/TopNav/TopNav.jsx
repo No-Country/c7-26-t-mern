@@ -10,9 +10,9 @@ import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 const TopNav = (props) => {
   return (
     <nav className="topNav">
-        <Link to={"/profile"}>
-          <AvatarIcon />
-        </Link>
+      <Link to={"/profile"}>
+        <AvatarIcon />
+      </Link>
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">
