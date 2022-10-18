@@ -25,7 +25,7 @@ const FilterSingleCategory = () => {
         <div>
             <div className="nuevoReclamoTopNav">
                 <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
-                <span className="appNotificationTextMenu">Nuevo Reclamo</span>
+                <h2 className="appNotificationTextMenu">Nuevo Reclamo</h2>
             </div>
             {item
                 ?
