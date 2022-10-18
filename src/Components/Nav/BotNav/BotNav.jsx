@@ -25,7 +25,7 @@ function BotNav() {
           </div>
         </NavLink>
 
-        <Link to="/List">
+        <Link to="/newClaim/institution" state={{ Title: "Institución" }}>
           <div className="botNavContainerItem botNavContainerItemCenter">
             <AiOutlinePlus size={20} alt="" />
           </div>

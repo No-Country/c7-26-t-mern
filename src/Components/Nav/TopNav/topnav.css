@@ -17,12 +17,10 @@
   /* padding: 0.2rem 1.5rem 0.2rem 0; */
   font-family: var(--font-secundary);
   padding: 16px;
-  padding-left: 1rem;
 }
 
-.topNavLogo {
-  width: 30px;
-  display: none;
+.topNavLogo img {
+  width: 100px;
 }
 
 .topNavUser {
@@ -69,6 +67,10 @@
     width: 40px;
     margin-right: 2rem;
   }
+
+  .topNav {
+    padding-left: 3.3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -97,17 +99,20 @@
     line-height: 30px;
   }
 
-  .topNavList {
-    gap: 0.5rem;
-  }
-
-  .notificationIcon {
-    display: block;
-    margin-right: 1rem;
+  .topNav {
+    padding-left: 3.3rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .notificationIcon {
+    display: block;
+  }
+
+  .topNav {
+    padding: 1.2rem 1rem 1.2rem 3.4rem;
+  }
+
   .topNavListDesktop {
     margin-right: 10rem;
   }

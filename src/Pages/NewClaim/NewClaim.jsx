@@ -1,6 +1,5 @@
-import React from "react";
 import { AiOutlineArrowLeft, AiFillFileAdd } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import InputReclamo from "../../Components/InputReclamo/InputReclamo";
 import ubication from "../../Assets/img/mapa.svg";
 import "./newclaim.css";
@@ -18,7 +17,7 @@ const NewClaim = () => {
         <Link to={"/home"} className="appNotificationIcon">
           <AiOutlineArrowLeft />
         </Link>
-        <span className="appNotificationTextMenu">Nuevo Reclamo</span>
+        <h2 className="appNotificationTextMenu">Nuevo Reclamo</h2>
       </div>
 
       <h2 className="nuevoReclamoTitle">Adjuntá detalles de tu problema:</h2>
@@ -74,7 +73,9 @@ const NewClaim = () => {
           className="nuevoReclamoSubmit"
         />
       </div>
+      <Outlet></Outlet>
     </form>
+   
   );
 };
 export default NewClaim;

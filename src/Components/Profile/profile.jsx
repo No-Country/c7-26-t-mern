@@ -1,4 +1,4 @@
-import "./perfil.css";
+import "./profile.css";
 import React from 'react';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from 'react-router-dom';
@@ -15,10 +15,11 @@ const Perfil = () => {
                 <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
                 <span className="appNotificationTextMenu">Perfil</span>
             </div>
+
             <div className="perfilOptionsContainer">
-                <Link to={"/configuracion"} className="perfilOptions"><DiAptana/>Configuracion</Link>
-                <Link to={"/password"} className="perfilOptions"><FaExchangeAlt/>Cambiar contraseña</Link>
-                <Link to={"/ayuda"} className="perfilOptions"><FiHelpCircle/>Ayuda</Link>
+                <Link to={"/configuracion"} className="perfilOptions"><DiAptana />Configuracion</Link>
+                <Link to={"/password"} className="perfilOptions"><FaExchangeAlt />Cambiar contraseña</Link>
+                <Link to={"/ayuda"} className="perfilOptions"><FiHelpCircle />Ayuda</Link>
                 <Link to={"/"} className="perfilOptionsSession perfilOptions">Cerrar Sesion</Link>
             </div>
         </div>

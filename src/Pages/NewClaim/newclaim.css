@@ -1,3 +1,5 @@
+/* top nav */
+
 .nuevoReclamoTopNav {
     background-color: var(--color-white);
     color: rgba(0, 0, 0, 0.87);
@@ -25,6 +27,9 @@
     justify-content: center;
     gap: 2rem;
 }
+
+
+ /*inputs container */ 
 
 .nuevoReclamoTitle {
     font-size: 1.5em;
@@ -55,7 +60,6 @@
     font-size: 1.150em;
     margin-top: 0.3rem;
 }
-
 
 
 .inputFileContainer {
@@ -166,6 +170,8 @@ input[type='file'] {
     margin-bottom: 1rem;
 }
 
+
+/* input ubicacion */
 .ubicacionContainer {
     display: flex;
     gap: 2rem;
@@ -206,4 +212,46 @@ input[type='file'] {
 
 .inputBoxReclamo:has(.inputUbicacion:focus-visible) {
     border-bottom: 2px solid var(--color-bg-primary);
+}
+
+/* Filter */
+
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.filterItemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.filterVerified {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.filterText {
+    padding: 1.5rem 2rem 1.5rem 1rem;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.filterIconRounded {
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+    border-radius: 50%;
+}
+
+/* theme data container */
+
+.themesDataContainer {
+    width: 100%;
 }
