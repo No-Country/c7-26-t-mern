@@ -9,7 +9,7 @@ import { AvatarIcon } from "../../AvatarIcon/AvatarIcon";
 
 const TopNav = (props) => {
   return (
-    <nav className="topNav">
+    <nav className={`topNav ${props.className}`}>
       <div className="topNavUser">
         <Link to={"/home"}>
           <picture className="topNavLogo">

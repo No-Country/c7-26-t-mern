@@ -10,6 +10,7 @@ import List from "./Components/List/List.jsx";
 import NewClaim from "./Pages/NewClaim/NewClaim";
 import InstitutionClaims from './Pages/InstitutionClaims/InstitutionClaims';
 import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import MyClaims from "./Pages/MyClaims/MyClaims";
 
 
 function App() {
@@ -24,10 +25,11 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/List" element={<List />}></Route>
         <Route path="/notifications" element={<AppNotification />}></Route>
-        <Route path="/profile" element={<Perfil />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/institutionClaims" element={<InstitutionClaims />}></Route>
         <Route path="/newclaim" element={<NewClaim />}></Route>
         <Route path="/claimDetail" element={<ClaimDetail />}></Route>
+        <Route path="/myClaims" element={<MyClaims />}></Route>
       </Routes>
     </Router >
   );
