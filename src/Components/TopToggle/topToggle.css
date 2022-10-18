@@ -20,8 +20,15 @@
   width: 50%;
   text-align: center;
   padding-top: 5vw;
-  margin-bottom: 5vw;
+  padding-bottom: 5vw;
   font-family: var(--font-secundary);
   font-weight: 500;
   font-size: 4vw;
+  cursor: pointer;
+}
+
+.optionActive {
+  color: var(--color-bg-primary);
+  font-weight: 800;
+  border-bottom: 3px solid var(--color-bg-primary);
 }

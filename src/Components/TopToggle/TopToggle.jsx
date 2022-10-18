@@ -2,31 +2,32 @@ import React, { useState } from "react";
 import "./topToggle.css";
 
 const TopToggle = (props) => {
-  const [toogle, setToogle] = "";
+  const [active, setActive] = useState("");
 
-  function changeStatus(e) {
-    console.log(e.target);
-    // if (target.e.toggle === "active") {
-    //   console.log("hola");
-    // } else {
-    //   console.log("chau");
-    // }
-  }
+  const handleClick = (event) => {
+    setActive(event.target.id);
+  };
 
   return (
     <div className="topToggleContainer">
       <ul className="toggleOptions">
-        <li toggle="active" onClick={changeStatus} className="option option1">
+        <li
+          key={1}
+          className={`option ${active === "1" ? "optionActive" : undefined}`}
+          id={"1"}
+          onClick={handleClick}
+        >
           {props.option1}
         </li>
-        <li toggle="inactive" onClick={changeStatus} className="option option2">
+        <li
+          key={2}
+          className={`option ${active === "2" ? "optionActive" : undefined}`}
+          id={"2"}
+          onClick={handleClick}
+        >
           {props.option2}
         </li>
       </ul>
-      <div
-        toggle="active"
-        className="bottomAnimatedBar bABActive bABInactive"
-      ></div>
     </div>
   );
 };
