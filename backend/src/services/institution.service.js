@@ -24,8 +24,17 @@ const save = async (data) => {
       ...data,
       password: hashedPassword
    })
+   newData.addHook
    newData.password = undefined
    return newData// model
+}
+
+const saveBulk = async ({ data, categoryIds }) => {
+   const institutions = await Institution.bulkCreate(data)
+   for (const institution of institutions) {
+      await institution.addCategories(categoryIds)
+   }
+   return institutions
 }
 
 const modify = async (model, dataUpdate) => {
@@ -40,6 +49,7 @@ module.exports = {
    searchAll,
    searchById,
    save,
+   saveBulk,
    modify,
    remove
 }

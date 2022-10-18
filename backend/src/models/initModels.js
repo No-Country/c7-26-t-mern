@@ -6,7 +6,8 @@ const {
    Country,
    Institution,
    Picture
-} = require(".")
+} = require(".");
+const { Institution_Category } = require("./institution_category.model");
 
 const initModels = () => {
    //1.- Country 1 <=> N City
@@ -22,16 +23,16 @@ const initModels = () => {
    Institution.belongsTo(City)
 
    //4.- Institution N <=> M Category
-   Institution.belongsToMany(Category, { through: "institution_categories" })
-   Category.belongsToMany(Institution, { through: "institution_categories" })
+   Institution.belongsToMany(Category, { through: Institution_Category })
+   Category.belongsToMany(Institution, { through: Institution_Category })
 
    //5.- Claimmer 1 <=> N Claim
    Claimmer.hasMany(Claim)
    Claim.belongsTo(Claimmer)
 
-   //6.- Category 1 <=> M Claim
-   Category.hasMany(Claim)
-   Claim.belongsTo(Category)
+   //6.- insitution_categories 1 <=> M  claim
+   Institution_Category.hasMany(Claim)
+   Claim.belongsTo(Institution_Category)
 
    //7.- Claimmer N <=> M Claim
    Claimmer.belongsToMany(Claim, { through: "favours", as: "Favorite" })

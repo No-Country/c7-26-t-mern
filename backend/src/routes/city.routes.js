@@ -6,7 +6,8 @@ const {
 	getAll,
 	getOne,
 	eliminate,
-	update
+	update,
+	createBulk
 } = require('../controllers/city.controller');
 
 // Middlewares
@@ -25,5 +26,6 @@ cityRouter
 	.get("/:id", cityExists, getOne)
 	.patch("/:id", cityExists, updateValidators, update)
 	.post("/", createValidators, create)
+	.post("/bulk", createBulk)
 
 module.exports = { cityRouter };

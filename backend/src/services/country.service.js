@@ -1,18 +1,18 @@
-const { City } = require("../models")
+const { Country } = require("../models")
 
 const searchAll = async () => {
-   return await City.findAll() // models[]
+   return await Country.findAll() // models[]
 }
 
 const searchById = async (id) => {
-   return await City.findByPk(id) // model | null 
+   return await Country.findByPk(id) // model | null 
 }
 
 const save = async (data) => {
-   return await City.create(data) // model
+   return await Country.create(data) // model
 }
 
-const saveBulk = async (data) => await City.bulkCreate(data)
+const saveBulk = async (data) => await Country.bulkCreate(data)
 
 const modify = async (model, dataUpdate) => {
    return await model.update(dataUpdate) // array[number, models[]]

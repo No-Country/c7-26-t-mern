@@ -22,7 +22,7 @@ const createValidators = [
 		.withMessage('Password must be a string')
 		.notEmpty()
 		.withMessage('Password cannot be empty')
-		.isLength({ min: 8 })
+		.isLength({ min: 8, max: 16 })
 		.withMessage('Password must be at least 8 characters'),
 	body('DNI')
 		.isString()
@@ -38,7 +38,7 @@ const updateValidators = [
 		.withMessage('Password must be a string')
 		.notEmpty()
 		.withMessage('Password cannot be empty')
-		.isLength({ min: 8 })
+		.isLength({ min: 8, max: 16 })
 		.withMessage('Password must be at least 8 characters'),
 	checkValidations,
 ];

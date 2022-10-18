@@ -6,7 +6,8 @@ const {
 	getAll,
 	getOne,
 	eliminate,
-	update
+	update,
+	createBulk
 } = require('../controllers/category.controller');
 
 // Middlewares
@@ -25,5 +26,6 @@ categoryRouter
 	.get("/:id", categoryExists, getOne)
 	.patch("/:id", categoryExists, updateValidators, update)
 	.post("/", createValidators, create)
+	.post("/bulk", createBulk)
 
 module.exports = { categoryRouter };

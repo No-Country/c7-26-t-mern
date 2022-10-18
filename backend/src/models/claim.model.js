@@ -10,7 +10,6 @@ const Claim = db.define("claim", {
    title: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
    },
    description: {
       type: DataTypes.STRING,

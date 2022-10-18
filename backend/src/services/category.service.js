@@ -12,6 +12,8 @@ const save = async (data) => {
    return await Category.create(data) // model
 }
 
+const saveBulk = async (data) => await Category.bulkCreate(data)
+
 const modify = async (model, dataUpdate) => {
    return await model.update(dataUpdate) // array[number, models[]]
 }
@@ -24,6 +26,7 @@ module.exports = {
    searchAll,
    searchById,
    save,
+   saveBulk,
    modify,
    remove
 }

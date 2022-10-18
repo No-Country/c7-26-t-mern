@@ -28,6 +28,8 @@ const save = async (data) => {
    return newData// model
 }
 
+const saveBulk = async (data) => await Claimmer.bulkCreate(data)
+
 const modify = async (model, dataUpdate) => {
    const newData = await model.update(dataUpdate)
    newData.password = undefined
@@ -42,6 +44,7 @@ module.exports = {
    searchAll,
    searchById,
    save,
+   saveBulk,
    modify,
    remove
 }

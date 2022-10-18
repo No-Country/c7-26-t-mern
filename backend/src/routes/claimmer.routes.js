@@ -6,7 +6,8 @@ const {
 	getAll,
 	getOne,
 	eliminate,
-	update
+	update,
+	createBulk
 } = require('../controllers/claimmer.controller');
 
 // Middlewares
@@ -25,5 +26,6 @@ claimmerRouter
 	.get("/:id", claimmerExists, getOne)
 	.patch("/:id", claimmerExists, updateValidators, update)
 	.post("/", createValidators, create)
+	.post("/bulk", createBulk)
 
 module.exports = { claimmerRouter };

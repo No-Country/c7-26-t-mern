@@ -2,7 +2,7 @@
 const { catchAsync } = require('../utils/catchAsync.util');
 
 // services imports
-const { searchAll, save, modify, remove } = require('../services/institution.service');
+const { searchAll, save, modify, remove, saveBulk } = require('../services/institution.service');
 
 //CRUD
 const create = catchAsync(async (req, res, next) => {
@@ -14,6 +14,15 @@ const create = catchAsync(async (req, res, next) => {
 		data,
 	});
 });
+
+const createBulk = catchAsync(async (req, res, _next) => {
+	const data = await saveBulk(req.body)
+
+	res.status(201).json({
+		status: 'success',
+		data,
+	});
+})
 
 const getAll = catchAsync(async (req, res, next) => {
 
@@ -57,6 +66,7 @@ const update = catchAsync(async (req, res, next) => {
 
 module.exports = {
 	create,
+	createBulk,
 	getAll,
 	getOne,
 	eliminate,

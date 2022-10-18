@@ -6,7 +6,8 @@ const {
 	getAll,
 	getOne,
 	eliminate,
-	update
+	update,
+	createBulk
 } = require('../controllers/institution.controller');
 
 // Middlewares
@@ -25,5 +26,6 @@ institutionRouter
 	.get("/:id", institutionExists, getOne)
 	.patch("/:id", institutionExists, updateValidators, update)
 	.post("/", createValidators, create)
+	.post("/bulk", createBulk)
 
 module.exports = { institutionRouter };

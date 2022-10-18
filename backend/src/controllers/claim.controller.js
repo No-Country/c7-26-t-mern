@@ -2,7 +2,7 @@
 const { catchAsync } = require('../utils/catchAsync.util');
 
 // services imports
-const { searchAll, save, modify, remove, saveBulk } = require('../services/claimmer.service');
+const { searchAll, save, modify, remove, saveBulk } = require('../services/claim.service');
 
 //CRUD
 const create = catchAsync(async (req, res, next) => {
@@ -36,27 +36,27 @@ const getAll = catchAsync(async (req, res, next) => {
 
 const getOne = catchAsync(async (req, res, next) => {
 
-	const { claimmer } = req
+	const { claim } = req
 	// 200 -> Success and the data has been recovered
 	res.status(200).json({
 		status: 'success',
-		data: claimmer
+		data: claim
 	});
 });
 
 const eliminate = catchAsync(async (req, res, next) => {
 
-	await remove(req.claimmer)
+	await remove(req.claim)
 	// 200 -> Success and the data has been deleted
 	res.status(200).json({
 		status: 'success',
-		msg: "Claimmer was removed succesfull!"
+		msg: "Claim was removed succesfull!"
 	});
 });
 
 const update = catchAsync(async (req, res, next) => {
 
-	const data = await modify(req.claimmer, req.body);
+	const data = await modify(req.claim, req.body);
 	// 200 -> Success and the data has been modified
 	res.status(200).json({
 		status: 'success',
