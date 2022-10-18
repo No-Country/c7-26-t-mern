@@ -1,55 +1,57 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Filter from "./Filter";
-import { useParams } from 'react-router-dom';
-import { themesData, institutionData } from '../../datas/themesData';
-import { Link } from 'react-router-dom';
+import { useParams, useLocation } from "react-router-dom";
+import { themesData, institutionData } from "../../datas/themesData";
+import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Category from "./Category/Category";
 import ThemeCard from "../../Components/ThemeCard/ThemeCard";
 
-
 const FilterSingleCategory = () => {
+  // const { idInstitucion } = useParams();
 
-    const [item, setItems] = useState(null)
-    const { idInstitucion } = useParams();
+  // useEffect(() => {
+  //     setItems(institutionData.filter((item) => {
+  //         return item.category === idInstitucion
+  //     }))
+  // }, [idInstitucion])
 
+  function Profile() {
+    const location = useLocation();
+    try {
+      const { Institution } = location.state;
+      return Institution;
+    } catch (err) {
+      return "Default";
+    }
+  }
 
-    useEffect(() => {
-        setItems(institutionData.filter((item) => {
-            return item.category === idInstitucion
-        }))
-    }, [idInstitucion])
+  let item = Profile();
+  console.log(item);
 
-
-    return (
+  return (
+    <div>
+      {item ? (
         <div>
-            <div className="nuevoReclamoTopNav">
-                <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
-                <span className="appNotificationTextMenu">Nuevo Reclamo</span>
-            </div>
-            {item
-                ?
-                <div>
-                    <Filter
-                        category={item[0].category}
-                        src={item[0].url}
-                        alt={item[0].title}
-                        text={item[0].title}
-                        className='filterIconRounded' />
+          <Filter
+            category={item.category}
+            src={item.src}
+            alt={item.text}
+            text={item.text}
+            className="filterIconRounded"
+          />
 
-                    <p>Categorías asociadas</p>
-
-                    <div className="themeCardContent">
-                        {themesData.map(({url, title, id}, idx) => (
-                            <ThemeCard url={url} title={title} key={idx} id={id} />
-                        ))}
-                    </div>
-                </div>
-                : <p>Cargando...</p>
-            }
+          <div className="themeCardContent">
+            {themesData.map(({ url, title, id }, idx) => (
+              <ThemeCard url={url} title={title} key={idx} id={id} />
+            ))}
+          </div>
         </div>
-
-    )
-}
+      ) : (
+        <p>Cargando...</p>
+      )}
+    </div>
+  );
+};
 
 export default FilterSingleCategory;

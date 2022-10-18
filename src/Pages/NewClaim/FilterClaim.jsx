@@ -1,37 +1,31 @@
 import Filter from "./Filter";
-import { Link } from 'react-router-dom';
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link, Outlet } from "react-router-dom";
 // import asd from '../../Assets/img/verified.svg'
 import { institutionData } from "../../datas/themesData";
 
-
 const FilterClaim = () => {
-    return (
-        <div>
-            <div className="nuevoReclamoTopNav">
-                <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
-                <span className="appNotificationTextMenu">Nuevo Reclamo</span>
-            </div>
 
-            <div className="themesDataContainer">
-                {institutionData.map((item, index) => {
-                    return (
-                        <Filter
-                            category={item.category}
-                            key={index}
-                            src={item.url}
-                            alt={item.title}
-                            text={item.title}
-                            className='filterIconRounded'
-                            
-                        />
-                    )
-                })
-                }
-            </div>
+  return (
+    <div>
 
-        </div>
-    )
-}
+      <div className="themesDataContainer">
+        {institutionData.map(({ url, category, title }, index) => {
+          return (
+            <Filter
+              category={category}
+              key={index}
+              src={url}
+              alt={title}
+              text={title}
+              className="filterIconRounded"
+            />
+          );
+        })}
+      </div>
 
-export default FilterClaim
+      <Outlet></Outlet>
+    </div>
+  );
+};
+
+export default FilterClaim;

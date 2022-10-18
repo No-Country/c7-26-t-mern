@@ -1,23 +1,24 @@
 import { AiOutlineArrowLeft, AiFillFileAdd } from "react-icons/ai";
-import { Link } from 'react-router-dom';
-import InputReclamo from '../../Components/InputReclamo/InputReclamo';
-import ubication from '../../Assets/img/mapa.svg';
-import './newclaim.css';
-import image from '../../Assets/img/imagenes.svg';
+import { Link, Outlet } from "react-router-dom";
+import InputReclamo from "../../Components/InputReclamo/InputReclamo";
+import ubication from "../../Assets/img/mapa.svg";
+import "./newclaim.css";
+import image from "../../Assets/img/imagenes.svg";
 
 export const NewClaim = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("reclamo creado");
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('reclamo creado')
-    }
-
-    return (
-        <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
-            <div className="nuevoReclamoTopNav">
-                <Link to={"/home"} className="appNotificationIcon"><AiOutlineArrowLeft /></Link>
-                <span className="appNotificationTextMenu">Nuevo Reclamo</span>
-            </div>
+  return (
+    <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
+      <div className="nuevoReclamoTopNav">
+        <Link to={"/home"} className="appNotificationIcon">
+          <AiOutlineArrowLeft />
+        </Link>
+        <h2 className="appNotificationTextMenu">Nuevo Reclamo</h2>
+      </div>
 
             <h2 className='nuevoReclamoTitle'>Adjuntá detalles de tu problema:</h2>
             <div className='nuevoReclamoInputs'>
