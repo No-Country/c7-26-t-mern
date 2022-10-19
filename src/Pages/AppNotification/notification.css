@@ -51,6 +51,7 @@ letter-spacing: 0.25px;
 
 @media (min-width:768px) {
   .appNotificationMenu {
-      background-color: #262724;;
+      background-color: #262724;
+      display: none;
   }
 }
