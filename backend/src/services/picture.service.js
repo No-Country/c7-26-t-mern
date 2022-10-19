@@ -1,4 +1,3 @@
-const bcrypt = require("bcryptjs");
 const { Picture } = require("../models");
 
 const searchAll = async () => {
