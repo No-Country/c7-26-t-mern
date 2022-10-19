@@ -32,41 +32,40 @@
 }
 
 .topNavLogo img {
-    width: 100px;
+  width: 100px;
 }
 
 .topNavUser {
-    display: flex;
-    align-items: center;
-    font-size: var(--text-caption)
+  display: flex;
+  align-items: center;
+  font-size: var(--text-caption);
 }
 
 .topNavUserText {
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 32px;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 32px;
 }
 
 .topNavList {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .topNavListDesktopContainer {
-    display: none;
+  display: none;
 }
 
 .searchBarNav {
-    display: none !important;
+  display: none !important;
 }
-
 
 /* notification icon */
 .notificationIcon {
-    width: 18px;
+  width: 18px;
 }
 
 /* NAVBAR BUTTON RECLAMO */
@@ -98,9 +97,9 @@
         margin-right: 2rem;
     }
 
-    .topNav {
-        padding-left: 3.3rem;
-    }
+  .topNav {
+    padding-left: 3.3rem;
+  }
 
     .topNavMw {
         gap: 15rem;
@@ -122,9 +121,9 @@
         width: 35vw !important;
     }
 
-    .topNavListDesktopContainer {
-        display: block;
-    }
+  .topNavListDesktopContainer {
+    display: block;
+  }
 
     .topNavListDesktop {
         display: flex;
@@ -162,9 +161,9 @@
         
     }
 
-    .topNavListLinks {
-        font-size: 1.3em;
-    }
+  .topNavListLinks {
+    font-size: 1.3em;
+  }
 }
 
 /* @media (min-width:1200px) {

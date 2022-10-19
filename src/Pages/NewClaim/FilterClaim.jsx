@@ -7,7 +7,6 @@ const FilterClaim = () => {
 
   return (
     <div>
-
       <div className="themesDataContainer">
         {institutionData.map(({ url, category, title }, index) => {
           return (

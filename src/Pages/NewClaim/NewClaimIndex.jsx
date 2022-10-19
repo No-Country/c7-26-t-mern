@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import TopNav from "../../Components/Nav/TopNav/TopNav";
@@ -8,6 +8,8 @@ import './newclaim.css'
 
 
 const NewClaimIndex = () => {
+  const history = useNavigate();
+
   function Profile() {
     const location = useLocation();
     try {
@@ -21,9 +23,9 @@ const NewClaimIndex = () => {
   return (
     <div>
       <div className="nuevoReclamoTopNav">
-        <Link to={"/home"} className="appNotificationIcon">
+        <span onClick={() => {history(-1)}} className="appNotificationIcon">
           <AiOutlineArrowLeft />
-        </Link>
+        </span>
         <h2 className="appNotificationTextMenu">{Profile()}</h2>
       </div>
 
