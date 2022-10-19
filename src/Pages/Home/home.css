@@ -1,0 +1,11 @@
+.sectionHome {
+  padding: 16px 16px 25% 16px;
+}
+
+.sectionHomeContainerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  height: auto;
+  padding-bottom: 66px;
+}
