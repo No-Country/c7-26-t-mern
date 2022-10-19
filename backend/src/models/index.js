@@ -5,6 +5,7 @@ const { Claim } = require("./claim.model")
 const { Claimmer } = require("./claimmer.model")
 const { Country } = require("./country.model")
 const { Institution } = require("./institution.model")
+const { Institution_Category } = require("./institution_category.model")
 const { Picture } = require("./picture.model")
 // const { User } = require('./user.model');
 
@@ -15,5 +16,6 @@ module.exports = {
    Claimmer,
    Country,
    Institution,
+   Institution_Category,
    Picture
 }

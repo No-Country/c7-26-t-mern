@@ -2,10 +2,11 @@
 const { catchAsync } = require('../utils/catchAsync.util');
 
 // services imports
-const { searchAll, save, modify, remove, saveBulk } = require('../services/claim.service');
+const { searchAll, searchByTitle, save, modify, remove, saveBulk, searchNews } = require('../services/claim.service');
+const { Claim, Institution_Category } = require('../models');
 
 //CRUD
-const create = catchAsync(async (req, res, next) => {
+const create = catchAsync(async (req, res, _next) => {
 
 	const data = await save(req.body)
 	// 201 -> Success and a resource has been created
@@ -24,17 +25,16 @@ const createBulk = catchAsync(async (req, res, _next) => {
 	});
 })
 
-const getAll = catchAsync(async (req, res, next) => {
-
-	const data = await searchAll()
+const getAll = catchAsync(async (req, res, _next) => {
+	const data = await searchAll(req.query)
 	// 200 -> Success and the data has been recovered
 	res.status(200).json({
 		status: 'success',
 		data,
 	});
 });
-
-const getOne = catchAsync(async (req, res, next) => {
+// 1 => id
+const getOne = catchAsync(async (req, res, _next) => {
 
 	const { claim } = req
 	// 200 -> Success and the data has been recovered
@@ -44,7 +44,7 @@ const getOne = catchAsync(async (req, res, next) => {
 	});
 });
 
-const eliminate = catchAsync(async (req, res, next) => {
+const eliminate = catchAsync(async (req, res, _next) => {
 
 	await remove(req.claim)
 	// 200 -> Success and the data has been deleted
@@ -54,7 +54,7 @@ const eliminate = catchAsync(async (req, res, next) => {
 	});
 });
 
-const update = catchAsync(async (req, res, next) => {
+const update = catchAsync(async (req, res, _next) => {
 
 	const data = await modify(req.claim, req.body);
 	// 200 -> Success and the data has been modified
