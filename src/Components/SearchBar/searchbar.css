@@ -1,9 +1,48 @@
 .homeSearch {
-    width: 100%;
+  width: 100%;
 }
 
-@media (min-width:768px) {
-    .homeSearch {
-        display: none !important;
-    }
+.filterOptionsDivOn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  margin-top: 5px;
+  z-index: 3;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 1.5vw;
+  animation: growDown 300ms ease-in-out forwards;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.filterOptionsDivOff {
+  display: none;
+}
+
+.filterOption {
+  font-size: 4.5vw;
+  padding-bottom: 8px;
+  margin-left: 5px;
+  font-family: var(--font-secundary);
+}
+
+@media (min-width: 768px) {
+  .homeSearch {
+    display: none !important;
+  }
 }
