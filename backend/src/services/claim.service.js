@@ -10,7 +10,6 @@ const save = async (data) => await Claim.create(data)// model
 const saveBulk = async (data) => await Claim.bulkCreate(data)
 
 const searchAll = async (query) => { // models[]
-
    const { title, claimmerId, institutionCategoryId, limit, offset } = query
 
    //Contoller of the paginate
