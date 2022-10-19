@@ -8,7 +8,7 @@ import axios from "axios";
 
 import "./searchbar.css";
 
-function SearchBar() {
+function SearchBar({ handleSearch }) {
   return (
     <Paper
       component="form"
@@ -31,6 +31,7 @@ function SearchBar() {
         sx={{ ml: 1, flex: 1, fontSize: 13 }}
         placeholder="Busca un reclamo"
         inputProps={{ "aria-label": "Busca un reclamo" }}
+        onChange={handleSearch}
       />
       <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
         <MicIcon />
