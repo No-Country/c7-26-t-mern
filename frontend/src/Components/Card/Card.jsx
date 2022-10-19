@@ -6,14 +6,14 @@ import "./card.css";
 // Image Claimmer
 import profileClaimmer from "../../Assets/img/imgClaimer.jpg";
 
-const Card = (props) => {
+const Card = ({ title, address, status, description }) => {
   return (
     <div className="claimContainer">
       <div className="claimTopInfo">
         <img className="imgClaimmer" src={profileClaimmer} alt="imgClaimmer" />
         <div className="claimTitleAndSubtitle">
-          <h3 className="claimTitle">{props.title}</h3>
-          <h5 className="claimSubtitle">{props.subtitle}</h5>
+          <h3 className="claimTitle">{title}</h3>
+          <h5 className="claimSubtitle">{address}</h5>
         </div>
       </div>
       <div className="claimContent">
@@ -23,7 +23,7 @@ const Card = (props) => {
           alt="imgClaim"
         />
         <div className="claimBottomInfo">
-          <p className="claimDescription">{props.description}</p>
+          <p className="claimDescription">{description}</p>
           <div className="barVote">
             <div className="barPaintedVoted">
               <div className="lineVoteProgress"></div>
@@ -31,7 +31,7 @@ const Card = (props) => {
           </div>
           <div className="claimButtons">
             <Link className="seeProgressLink" to="/claimdetail">
-              <button className="seeProgressButton">ESTADO</button>
+              <button className="seeProgressButton">VER ESTADO</button>
             </Link>
             <div className="claimIconsBottom">
               <p className="vote">

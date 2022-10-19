@@ -80,7 +80,7 @@ const Login = (props) => {
             text="Ingresar"
             bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
             color="#F0F0F0"
-            onClick={loginFunction}
+            // onClick={loginFunction}
             to={"/home"}
           />{" "}
         </form>

@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 
 // Routers
 const { routersApp } = require("./routes")
@@ -10,6 +11,7 @@ const { globalErrorHandler } = require('./controllers/error.controller');
 // Init our Express app
 const app = express();
 
+app.use(cors());
 // Enable Express app to receive JSON data
 app.use(express.json());
 
