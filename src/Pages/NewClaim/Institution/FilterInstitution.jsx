@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import SearchBar from "../../../Components/SearchBar/SearchBar";
 import { institutionData } from "../../../datas/themesData";
-import Filter from "../Filter";
+import InstitutionCard from "../InstitutionCard";
 
 import "./filterInstitution.css";
 
@@ -13,7 +13,7 @@ const FilterInstitution = () => {
         <SearchBar placeholder="Busca un reclamo" />
         {institutionData.map(({ url, category, title }, index) => {
           return (
-            <Filter
+            <InstitutionCard
               category={category}
               key={index}
               src={url}

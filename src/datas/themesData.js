@@ -1,51 +1,52 @@
+
 export const themesData = [
   {
-    color: "#1E3264",
+    color: "#E2773A ",
     title: "Educación",
     category: "educacion",
   },
   {
-    color: "#1E3264",
+    color: "#007544",
     title: "Agua e Higiene",
     category: "agua",
   },
   {
-    color: "#1E3264",
+    color: "#073F27",
     title: "Pluviales",
     category: "pluviales",
   },
   {
-    color: "#1E3264",
+    color: "#0587D0",
     title: "Alumbrado",
     category: "alumbrado",
   },
   {
-    color: "#1E3264",
+    color: "#005382",
     title: "Espacios verdes",
     category: "espaciosverdes",
   },
   {
-    color: "#1E3264",
+    color: "#7F0082",
     title: "Salud",
     category: "salud",
   },
   {
-    color: "#1E3264",
+    color: "#8F0000",
     title: "Calles y veredas",
     category: "calles",
   },
   {
-    color: "#1E3264",
+    color: "#E2773A",
     title: "Reciclado",
     category: "reciclado",
   },
   {
-    color: "#1E3264",
+    color: "#007544",
     title: "Servicios municipales",
     category: "servicios",
   },
   {
-    color: "#1E3264",
+    color: "#073F27",
     title: "Corrupción",
     category: "corrupcion",
   },

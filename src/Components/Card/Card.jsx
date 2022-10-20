@@ -30,7 +30,7 @@ const Card = (props) => {
             </div>
           </div>
           <div className="claimButtons">
-            <Link className="seeProgressLink" to="/claimdetail">
+            <Link className="seeProgressLink" to="/claimStatus">
               <button className="seeProgressButton">ESTADO</button>
             </Link>
             <div className="claimIconsBottom">

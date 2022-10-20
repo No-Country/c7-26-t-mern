@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
 
-import Filter from "../Filter";
+import InstitutionCard from "../InstitutionCard";
 import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
 
 import { themesData } from "../../../datas/themesData";
 
-import "./filterCategory.css"
+import "./filterCategory.css";
 
 const FilterSingleCategory = () => {
   // const { idInstitucion } = useParams();
@@ -33,7 +33,7 @@ const FilterSingleCategory = () => {
     <div className="categoryClaimSection">
       {item ? (
         <div>
-          <Filter
+          <InstitutionCard
             category={item.category}
             src={item.src}
             alt={item.text}

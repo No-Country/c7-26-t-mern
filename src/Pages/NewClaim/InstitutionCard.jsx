@@ -1,8 +1,7 @@
 import verified from "../../Assets/img/verified.svg";
 import { Link } from "react-router-dom";
-import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
-const Filter = (props) => {
+const InstitutionCard = (props) => {
 
   return (
     <div>
@@ -19,4 +18,4 @@ const Filter = (props) => {
   );
 };
 
-export default Filter;
+export default InstitutionCard;
