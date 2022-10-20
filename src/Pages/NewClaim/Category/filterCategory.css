@@ -1,0 +1,19 @@
+.categoryClaimSection {
+  padding: 1.6rem;
+}
+
+.categoryClaimSection .filterItemContainer {
+  margin-bottom: 1.6rem;
+}
+
+.categoryClaimSectionTitle {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+
+  letter-spacing: -0.05em;
+  color: #000000;
+  margin-bottom: .8rem;
+}

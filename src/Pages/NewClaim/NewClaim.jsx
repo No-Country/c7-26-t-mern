@@ -1,12 +1,13 @@
 import InputReclamo from "../../Components/InputReclamo/InputReclamo";
 import ubication from "../../Assets/img/mapa.svg";
 import "./newclaim.css";
-// import image from "../../Assets/img/imagenes.svg";
+import image from "../../Assets/img/imagenes.svg";
 import { useState } from 'react';
 import { useLocation } from "react-router-dom";
 import ThemeCard from "../../Components/ThemeCard/ThemeCard";
 import Filter from "./Filter";
-import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import { AiFillFileAdd } from "react-icons/ai";
 
 const NewClaim = () => {
 
@@ -47,74 +48,83 @@ const NewClaim = () => {
     let { Theme, Institution } = ThemeGetter();
     console.log(Institution);
 
-    return (
-        <div>
-            <SectionTitle title="Nuevo reclamo"/>
-            <div className="newClaimContainer">
-                <ThemeCard url={Theme.url} title={Theme.title} id={Theme.id} />
-                <Filter
-                    category={Institution.category}
-                    src={Institution.src}
-                    alt={Institution.text}
-                    text={Institution.text}
-                    className="filterIconRounded"
-                />
+  return (
+    <div>
+      <div className="nuevoReclamoSectionSelectionTop">
+        <Filter
+          category={Institution.category}
+          src={Institution.src}
+          alt={Institution.text}
+          text={Institution.text}
+          className="filterIconRounded"
+        />
+        <ThemeCard bg={Theme.bg} title={Theme.title} id={Theme.id} />
+      </div>
+
+      <div className="nuevoReclamoContainer">
+        <form onSubmit={handleSubmit} className="nuevoReclamoContainerForm">
+          <h2 className="reclamosAsociadosSectionSelectionClaimsTitle">
+            Adjuntá detalles de tu problema:
+          </h2>
+          <div className="nuevoReclamoInputs">
+            <InputReclamo
+              className="inputBoxInput"
+              type={"text"}
+              label={"Titulo"}
+              value={"titulo"}
+              //   onChange={handleChange}
+              name="titulo"
+              disabled={""}
+            />
+            <div className="textAreaContainer">
+              <textarea
+                className="textAreaReclamo"
+                placeholder="Descripción del problema..."
+              ></textarea>
+              <label>Descripción del problema...</label>
+
+              <h3 className="textAreaSubtitle">
+                Hacelo de la forma más detallada posible.
+              </h3>
             </div>
-            <form onSubmit={handleSubmit} className="nuevoReclamoContainer">
 
-                <h2 className='nuevoReclamoTitle'>Adjuntá detalles de tu problema:</h2>
-                <div className='nuevoReclamoInputs'>
-                    <InputReclamo
-                        className='inputBoxInput'
-                        type={"text"}
-                        label={"Titulo"}
-                        value={"titulo"}
-                        name="titulo"
-                        disabled={""}
-                        onChange={handleOnChangeTitle}
-                    />
-                    <div className='textAreaContainer'>
-                        <div>
-                            <textarea
-                                onChange={handleOnChangeTextArea}
-                                className='textAreaReclamo' placeholder='Descripción del problema...'></textarea>
-                            <label>Descripción del problema...</label>
-                        </div>
-                        <h3 className='textAreaSubtitle'>Hacelo de la forma más detallada posible.</h3>
-                    </div>
-
-                    <div className='ubicacionContainer'>
-                        <img className='iconInput' src={ubication} alt="" />
-                        <InputReclamo
-                            className='inputUbicacion'
-                            type={"text"}
-                            label={"Ubicación"}
-                            value={"ubicacion"}
-                            name="ubicacion"
-                            disabled={""}
-                            onChange={handleOnChangeUbication}
-                        />
-                    </div>
-                    <div className='fileContainer'>
-                        {/* <img className='iconInput' src={image} alt="" /> */}
-                        <div className='inputFileContainer'>
-                            <input
-                                className="inputFile"
-                                type="file"
-                                id='file'
-                                accept='image/*, video/*'
-                                multiple
-                                capture="environment, user" />
-                            <h3>*Opcional (hasta 4 archivos)</h3>
-                        </div>
-                    </div>
-                    <input
-                        type='submit' value='PUBLICAR' className='nuevoReclamoSubmit'
-                        style={{ backgroundColor: buttonHandlerColor ? "#8E938D" : "#8f0000" }} />
-                </div>
-            </form>
-        </div>
-    )
-}
-
+            <div className="ubicacionContainer">
+              <img className="iconInput" src={ubication} alt="" />
+              <InputReclamo
+                className="inputUbicacion"
+                type={"text"}
+                label={"Ubicación"}
+                value={"ubicacion"}
+                //   onChange={handleChange}
+                name="ubicacion"
+                disabled={""}
+              />
+            </div>
+            <div className="fileContainer">
+              <img className="iconInput" src={image} alt="" />
+              <div className="inputFileContainer">
+                <input type="file" id="file" accept="image/*" />
+                <label className="labelFile" htmlFor="file">
+                  Adjuntá fotos/videos &nbsp;
+                  <AiFillFileAdd className="labelIcon" />
+                </label>
+                <h3>*Opcional (hasta 4 archivos)</h3>
+              </div>
+            </div>
+            <PrimaryButton
+              text="CREAR NUEVO"
+              bg="var(--color-bg-primary)"
+              color="var(--color-primary)"
+              state={{
+                Title: "Nuevo Reclamo",
+                Theme: Theme,
+                Institution: Institution,
+              }}
+            ></PrimaryButton>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 export default NewClaim;

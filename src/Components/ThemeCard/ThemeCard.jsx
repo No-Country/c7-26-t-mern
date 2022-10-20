@@ -3,22 +3,31 @@ import "./themecard.css";
 import { Link, useLocation } from "react-router-dom";
 
 const ThemeCard = (props, key) => {
-
   function Institution() {
     const location = useLocation();
     try {
       const { Institution } = location.state;
       return Institution;
-    } catch(err) {
-      return "Default"
+    } catch (err) {
+      return "Default";
     }
   }
 
   return (
-    <Link className="themeCardContainer" key={key} to={"/newClaim/claim"} state={{ Title: "Nuevo Reclamo", Theme: props, Institution: Institution()}}> 
-      <img className="themeImg" src={props.url} alt="" />
-      <p className="themeTitle">{props.title}</p>
-      <div className="blurImg"></div>
+    <Link
+      className="themeCardContainer"
+      style={{ backgroundColor: props.bg }}
+      key={key}
+      to={"/newClaim/asociateClaims"}
+      state={{
+        Title: "Reclamos Asociados",
+        Theme: props,
+        Institution: Institution(),
+      }}
+    >
+      <div className="themeColor">
+        <p className="themeTitle">{props.title}</p>
+      </div>
     </Link>
   );
 };

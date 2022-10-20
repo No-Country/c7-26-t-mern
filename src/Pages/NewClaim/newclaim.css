@@ -1,260 +1,296 @@
 /* top nav */
 
+.nuevoReclamoSectionSelectionTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.nuevoReclamoSectionSelectionTop .themeColor {
+  aspect-ratio: unset;
+}
+
+.nuevoReclamoSectionSelectionTop .filterContainer {
+  height: 100%;
+}
+
 .nuevoReclamoTopNav {
-    background-color: var(--color-white);
-    color: rgba(0, 0, 0, 0.87);
-    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-    display: flex;
-    align-items: center;
-    gap: 2.3rem;
-    flex-direction: row;
-    width: 100%;
-    flex-shrink: 0;
-    position: static;
-    background-color: var(--color-bg-primary);
-    color: var(--color-white);
-    font-family: var(--font-secundary);
-    padding: 1.2rem;
-    padding-left: 1.2rem;
+  background-color: var(--color-white);
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+  flex-direction: row;
+  width: 100%;
+  flex-shrink: 0;
+  position: static;
+  background-color: var(--color-bg-primary);
+  color: var(--color-white);
+  font-family: var(--font-secundary);
+  padding: 1.2rem;
+  padding-left: 1.2rem;
 }
 
-.nuevoReclamoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+.nuevoReclamoContainerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
+.nuevoReclamoContainerForm a.primaryButton {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
 
 /*inputs container */
 
 .nuevoReclamoTitle {
-    font-size: 1.5em;
-    text-align: center;
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: -0.02em;
+  font-size: 1.5em;
+  text-align: start;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.02em;
 }
 
 .nuevoReclamoInputs {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 /* text area */
 
 .textAreaContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .textAreaSubtitle {
-    font-size: 1.150em;
-    margin-top: 0.3rem;
+  font-size: 1.15em;
+  margin-top: 0.3rem;
+}
+
+.inputFileContainer {
+  width: 100%;
+}
+
+.labelFile {
+  display: block;
+  color: var(--color-black);
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.06);
+  /* position: absolute; */
+  margin: auto;
+  /* top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+  font-size: 1.5em;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.labelFile:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.labelIcon {
+  font-size: 1.2em;
 }
 
 .textAreaReclamo {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-white);
-    border-radius: 4px 4px 0 0;
-    border: none;
-    border-bottom: 2px solid #26272442;
-    width: 90vw;
-    height: 160px;
-    padding: 1rem;
-    resize: none;
-    outline: none;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 4px 4px 0 0;
+  border: none;
+  border-bottom: 2px solid #26272442;
+  height: 160px;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+  width: 100%;
 }
 
 .textAreaReclamo:focus-visible {
-    border-bottom: 2px solid var(--color-bg-primary);
+  border-bottom: 2px solid var(--color-bg-primary);
 }
 
 .textAreaReclamo::placeholder {
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 18px;
-    border: none;
-    color: var(--color-inactive);
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 18px;
+  border: none;
+  color: var(--color-inactive);
 }
 
 .textAreaReclamo:not(:placeholder-shown) {
-    padding: 8px 16px;
-    padding-top: 30px;
+  padding: 8px 16px;
+  padding-top: 30px;
 }
 
-.textAreaReclamo:not(:placeholder-shown)~label {
-    display: block;
-    position: absolute;
-    z-index: 50;
-    padding: 7px 16px;
-    font-size: 12px;
-    top: 178px;
+.textAreaReclamo:not(:placeholder-shown) ~ label {
+  display: block;
+  position: absolute;
+  z-index: 50;
+  font-size: 12px;
+  padding: 8px 16px;
+  left: 0;
 }
 
 /* boton nuevo reclamo */
 .nuevoReclamoSubmit {
-    border: none;
-    cursor: pointer;
-    background-color: var(--color-inactive);
-    padding: 1rem 9rem;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-inactive);
+  padding: 1rem 6rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
 }
 
-/* input file nuevo */
-
-
-.inputFileContainer {
-    width: 100%;
+.iconInput {
+  width: 25px;
 }
 
-.inputFile {
-    font-size: 1.1em;
-    background-color: var(--color-white);
-    border-radius: 4px;
-    box-shadow: 5px 5px 10px rgb(175, 175, 175);
-    margin-bottom: 0.3rem;
-    width: 90vw;
+.fileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
 }
 
-::-webkit-file-upload-button {
-    color: var(--color-white);
-    background-color: var(--color-inactive);
-    padding: 1.3rem;
-    border: none;
-    border-radius: 4px 0 0px 4px;
-    outline: none;
-    /* box-shadow: 1px 0 1px 1px; */
+.fileContainer .iconInput {
+  margin-bottom: 1rem;
 }
-
-::-webkit-file-upload-button:hover {
-    background: var(--color-bg-primary);
-}
-
-::-webkit-file-upload-button:active {
-    background: var(--color-bg-primary);
-}
-
 
 /* input ubicacion */
 .iconInput {
-    width: 25px;
+  width: 25px;
 }
 
 .ubicacionContainer {
-    display: flex;
-    gap: 2rem;
-    width: 90vw;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
 }
 
 .inputUbicacion {
-    border: none;
-    padding: 19px 16px;
+  border: none;
+  padding: 19px 16px;
 }
 
 .inputUbicacion:focus-visible {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .inputUbicacion::placeholder {
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 18px;
-    border: none;
-    color: #4e4f4c;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 18px;
+  border: none;
+  color: #4e4f4c;
 }
 
 .inputUbicacion:not(:placeholder-shown) {
-    padding: 8px 16px;
-    padding-top: 30px;
+  padding: 8px 16px;
+  padding-top: 30px;
 }
 
-.inputUbicacion:not(:placeholder-shown)~label {
-    display: block;
-    position: absolute;
-    z-index: 50;
-    padding: 8px 16px;
-    font-size: 12px;
-    top: 0;
+.inputUbicacion:not(:placeholder-shown) ~ label {
+  display: block;
+  position: absolute;
+  z-index: 50;
+  padding: 8px 16px;
+  font-size: 12px;
+  top: 0;
 }
 
 .inputBoxReclamo:has(.inputUbicacion:focus-visible) {
-    border-bottom: 2px solid var(--color-bg-primary);
+  border-bottom: 2px solid var(--color-bg-primary);
+}
+
+.nuevoReclamoInputs .inputBoxReclamo {
+  width: 100%;
 }
 
 /* Filter */
 
 .filterContainer {
-    display: flex;
-    justify-content: center;
-    padding: 0 1rem;
+  display: flex;
 }
 
 .filterItemContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    background: #FFFFFF;
-    border-radius: 4px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 4px;
+  width: 100%;
 }
 
 .filterVerified {
-    width: 20px;
-    margin-right: 0.5rem;
+  width: 20px;
+  margin-right: 0.5rem;
 }
 
 .filterText {
-    padding: 1.5rem 2rem 1.5rem 1rem;
-    font-size: 1.2em;
-    color: #000000;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000000;
 }
 
 .filterIconRounded {
-    width: 30px;
-    height: 30px;
-    margin-left: 1rem;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem;
+  border-radius: 50%;
 }
 
 /* theme data container */
 
 .themesDataContainer {
-    width: 100%;
+  width: 100%;
 }
 
+.newClaimContainer {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
 
-@media (min-width:768px) {
-    .nuevoReclamoTopNav {
-        background-color: #262724;;
-        background-color: #262724;
-        display: none;
-    }
-
-    .topNavDinamicContainer {
-        display: block;
-    }
+.nuevoReclamoContainer {
+  padding: 1.6rem;
+  padding-top: 0;
 }
