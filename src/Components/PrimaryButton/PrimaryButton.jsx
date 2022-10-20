@@ -3,19 +3,20 @@ import React from "react";
 import "./primaryButton.css";
 import { Link } from "react-router-dom";
 
-const PrimaryButton = (prop) => {
+const PrimaryButton = (props) => {
   return (
     <Link
-      className={`primaryButton ${prop.className}`}
+      className={`primaryButton ${props.className}`}
       style={{
-        backgroundColor: prop.bg,
-        color: prop.color,
-        pointerEvents: prop.disabled ? "none" : "",
+        backgroundColor: props.bg,
+        color: props.color,
+        pointerEvents: props.disabled ? "none" : "",
       }}
-      to={prop.to}
-      onClick={prop.onClick}
+      to={props.to}
+      onClick={props.onClick}
+      state={props.state}
     >
-      {prop.text}
+      {props.text}
     </Link>
   );
 };

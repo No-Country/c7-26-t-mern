@@ -39,33 +39,37 @@ const Perfil = () => {
             <InputReclamo
             className='inputBoxProfile'
             type={"text"}
-            label={"Nombre"}
+            label={"Roberto Gonzalez"}
             name="nombre"
+            readOnly="readOnly"
             disabled={""}/>
 
             <InputReclamo
             className='inputBoxProfile'
             type={"text"}
-            label={"Nombre de usuario"}
+            label={"Roberto123"}
             name="usuario"
+            readOnly="readOnly"
             disabled={""}/>
 
             <InputReclamo
             className='inputBoxProfile'
             type={"email"}
-            label={"Email"}
+            label={"roberto123@gmail.com"}
             name="email"
+            readOnly="readOnly"
             disabled={""}/>
 
             <InputReclamo
             className='inputBoxProfile'
             type={"text"}
-            label={"Número de telefono"}
+            label={"1122334455"}
             name="telefono"
+            readOnly="readOnly"
             disabled={""}/>
 
             <button className="profileButton">GUARDAR CAMBIOS</button>
-            <button className="profileSession">CERRAR SESION</button>
+            <Link to="/"><button className="profileSession">CERRAR SESION</button></Link>
             </div>
 
 

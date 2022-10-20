@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import Filter from "./Filter";
-import { useParams, useLocation } from "react-router-dom";
-import { themesData, institutionData } from "../../datas/themesData";
-import { Link } from "react-router-dom";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import Category from "./Category/Category";
-import ThemeCard from "../../Components/ThemeCard/ThemeCard";
+import { useLocation } from "react-router-dom";
+
+import Filter from "../Filter";
+import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
+
+import { themesData } from "../../../datas/themesData";
+
+import "./filterCategory.css"
 
 const FilterSingleCategory = () => {
   // const { idInstitucion } = useParams();
@@ -30,7 +30,7 @@ const FilterSingleCategory = () => {
   console.log(item);
 
   return (
-    <div>
+    <div className="categoryClaimSection">
       {item ? (
         <div>
           <Filter
@@ -41,9 +41,11 @@ const FilterSingleCategory = () => {
             className="filterIconRounded"
           />
 
+          <h2 className="categoryClaimSectionTitle">Categorias Asociadas</h2>
+
           <div className="themeCardContent">
-            {themesData.map(({ url, title, id }, idx) => (
-              <ThemeCard url={url} title={title} key={idx} id={id} />
+            {themesData.map(({ color, title, id }, idx) => (
+              <ThemeCard bg={color} title={title} key={idx} id={id} />
             ))}
           </div>
         </div>

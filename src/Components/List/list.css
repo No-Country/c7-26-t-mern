@@ -1,6 +1,5 @@
 .themeCardContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 16px;
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
 }

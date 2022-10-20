@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./topToggle.css";
+import "./toptogglelogin.css";
 
 const TopToggle = (props) => {
   const [active, setActive] = useState("");
@@ -9,11 +9,11 @@ const TopToggle = (props) => {
   };
 
   return (
-    <div className="topToggleContainer">
-      <ul className="toggleOptions">
+    <div className="topToggleLogin">
+      <ul className="toggleLoginOptions">
         <li
           key={1}
-          className={`option ${active === "1" ? "optionActive" : undefined}`}
+          className={`optionLogin ${active === "1" ? "optionActive" : undefined}`}
           id={"1"}
           onClick={handleClick}
         >
@@ -22,7 +22,7 @@ const TopToggle = (props) => {
         <li
           key={2}
           style={{bodybackgroundColor: "red"}}
-          className={`option institucion ${active === "2" ? "optionActive" : undefined}`}
+          className={`optionLogin institucion ${active === "2" ? "optionActive" : undefined}`}
           id={"2"}
           onClick={handleClick}
         >

@@ -1,13 +1,16 @@
-import Filter from "./Filter";
-import { Link, Outlet } from "react-router-dom";
-// import asd from '../../Assets/img/verified.svg'
-import { institutionData } from "../../datas/themesData";
+import { Outlet } from "react-router-dom";
 
-const FilterClaim = () => {
+import SearchBar from "../../../Components/SearchBar/SearchBar";
+import { institutionData } from "../../../datas/themesData";
+import Filter from "../Filter";
 
+import "./filterInstitution.css";
+
+const FilterInstitution = () => {
   return (
     <div>
       <div className="themesDataContainer">
+        <SearchBar placeholder="Busca un reclamo" />
         {institutionData.map(({ url, category, title }, index) => {
           return (
             <Filter
@@ -27,4 +30,4 @@ const FilterClaim = () => {
   );
 };
 
-export default FilterClaim;
+export default FilterInstitution;

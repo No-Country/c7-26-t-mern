@@ -2,10 +2,15 @@
   padding: 20px;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
   overflow: hidden;
+}
+
+.sectionLoginChoice a.primaryButton {
+  padding: 17px;
 }
 
 .sectionLoginChoiceContainer {
@@ -137,3 +142,4 @@
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
+
