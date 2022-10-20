@@ -25,8 +25,6 @@ const FilterInstitution = () => {
           );
         })}
       </div>
-
-      <Outlet></Outlet>
     </div>
   );
 };
