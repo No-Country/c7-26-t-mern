@@ -18,6 +18,7 @@ const MyClaims = () => {
         />
         <p className="noResultsText">Aún no tienes ningún reclamo</p>
       </div>
+      <button className="addNewClaim">+ NUEVO RECLAMO</button>
       <BotNav />
     </div>
   );
