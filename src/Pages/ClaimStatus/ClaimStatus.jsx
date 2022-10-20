@@ -1,9 +1,11 @@
 import React from "react";
-
+import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import StatusCard from "./StatusCard/StatusCard";
 import InstitutionCard from "../NewClaim/InstitutionCard";
+import NewClaimModal from "./NewClaimModal/NewClaimModal";
 
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { RiShareLine } from "react-icons/ri";
@@ -16,17 +18,40 @@ const ClaimStatus = () => {
   let navigate = useNavigate();
 
   function navigateHome(event) {
-
     // await submitForm(event.target);
     navigate("/home", { replace: true });
     // replace: true will replace the current entry in
     // the history stack instead of adding a new one
   }
 
+  const [modal, setModal] = useState(false);
+
+  const location = useLocation();
+  const isNewClaim = useRef(false);
+
+  useEffect(() => {
+    try {
+      const { Theme, Institution } = location.state;
+      console.log(location.state);
+      setModal(true);
+      isNewClaim.current = true;
+    } catch (err) {
+      return () => {
+        setModal(false);
+      };
+    }
+  }, []);
+
   return (
     <React.Fragment>
+      {modal && <NewClaimModal setModal={setModal} />}
       <div className="nuevoReclamoTopNav">
-        <span onClick={() => {navigateHome()}} className="appNotificationIcon">
+        <span
+          onClick={() => {
+            navigateHome();
+          }}
+          className="appNotificationIcon"
+        >
           <AiOutlineArrowLeft />
         </span>
         <h2 className="appNotificationTextMenu">{"Estado del Reclamo"}</h2>
@@ -63,7 +88,14 @@ const ClaimStatus = () => {
           </div>
         </div>
 
-        <PrimaryButton bg="#262724" text="Volver a mis reclamos" color="var(--color-primary)" to="/myClaims"/>
+        {isNewClaim.current === true && (
+          <PrimaryButton
+            bg="#262724"
+            text="Volver a mis reclamos"
+            color="var(--color-primary)"
+            to="/myClaims"
+          />
+        )}
       </div>
     </React.Fragment>
   );
