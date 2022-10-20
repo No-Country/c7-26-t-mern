@@ -1,12 +1,12 @@
-import InputReclamo from "../../Components/InputReclamo/InputReclamo";
-import ubication from "../../Assets/img/mapa.svg";
+import InputReclamo from "../../../Components/InputReclamo/InputReclamo";
+import ubication from "../../../Assets/img/mapa.svg";
 import "./newclaim.css";
-import image from "../../Assets/img/imagenes.svg";
+import image from "../../../Assets/img/imagenes.svg";
 import { useState } from 'react';
 import { useLocation } from "react-router-dom";
-import ThemeCard from "../../Components/ThemeCard/ThemeCard";
-import Filter from "./Filter";
-import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
+import Filter from "./../Filter";
+import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 import { AiFillFileAdd } from "react-icons/ai";
 
 const NewClaim = () => {
@@ -115,6 +115,7 @@ const NewClaim = () => {
               text="CREAR NUEVO"
               bg="var(--color-bg-primary)"
               color="var(--color-primary)"
+              to="/claimStatus"
               state={{
                 Title: "Nuevo Reclamo",
                 Theme: Theme,

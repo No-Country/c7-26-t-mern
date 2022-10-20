@@ -6,7 +6,7 @@ import { MdVerified } from "react-icons/md";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import "./claimDetail.css";
 
-const ClaimDetail = () => {
+const ClaimStatus = () => {
   return (
     <div>
       <TopNav text={"Proceso del reclamo"} />
@@ -77,4 +77,4 @@ const ClaimDetail = () => {
   );
 };
 
-export default ClaimDetail;
+export default ClaimStatus;
