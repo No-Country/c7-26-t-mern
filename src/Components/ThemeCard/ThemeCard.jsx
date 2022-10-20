@@ -16,7 +16,7 @@ const ThemeCard = (props, key) => {
   return (
     <Link
       className="themeCardContainer"
-      style={{ backgroundColor: props.bg }}
+      style={{ backgroundColor: props.bg, pointerEvents: props.link === true ? "" : "none"  }}
       key={key}
       to={"/newClaim/asociateClaims"}
       state={{

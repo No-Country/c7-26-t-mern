@@ -45,7 +45,7 @@ const FilterSingleCategory = () => {
 
           <div className="themeCardContent">
             {themesData.map(({ color, title, id }, idx) => (
-              <ThemeCard bg={color} title={title} key={idx} id={id} />
+              <ThemeCard bg={color} title={title} key={idx} id={id} link={true}/>
             ))}
           </div>
         </div>

@@ -14,6 +14,7 @@ const FilterInstitution = () => {
         {institutionData.map(({ url, category, title }, index) => {
           return (
             <InstitutionCard
+              link={true}
               category={category}
               key={index}
               src={url}

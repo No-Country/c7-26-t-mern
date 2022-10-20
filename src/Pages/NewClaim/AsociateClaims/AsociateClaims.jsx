@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
 import Card from "../../../Components/Card/Card";
@@ -11,6 +11,9 @@ import "./asociateClaims.css";
 
 const AsociateClaims = () => {
   const [shadow, setShadow] = useState(false);
+  const Theme = useRef();
+  const Institution = useRef();
+  const location = useLocation();
 
   const ScrollHandler = (e) => {
     let element = e.target;
@@ -21,18 +24,8 @@ const AsociateClaims = () => {
     }
   };
 
-  function ThemeGetter() {
-    const location = useLocation();
-    try {
-      const { Theme, Institution } = location.state;
-      console.log(location.state);
-      return { Theme, Institution };
-    } catch (err) {
-      return "Default";
-    }
-  }
-
-  let { Theme, Institution } = ThemeGetter();
+  Theme.current = location.state.Theme;
+  Institution.current = location.state.Institution;
 
   return (
     <div>
@@ -43,13 +36,18 @@ const AsociateClaims = () => {
         }}
       >
         <InstitutionCard
-          category={Institution.category}
-          src={Institution.src}
-          alt={Institution.text}
-          text={Institution.text}
+          link={false}
+          category={Institution.current.category}
+          src={Institution.current.src}
+          alt={Institution.current.text}
+          text={Institution.current.text}
           className="filterIconRounded"
         />
-        <ThemeCard bg={Theme.bg} title={Theme.title} id={Theme.id} />
+        <ThemeCard
+          bg={Theme.current.bg}
+          title={Theme.current.title}
+          id={Theme.current.id}
+        />
       </div>
       <div className="reclamosAsociadosSection">
         <div className="reclamosAsociadosSectionSelection"></div>
@@ -61,8 +59,8 @@ const AsociateClaims = () => {
             color="var(--color-primary)"
             state={{
               Title: "Nuevo Reclamo",
-              Theme: Theme,
-              Institution: Institution,
+              Theme: Theme.current,
+              Institution: Institution.current,
             }}
           ></PrimaryButton>
         </div>
