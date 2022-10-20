@@ -20,7 +20,7 @@
 
 .appNotificationIcon {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .appNotificationTextMenu {
@@ -28,6 +28,7 @@
   font-weight: bold;
   letter-spacing: 0.5px;
   line-height: 32px;
+  color: #fff;
 }
 
 .notificationsContainer {

@@ -1,9 +1,11 @@
 import verified from "../../Assets/img/verified.svg";
 import { Link } from "react-router-dom";
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
 const Filter = (props) => {
 
   return (
+    <div>
     <Link to="/newClaim/category" state={{ Title: "Categoria", Institution: props}} >
       <div className="filterContainer">
         <div className="filterItemContainer">
@@ -13,6 +15,7 @@ const Filter = (props) => {
         </div>
       </div>
     </Link>
+    </div>
   );
 };
 

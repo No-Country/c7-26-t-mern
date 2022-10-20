@@ -1,7 +1,9 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import TopNav from "../../Components/Nav/TopNav/TopNav";
+import './newclaim.css'
+
 // import asd from '../../Assets/img/verified.svg'
 
 
@@ -13,7 +15,7 @@ const NewClaimIndex = () => {
     try {
       const { Title } = location.state;
       return Title;
-    } catch(err) {
+    } catch (err) {
       return "Default"
     }
   }
@@ -26,6 +28,11 @@ const NewClaimIndex = () => {
         </span>
         <h2 className="appNotificationTextMenu">{Profile()}</h2>
       </div>
+
+      <div className="topNavDinamicContainer">
+          <TopNav
+            className="topNav"/>
+        </div>
 
       <Outlet></Outlet>
     </div>

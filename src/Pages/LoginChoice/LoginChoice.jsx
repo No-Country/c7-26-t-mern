@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react";
 import Logo from "../../Components/Logo/Logo";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import TopToggleLogin from '../../Components/TopToggleLogin/TopToggleLogin'
 
-import "./loginChoice.css";
+import "./LoginChoice.css";
 
 const LoginChoice = (props) => {
   const [loading, setLoading] = useState(false);

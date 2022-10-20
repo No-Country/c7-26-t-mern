@@ -4,21 +4,20 @@
     -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-    display: flex;
-    align-items: center;
-    gap: 2.3rem;
-    flex-direction: row;
     width: 100%;
     flex-shrink: 0;
     position: static;
     background-color: #8f0000;
     color: #fff;
     font-family: var(--font-secundary);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     padding: 1.2rem;
     padding-left: 1.2rem;
 }
 
-.perfilOptionsContainer {
+/* .perfilOptionsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,4 +40,95 @@
     border-top: 1px solid #8f0000;
     width: 100%;
     padding-top: 1rem;
+} */
+
+/* inputs profile */
+.inputBoxProfile {
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    border: none;
+    padding: 19px 16px;
+}
+
+.inputBoxProfile:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.inputBoxProfile::placeholder {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 18px;
+    border: none;
+    color: #4e4f4c;
+}
+
+.inputBoxProfile:not(:placeholder-shown) {
+    padding: 8px 16px;
+    padding-top: 30px;
+}
+
+label {
+    display: none;
+}
+
+.inputBoxProfile:not(:placeholder-shown)~label {
+    display: block;
+    position: absolute;
+    z-index: 50;
+    padding: 8px 16px;
+    font-size: 12px;
+    top: 0;
+}
+
+.inputBoxReclamo:has(.inputBoxProfile:focus-visible) {
+    border-bottom: 2px solid var(--color-bg-primary);
+}
+
+
+.profileButton {
+    border: none;
+    background-color: var(--color-bg-primary);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+
+/* container inputs */
+.inputProfileContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.profileSession {
+    margin-top: 10rem;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 1rem 7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+@media (min-width:768px) {
+    .perfilTopNav {
+        background-color: #262724;
+        display: none;
+    }
 }

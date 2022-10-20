@@ -37,17 +37,16 @@
 }
 
 .nuevoReclamoContainerForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .nuevoReclamoContainerForm a.primaryButton {
-    display: flex;
-    height: 45px;
-    align-items: center;
-  }
-  
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
 
 /*inputs container */
 
@@ -68,6 +67,8 @@
   align-items: center;
   justify-content: center;
 }
+
+/* text area */
 
 .textAreaContainer {
   display: flex;
@@ -156,6 +157,7 @@ input[type="file"] {
   left: 0;
 }
 
+/* boton nuevo reclamo */
 .nuevoReclamoSubmit {
   border: none;
   cursor: pointer;
@@ -190,6 +192,10 @@ input[type="file"] {
 }
 
 /* input ubicacion */
+.iconInput {
+  width: 25px;
+}
+
 .ubicacionContainer {
   display: flex;
   gap: 2rem;
