@@ -15,6 +15,10 @@ import "./claimStatus.css";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
 const ClaimStatus = () => {
+  const [modal, setModal] = useState(false);
+  const isNewClaim = useRef(false);
+
+  const location = useLocation();
   let navigate = useNavigate();
 
   function navigateHome(event) {
@@ -24,10 +28,10 @@ const ClaimStatus = () => {
     // the history stack instead of adding a new one
   }
 
-  const [modal, setModal] = useState(false);
-
-  const location = useLocation();
-  const isNewClaim = useRef(false);
+  function modalHandler() {
+    document.body.style.overflow = "auto";
+    setModal(false)
+  }
 
   useEffect(() => {
     try {
@@ -35,6 +39,8 @@ const ClaimStatus = () => {
       console.log(location.state);
       setModal(true);
       isNewClaim.current = true;
+      document.body.style.overflow = "hidden";
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     } catch (err) {
       return () => {
         setModal(false);
@@ -44,7 +50,7 @@ const ClaimStatus = () => {
 
   return (
     <React.Fragment>
-      {modal && <NewClaimModal setModal={setModal} />}
+      {modal && <NewClaimModal setModal={modalHandler} />}
       <div className="nuevoReclamoTopNav">
         <span
           onClick={() => {

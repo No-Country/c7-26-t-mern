@@ -1,8 +1,6 @@
 import "./newClaimModal.css";
 
 const NewClaimModal = (props) => {
-  document.body.style.overflow = "hidden";
-
   return (
     <div className="newClaimModalBackground">
       <div className="newClaimModalBox">
