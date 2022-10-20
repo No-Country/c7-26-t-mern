@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const InstitutionCard = (props) => {
 
   return (
+    
     <div>
     <Link to="/newClaim/category" state={{ Title: "Categoria", Institution: props}} >
       <div className="filterContainer">

@@ -4,6 +4,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import TopNav from "../../Components/Nav/TopNav/TopNav";
 import "./NewClaim/newclaim.css";
 
+
 // import asd from '../../Assets/img/verified.svg'
 
 const NewClaimIndex = () => {
@@ -21,6 +22,10 @@ const NewClaimIndex = () => {
 
   return (
     <div>
+       <div className="topNavDinamicContainer">
+                <TopNav
+                    className="topNav" />
+            </div>
       <div className="nuevoReclamoTopNav">
         <span
           onClick={() => {

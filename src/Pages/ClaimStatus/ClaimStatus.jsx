@@ -13,6 +13,7 @@ import { BiUpvote } from "react-icons/bi";
 
 import "./claimStatus.css";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import TopNav from "../../Components/Nav/TopNav/TopNav";
 
 const ClaimStatus = () => {
   const [modal, setModal] = useState(false);
@@ -50,6 +51,10 @@ const ClaimStatus = () => {
 
   return (
     <React.Fragment>
+       <div className="topNavDinamicContainer">
+                <TopNav
+                    className="topNav" />
+            </div>
       {modal && <NewClaimModal setModal={modalHandler} />}
       <div className="nuevoReclamoTopNav">
         <span
