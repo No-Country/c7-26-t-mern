@@ -294,3 +294,10 @@ input[type="file"] {
   padding: 1.6rem;
   padding-top: 0;
 }
+
+/* media querie */
+@media (min-width:768px) {
+  .nuevoReclamoTopNav {
+    display: none;
+  }
+}

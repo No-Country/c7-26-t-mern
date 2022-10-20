@@ -9,7 +9,8 @@ import "./claimDetail.css";
 const ClaimDetail = () => {
   return (
     <div>
-      <TopNav text={"Proceso del reclamo"} />
+      <TopNav
+        className="topNav" />
       <div className="claimPrimaryInfo">
         <div className="claimCategoryImageContainer">
           <img
