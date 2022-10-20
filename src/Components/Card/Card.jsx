@@ -1,6 +1,5 @@
 import React from "react";
 import { BiUpvote } from "react-icons/bi";
-import { BsFillShareFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./card.css";
 
@@ -16,7 +15,6 @@ const Card = (props) => {
           <h3 className="claimTitle">{props.title}</h3>
           <h5 className="claimSubtitle">{props.subtitle}</h5>
         </div>
-        <BsFillShareFill className="shareIcon" />
       </div>
       <div className="claimContent">
         <img
