@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.sectionLoginChoice a.primaryButton {
+  padding: 17px;
+}
+
 .sectionLoginChoiceContainer {
   display: flex;
   align-items: center;

@@ -2,6 +2,10 @@
   padding: 16px;
 }
 
+.sectionLogin a.primaryButton {
+  padding: 17px;
+}
+
 .sectionLoginContainer {
   display: flex;
   align-items: center;
