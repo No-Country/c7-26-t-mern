@@ -7,10 +7,20 @@ import HeaderLogin from "./loginComponents/HeaderLogin/HeaderLogin";
 import LoginButtons from "./loginComponents/LoginButtons/loginButtons";
 
 import "./login.css";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token.length > 0) {
+      navigate("/home");
+    }
+  }, [token]);
 
   //fill inputs y obtain data value by onChange event
   const handleOnChangeName = (e) => {
@@ -27,23 +37,26 @@ const Login = (props) => {
   const loginFunction = async () => {
     axios({
       method: "post",
-      url: "http://localhost:3000/login",
+      url: "http://localhost:4000/api/v1/users/login",
       data: {
-        claimmerName: name,
+        email: name,
         password: password,
       },
+      headers: {
+        alg: "HS256",
+        typ: "JWT",
+      },
     }).then(
-      function logear(response) {
+      function logear({ data: response }) {
         console.log("Logeado correctamente");
-        window.localStorage.setItem("rol", response.data.rol);
+        setToken(response.data.token);
+        // window.localStorage.setItem("rol", response.data.rol);
         window.localStorage.setItem("token", response.data.token);
-        window.localStorage.setItem("id", response.data.idClaimmer);
+        window.localStorage.setItem("id", response.data.user.id);
         const idLogged = window.localStorage.getItem("id");
-        window.localStorage.setItem("path", "/home");
       },
       function error(params) {
         console.error("Nombre o Contraseña incorrecta");
-        window.localStorage.setItem("path", "/login");
       }
     );
   };
@@ -80,8 +93,7 @@ const Login = (props) => {
             text="Ingresar"
             bg={buttonHandlerColor ? "#8E938D" : "#8f0000"}
             color="#F0F0F0"
-            // onClick={loginFunction}
-            to={"/home"}
+            onClick={loginFunction}
           />{" "}
         </form>
         <p className="sectionLoginContainerHelperText">

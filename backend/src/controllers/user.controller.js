@@ -9,7 +9,7 @@ const { User } = require('../models/user.model');
 const { catchAsync } = require('../utils/catchAsync.util');
 const { AppError } = require('../utils/appError.util');
 const { categoryService, countryService, cityService, institutionService, claimmerService } = require('../services');
-const { Picture } = require('../models');
+const { Picture, Claimmer } = require('../models');
 
 dotenv.config({ path: './config.env' });
 
@@ -80,9 +80,10 @@ const login = catchAsync(async (req, res, next) => {
 	// Get email and password from req.body
 	const { email, password } = req.body;
 
+
 	// Validate if the user exist with given email
-	const user = await User.findOne({
-		where: { email, status: 'active' },
+	const user = await Claimmer.findOne({
+		where: { email },
 	});
 
 	// Compare passwords (entered password vs db password)
@@ -97,7 +98,8 @@ const login = catchAsync(async (req, res, next) => {
 	// Generate JWT (payload, secretOrPrivateKey, options)
 	const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
 		expiresIn: '30d',
-	});
+	}, { algorithm: 'RS256' });
+	console.log(token);
 
 	res.status(200).json({
 		status: 'success',

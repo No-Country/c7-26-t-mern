@@ -10,36 +10,38 @@ const URL = "http://localhost:4000/api/v1";
 
 const Home = () => {
   const [claims, setClaims] = useState([]);
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
 
-  useEffect(() => {
-    const getClaims = async () => {
-      const { data: response } = await axios.get(`${URL}/claims`);
-      console.log(response.data);
-      setClaims(response.data);
-    };
-    getClaims();
-  }, []);
+  // title, claimmerId, institutionCategoryId, limit, offset
 
   useEffect(() => {
     // const query = `${search}`;
     const getClaims = async () => {
       let query;
-      let data;
-      if (Number(search)) {
-        query = Number(search);
-        data = await axios.get(`${URL}/claims/${query}`);
+      let response;
+      if (search.length === 0) {
+        const { data: array } = await axios.get(`${URL}/claims`);
+        response = array;
+        setClaims(response.data);
       } else {
-        query = `title=${search}`;
-        data = await axios.get(`${URL}/claims?${query}`);
+        if (Number(search)) {
+          query = Number(search);
+          const { data: array } = await axios.get(`${URL}/claims/${query}`);
+          response = array;
+          setClaims([response.data]);
+        } else {
+          query = `title=${search}&institution=${search}&category=${search}&offset=${1}&limit=${10}`;
+          const { data: array } = await axios.get(`${URL}/claims?${query}`);
+          response = array;
+          setClaims(response.data);
+        }
       }
-      console.log(data);
-      // const { data: response } = console.log(response.data);
-      setSearch(data.data);
+      console.log(response);
+      // const { response: response } = console.log(response.response);
     };
     getClaims();
   }, [search]);
