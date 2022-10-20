@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import "./topToggle.css";
 
-const TopToggle = (props) => {
-  const [active, setActive] = useState("");
-
-  const handleClick = (event) => {
-    setActive(event.target.id);
-  };
+const TopToggle = ({ handleClick, option1, option2, option }) => {
+  let active = option;
 
   return (
     <div className="topToggleContainer">
@@ -17,7 +13,7 @@ const TopToggle = (props) => {
           id={"1"}
           onClick={handleClick}
         >
-          {props.option1}
+          {option1}
         </li>
         <li
           key={2}
@@ -25,7 +21,7 @@ const TopToggle = (props) => {
           id={"2"}
           onClick={handleClick}
         >
-          {props.option2}
+          {option2}
         </li>
       </ul>
     </div>

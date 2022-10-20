@@ -53,18 +53,12 @@ const Login = (props) => {
         // window.localStorage.setItem("rol", response.data.rol);
         window.localStorage.setItem("token", response.data.token);
         window.localStorage.setItem("id", response.data.user.id);
-        const idLogged = window.localStorage.getItem("id");
       },
       function error(params) {
         console.error("Nombre o Contraseña incorrecta");
       }
     );
   };
-
-  // NEED FIX THE PROBLEM ABOUT GETING LOCALSTORAGE PATH VALUE DINAMICALLY
-  // function getPathing() {
-  //   window.localStorage.getItem("path");
-  // }
 
   return (
     <section className="sectionLogin">
