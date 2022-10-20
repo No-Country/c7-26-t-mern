@@ -18,15 +18,15 @@
 }
 
 .sectionLoginChoiceContainerDescription {
-  margin: 0;
-  padding: 0 20px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  margin: 0px;
+  padding-right: 0px;
+  font-weight: 400px;
+  font-size: 2rem;
+  line-height: 30px;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: #262724;
 }
 
@@ -41,7 +41,8 @@
 .sectionLoginChoiceContainerTerms {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 10;
+  margin-bottom: 10px;
 }
 
 .sectionLoginChoiceContainerTerms-text {
@@ -136,4 +137,34 @@
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 0.5s;
+}
+
+
+@media (min-width: 700px) {
+  .sectionLoginChoiceContainerFunc{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    
+    width: 100%;
+  }
+
+  .sectionLoginChoiceContainerInfo{
+    margin-right: 90px;
+    padding-bottom: 90px;
+    width: 55%;
+  }
+
+  .sectionLoginChoiceContainerButtons{
+    margin-left: 80px;
+    width: 45%;
+  }
+
+  .sectionLoginChoiceContainerDescription {
+    margin-top: 30px;
+    text-align: start;
+    font-weight: 500;
+    font-size: 2.7rem;
+    line-height: 1.5em;
+  }
 }
