@@ -2,56 +2,56 @@ import InputReclamo from "../../../Components/InputReclamo/InputReclamo";
 import ubication from "../../../Assets/img/mapa.svg";
 import "./newclaim.css";
 import image from "../../../Assets/img/imagenes.svg";
-import { useState } from 'react';
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
-import Filter from "./../Filter";
+import InstitutionCard from "../InstitutionCard";
 import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 import { AiFillFileAdd } from "react-icons/ai";
 
 const NewClaim = () => {
+  const [title, setTitle] = useState("");
+  const [textArea, setTextArea] = useState("");
+  const [ubicationInput, setUbication] = useState("");
 
-    const [title, setTitle] = useState("");
-    const [textArea, setTextArea] = useState("");
-    const [ubicationInput, setUbication] = useState("");
+  const handleOnChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
 
-    const handleOnChangeTitle = (e) => {
-        setTitle(e.target.value);
-    };
+  const handleOnChangeTextArea = (e) => {
+    setTextArea(e.target.value);
+  };
 
-    const handleOnChangeTextArea = (e) => {
-        setTextArea(e.target.value);
-    };
+  const handleOnChangeUbication = (e) => {
+    setUbication(e.target.value);
+  };
 
-    const handleOnChangeUbication = (e) => {
-        setUbication(e.target.value);
-    };
+  const buttonHandlerColor =
+    title === "" || textArea === "" || ubicationInput === "";
 
-    const buttonHandlerColor = title === "" || textArea === "" || ubicationInput === "";
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("reclamo creado");
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("reclamo creado");
-    };
-
-    function ThemeGetter() {
-        const location = useLocation();
-        try {
-            const { Theme, Institution } = location.state;
-            console.log(location.state);
-            return { Theme, Institution };
-        } catch (err) {
-            return "Default";
-        }
+  function ThemeGetter() {
+    const location = useLocation();
+    try {
+      const { Theme, Institution } = location.state;
+      console.log(location.state);
+      return { Theme, Institution };
+    } catch (err) {
+      return "Default";
     }
+  }
 
-    let { Theme, Institution } = ThemeGetter();
-    console.log(Institution);
+  let { Theme, Institution } = ThemeGetter();
+  console.log(Institution);
 
   return (
     <div>
       <div className="nuevoReclamoSectionSelectionTop">
-        <Filter
+        <InstitutionCard
           category={Institution.category}
           src={Institution.src}
           alt={Institution.text}

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import ThemeCard from "../../../Components/ThemeCard/ThemeCard";
 import Card from "../../../Components/Card/Card";
-import Filter from "./../Filter";
+import InstitutionCard from "../InstitutionCard";
 
 import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 
@@ -13,13 +13,13 @@ const AsociateClaims = () => {
   const [shadow, setShadow] = useState(false);
 
   const ScrollHandler = (e) => {
-    let element = e.target
+    let element = e.target;
     if (element.scrollTop !== 0) {
-      setShadow(true)
+      setShadow(true);
     } else {
-      setShadow(false)
+      setShadow(false);
     }
-  }
+  };
 
   function ThemeGetter() {
     const location = useLocation();
@@ -36,8 +36,13 @@ const AsociateClaims = () => {
 
   return (
     <div>
-      <div className="reclamosAsociadosSectionSelectionTop" style={{boxShadow: shadow ? "0px -1px 18px rgba(0, 0, 0, 0.25)" : "none"}}>
-        <Filter
+      <div
+        className="reclamosAsociadosSectionSelectionTop"
+        style={{
+          boxShadow: shadow ? "0px -1px 18px rgba(0, 0, 0, 0.25)" : "none",
+        }}
+      >
+        <InstitutionCard
           category={Institution.category}
           src={Institution.src}
           alt={Institution.text}
@@ -62,7 +67,10 @@ const AsociateClaims = () => {
           ></PrimaryButton>
         </div>
 
-        <div className="reclamosAsociadosSectionSelectionClaims" onScroll={ScrollHandler}>
+        <div
+          className="reclamosAsociadosSectionSelectionClaims"
+          onScroll={ScrollHandler}
+        >
           <h3 className="reclamosAsociadosSectionSelectionClaimsTitle">
             Reclamos Activos
           </h3>

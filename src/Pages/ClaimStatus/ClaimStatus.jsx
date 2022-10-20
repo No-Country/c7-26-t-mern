@@ -1,79 +1,71 @@
 import React from "react";
-import TopNav from "../../Components/Nav/TopNav/TopNav";
-import BotNav from "../../Components/Nav/BotNav/BotNav";
-import profileClaimmer from "../../Assets/img/imgClaimer.jpg";
-import { MdVerified } from "react-icons/md";
+
+import { useNavigate } from "react-router-dom";
+
+import StatusCard from "./StatusCard/StatusCard";
+import InstitutionCard from "../NewClaim/InstitutionCard";
+
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { RiShareLine } from "react-icons/ri";
+import { BiUpvote } from "react-icons/bi";
+
+import "./claimStatus.css";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
-import "./claimDetail.css";
 
 const ClaimStatus = () => {
+  let navigate = useNavigate();
+
+  function navigateHome(event) {
+
+    // await submitForm(event.target);
+    navigate("/home", { replace: true });
+    // replace: true will replace the current entry in
+    // the history stack instead of adding a new one
+  }
+
   return (
-    <div>
-      <TopNav text={"Proceso del reclamo"} />
-      <div className="claimPrimaryInfo">
-        <div className="claimCategoryImageContainer">
-          <img
-            src="https://i.ibb.co/yVyNQ7w/postAgua.jpg"
-            alt="claimCategoryImage"
-            className="claimCategoryImage"
-          />
+    <React.Fragment>
+      <div className="nuevoReclamoTopNav">
+        <span onClick={() => {navigateHome()}} className="appNotificationIcon">
+          <AiOutlineArrowLeft />
+        </span>
+        <h2 className="appNotificationTextMenu">{"Estado del Reclamo"}</h2>
+      </div>
+      <div className="claimStatusSectionContianer">
+        <StatusCard />
+        <h3 className="claimStatusSectionContianerTitle">Responsable</h3>
+        <InstitutionCard
+          src={"https://i.ibb.co/7rpmB40/agua.jpg"}
+          alt={"Secretaria del agua"}
+          text={"Secretaria del agua"}
+        />
+        <div className="claimStatusSectionContianerProgress">
+          <div className="claimStatusSectionContianerProgressFullBar">
+            <div className="claimStatusSectionContianerProgressBar"></div>
+          </div>
+          <div className="claimStatusSectionContianerProgressBarText">
+            <span className="active">ENVIADO</span>
+            <span>VISTO</span>
+            <span>RESPUESTA</span>
+            <span>SOLUCIÓN</span>
+          </div>
         </div>
 
-        <div className="titlesAndProfileImg">
-          <div className="titles">
-            <h5 className="secudnaryTitle">Categoria: Ague e Higiene</h5>
-            <h3 className="principalTitle">¡No tenemos agua!</h3>
+        <div className="claimStatusSectionContianerActions">
+          <div className="claimStatusSectionContianerActionsAction">
+            <BiUpvote />
+            <span>VOTAR</span>
           </div>
-          <img
-            className="imgClaimmer imgClaimmerDetail"
-            src={profileClaimmer}
-            alt="imgClaimmer"
-          />
-        </div>
-      </div>
-      <div className="progressBar">
-        <div className="bar">
-          <div className="barPainted">
-            <div className="point"></div>
+
+          <div className="claimStatusSectionContianerActionsAction">
+            <RiShareLine />
+            <span>COMPARTIR</span>
           </div>
         </div>
-        <div className="progressTitlesDiv">
-          <p className="progressTitle">Enviado</p>
-          <p className="progressTitle">Visto</p>
-          <p className="progressTitle">Respuesta</p>
-          <p className="progressTitle">Solución</p>
-        </div>
+
+        <PrimaryButton bg="#262724" text="Volver a mis reclamos" color="var(--color-primary)" to="/myClaims"/>
       </div>
-      <div className="institutionAndButtons">
-        <div className="institutionInfo">
-          <img
-            className="imgClaimmer imgTakeDecisionsDetail"
-            src={profileClaimmer}
-            alt="imgClaimmer"
-          />
-          <div className="institutionInfoTitles">
-            <p className="institutionName">Municipalidad de Córdoba</p>
-            <p className="institutionAddress">Dirección: Av. Colón 579</p>
-          </div>
-          <MdVerified className="verifyIcon" />
-        </div>
-        <div className="buttonsInstitutions">
-          <PrimaryButton
-            text="Ver Institución"
-            color="white"
-            bg="var(--color-bg-primary)"
-            className="firstButton"
-          />
-          <PrimaryButton
-            text="Insistir"
-            color="var(--color-bg-primary)"
-            bg="var( --color-bg-secondary)"
-            className="secondButton"
-          />
-        </div>
-      </div>
-      <BotNav />
-    </div>
+    </React.Fragment>
   );
 };
 

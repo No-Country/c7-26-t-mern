@@ -1,0 +1,95 @@
+.statusCardContainer {
+  padding: 1.6rem;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+
+.statusCardContainerHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #8e938d;
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+
+.statusCardContainerHeaderDate {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  color: #4e4f4c;
+}
+
+.statusCardContainerHeaderId {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+
+  color: #000000;
+}
+
+.statusCardContainerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.statusCardContainerCardTop {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.statusCardContainerCardTop img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.statusCardContainerCardTop h4 {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #262724;
+}
+
+.statusCardContainerCardTop p {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+.statusCardContainerCardTopBody {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.statusCardContainerCardBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.statusCardContainerCardBottom img {
+  border-radius: 0.4rem;
+}
