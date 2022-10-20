@@ -10,7 +10,7 @@ const save = async (data) => await Claim.create(data)// model
 const saveBulk = async (data) => await Claim.bulkCreate(data)
 
 const searchAll = async (query) => { // models[]
-   const { title, claimmerId, institutionCategoryId, limit, offset } = query
+   const { title, claimmerId, institutionCategoryId, limit, offset, institution, category } = query
 
    //Contoller of the paginate
    const paginate = {
@@ -50,7 +50,6 @@ const searchAll = async (query) => { // models[]
 const searchById = async (id) => await Claim.findByPk(id) // model | null 
 
 const searchByTitle = async (query) => {
-   console.log(query);
    return await Claim.findAll({
       where: {
          title: {
@@ -70,13 +69,9 @@ const searchNews = async ({ range1, range2 }) => {
    })
 }
 
-// const searchByClaimmer = async (idClaimmer) => await Claim.findByPk(id) // model | null 
-
 // const searchByCategory = async (idCategory) => await Claim.findByPk(id) // model | null 
 
 // const searchByInstitution = async (idInstitution) => await Claim.findByPk(id) // model | null 
-
-
 
 module.exports = {
    modify,

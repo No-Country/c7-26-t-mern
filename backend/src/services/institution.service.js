@@ -1,11 +1,24 @@
 const bcrypt = require('bcryptjs');
+const { Op } = require("../utils/database.util")
 const { Institution } = require("../models")
 
-const searchAll = async () => {
+const searchAll = async (query) => {
+   const { name } = query
+
+   let where
+   if (name !== undefined) {
+      where = {
+         name: {
+            [Op.iLike]: `%${name}%`
+         }
+      }
+   }
+
    return await Institution.findAll({
       attributes: {
          exclude: ["password"]
-      }
+      },
+      where
    }) // models[]
 }
 
@@ -13,6 +26,17 @@ const searchById = async (id) => {
    return await Institution.findByPk(id, {
       attributes: {
          exclude: ["password"]
+      }
+   }) // model | null 
+}
+
+const searchByName = async (query) => {
+   return await Institution.findOne({
+      attributes: {
+         exclude: ["password"]
+      },
+      where: {
+         name: query
       }
    }) // model | null 
 }

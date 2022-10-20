@@ -1,7 +1,21 @@
+const { Op } = require("../utils/database.util")
 const { Category } = require("../models")
 
-const searchAll = async () => {
-   return await Category.findAll() // models[]
+const searchAll = async (query) => {
+   const { name } = query
+
+   let where
+   if (name !== undefined) {
+      where = {
+         name: {
+            [Op.iLike]: `%${name}%`
+         }
+      }
+   }
+
+   return await Category.findAll({
+      where
+   }) // models[]
 }
 
 const searchById = async (id) => {

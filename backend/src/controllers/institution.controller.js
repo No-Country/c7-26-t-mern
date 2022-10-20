@@ -26,7 +26,7 @@ const createBulk = catchAsync(async (req, res, _next) => {
 
 const getAll = catchAsync(async (req, res, next) => {
 
-	const data = await searchAll()
+	const data = await searchAll(req.query)
 	// 200 -> Success and the data has been recovered
 	res.status(200).json({
 		status: 'success',
