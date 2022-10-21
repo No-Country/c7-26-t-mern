@@ -9,7 +9,7 @@ import "./myClaims.css";
 const MyClaims = () => {
   return (
     <div>
-      {/* <TopNav className="topNav" text={"Mis Reclamos"} /> */}
+      <TopNav className="topNav" text={"Mis Reclamos"} />
       <TopToggle option1="CREADOS POR MÍ" option2="VOTADOS" />
       <div className="noContentAvaible">
         <img
@@ -19,7 +19,7 @@ const MyClaims = () => {
         />
         <p className="noResultsText">Aún no tienes ningún reclamo</p>
       </div>
-      <Link to="/newClaim/institution">
+      <Link className="addNewClaimLink" to="/newClaim/institution">
         <button className="addNewClaim">+ NUEVO RECLAMO</button>
       </Link>
       <BotNav />

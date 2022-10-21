@@ -105,7 +105,10 @@
   align-items: center;
 }
 
-.cardClaimBottom {
+.cardClaimBottomRight span {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 1em;
 }
 
 .cardClaimDate {
@@ -118,8 +121,12 @@
   gap: 0.8rem;
 }
 
-.cardClaimImg img {
+.cardClaimBottomLeft span {
+  margin: 0;
 }
+
+/* .cardClaimImg img {
+} */
 
 .cardClaimBottomRight {
   display: flex;
@@ -195,9 +202,9 @@
     font-size: 1.2rem;
   }
 
-  .cardClaimBottomRight span,
+  /* .cardClaimBottomRight span,
   .cardClaimBottomRight p {
-  }
+  } */
 
   .cardClaimImg img {
     border-radius: 0.8rem;

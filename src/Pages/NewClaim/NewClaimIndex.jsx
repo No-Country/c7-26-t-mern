@@ -1,7 +1,7 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import TopNav from "../../Components/Nav/TopNav/TopNav";
+// import TopNav from "../../Components/Nav/TopNav/TopNav";
 import "./NewClaim/newclaim.css";
 
 
@@ -22,10 +22,10 @@ const NewClaimIndex = () => {
 
   return (
     <div>
-       <div className="topNavDinamicContainer">
+       {/* <div className="topNavDinamicContainer">
                 <TopNav
                     className="topNav" />
-            </div>
+            </div> */}
       <div className="nuevoReclamoTopNav">
         <span
           onClick={() => {

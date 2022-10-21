@@ -50,7 +50,7 @@ const NewClaim = () => {
 
   return (
     <div>
-      <div className="nuevoReclamoSectionSelectionTop">
+      <div className="reclamosAsociadosSectionSelectionTop">
         <InstitutionCard
           category={Institution.category}
           src={Institution.src}
