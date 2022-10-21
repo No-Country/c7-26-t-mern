@@ -18,6 +18,48 @@ const LoginInputDesktop = () => {
     setOption(selection)
   )
 
+  const [form, setForm] = useState({
+    email: "",
+    password: ""
+  })
+
+  const handleChange = (input) => (e) => {
+    setForm((state) => ({
+      ...state,
+      [input]: e.target.value
+    }))
+  }
+
+  const emailValidation = () => {
+    let emailValue = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form.email)
+    if(emailValue || form.email === ""){
+      return true
+    }
+    return false
+  }
+
+  const passwordValidation = () => {
+    let passwordValue = /^(?=.*[A-Z].*[a-z]).{8,16}$/.test(form.password)
+    if (passwordValue || form.password === ""){
+      return true
+    }
+    return false
+  }
+
+  let buttonHandlerColor =
+  form.email === "" ||
+  form.password === "" 
+
+  const buttonDisable = () => {
+    let email = emailValidation()
+    let password = passwordValidation()
+
+    if(email && password && !buttonHandlerColor){
+      return true
+    }
+    return false
+  }
+
   return (
     <div className="sectionLoginChoiceContainerButtons">
       <div className="selected">
@@ -44,17 +86,27 @@ const LoginInputDesktop = () => {
       <InputField 
       type={"text"} 
       label={"Correo"} 
+      onChange={handleChange('email')}
+      defaultValue={form.email}
       />
+      {!emailValidation() && <span>*Por favor, introduzca un email valido</span>}
 
       <InputField 
-      type={"text"}
+      type={"password"}
       label={"Contraseña"}
-      />
+      onChange={handleChange('password')}
+      defaultValue={form.password}
+      ></InputField>
+      {!passwordValidation() && <span>*La contraseña debe contener al menos:
+         Una letra mayuscula, Una letra minuscula y tener una longitud de 8 a 16 caracteres
+         </span>}
+
       <PrimaryButton
         text="INICIA SESION"
-        bg="#FFE9AC"
-        color="#8F0000"
-        to="/login"
+        bg={buttonDisable() ? "#FFE9AC" : "#8E938D"}
+        color={buttonDisable() ? "#8F0000" : "#F0F0F0"}
+        // onClick={funcion para iniciar sesion}
+        disabled={buttonDisable() ? "" : "false"}
       />
 
       <div className="textHr">
