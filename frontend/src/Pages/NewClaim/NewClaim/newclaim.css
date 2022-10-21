@@ -1,11 +1,9 @@
 /* top nav */
 
-.nuevoReclamoSectionSelection {
-}
-
 .nuevoReclamoSectionSelectionTop {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.6rem;
   padding: 1.6rem;
 }
@@ -296,16 +294,12 @@ input[type="file"] {
 .nuevoReclamoContainer {
   padding: 1.6rem;
   padding-top: 0;
+  margin: 0 auto;
+  max-width: 992px;
 }
 
 @media (min-width: 768px) {
   .nuevoReclamoTopNav {
     background-color: var(--color-secondary);
-    height: 66px;
-  }
-
-  .nuevoReclamoSectionSelection {
-    max-width: 992px;
-    margin: 0 auto;
   }
 }

@@ -79,13 +79,9 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("email")}
         defaultValue={props.values.email}
       />
-<<<<<<< HEAD:frontend/src/Pages/Register/registerComponents/FormCredentials/FormCredentials.jsx
       {!emailValidation() && (
-        <span>*Por favor, introduzca un email valido</span>
+        <span className="spanForm">*Por favor, introduzca un email valido</span>
       )}
-=======
-      {!emailValidation() && <span className="spanForm">*Por favor, introduzca un email valido</span>}
->>>>>>> bc6de52abe893d0c1b0b479bc05dc68f1580f556:src/Pages/Register/registerComponents/FormCredentials/FormCredentials.jsx
 
       <InputField
         eventBlur={passwordValidation}
@@ -94,18 +90,12 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("password")}
         defaultValue={props.values.password}
       />
-<<<<<<< HEAD:frontend/src/Pages/Register/registerComponents/FormCredentials/FormCredentials.jsx
       {!passwordValidation() && (
-        <span>
+        <span className="spanForm">
           *La contraseña debe contener al menos: Una letra mayuscula, Una letra
           minuscula y tener una longitud de 8 a 16 caracteres
         </span>
       )}
-=======
-      {!passwordValidation() && <span className="spanForm">*La contraseña debe contener al menos:
-         Una letra mayuscula, Una letra minuscula y tener una longitud de 8 a 16 caracteres
-         </span>}
->>>>>>> bc6de52abe893d0c1b0b479bc05dc68f1580f556:src/Pages/Register/registerComponents/FormCredentials/FormCredentials.jsx
 
       <InputField
         type={"password"}
@@ -113,7 +103,9 @@ const FormCredentials = (props) => {
         onChange={props.handleChange("passwordRepited")}
         defaultValue={props.values.passwordRepited}
       />
-      {!samePassword() && <span className="spanForm">*No coincide con la contraseña</span>}
+      {!samePassword() && (
+        <span className="spanForm">*No coincide con la contraseña</span>
+      )}
 
       <PrimaryButton
         text="Siguiente"

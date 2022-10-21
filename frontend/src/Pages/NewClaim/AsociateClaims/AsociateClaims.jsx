@@ -54,6 +54,9 @@ const AsociateClaims = () => {
               title={Theme.current.title}
               id={Theme.current.id}
             />
+          </div>
+          <div className="reclamosAsociadosSection">
+            <div className="reclamosAsociadosSectionSelection"></div>
             <div className="reclamosAsociadosSectionSelectionBottom">
               <PrimaryButton
                 to="/newClaim/claim"
@@ -67,32 +70,14 @@ const AsociateClaims = () => {
                 }}
               ></PrimaryButton>
             </div>
-          </div>
-          <div className="reclamosAsociadosSection">
-            <div className="reclamosAsociadosSectionSelection"></div>
 
-            <h3 className="reclamosAsociadosSectionSelectionClaimsTitle">
-              Reclamos Activos
-            </h3>
             <div
               className="reclamosAsociadosSectionSelectionClaims"
               onScroll={ScrollHandler}
             >
-              <Card
-                title={"No hay agua en el barrio"}
-                subtitle={"AGUA"}
-                description={
-                  "La ciudad está sin agua, vecinos apoyemos esta moción para que el intendente haga algo."
-                }
-              ></Card>
-
-              <Card
-                title={"No hay agua en el barrio"}
-                subtitle={"AGUA"}
-                description={
-                  "La ciudad está sin agua, vecinos apoyemos esta moción para que el intendente haga algo."
-                }
-              ></Card>
+              <h3 className="reclamosAsociadosSectionSelectionClaimsTitle">
+                Reclamos Activos
+              </h3>
 
               <Card
                 title={"No hay agua en el barrio"}

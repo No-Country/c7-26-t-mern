@@ -35,7 +35,6 @@ const Register = () => {
       step: state.step + 1,
     }));
   };
-
   const prevState = () => {
     const { step } = state;
     setState({
@@ -43,7 +42,6 @@ const Register = () => {
       step: step - 1,
     });
   };
-
   const handleChange = (input) => (e) => {
     setState((state) => ({
       ...state,

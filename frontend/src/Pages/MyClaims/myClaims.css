@@ -4,11 +4,12 @@
 
 .noResultsImg {
   z-index: -1;
-  padding: 5%;
+  width: 100%;
+  max-height: 500px;
 }
 
 .noResultsText {
-  font-size: 5vw;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -31,7 +32,20 @@
   padding: 0px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 10% 16% 0;
+  margin: 0 auto;
   text-align: center;
   filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 1px 18px rgba(0, 0, 0, 0.12)) drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.addNewClaimLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.noContentAvaible {
+  margin: 0 auto;
+  max-width: 992px;
 }

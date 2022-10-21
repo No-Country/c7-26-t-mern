@@ -1,0 +1,110 @@
+.claimStatusSectionContianer {
+  padding: 1.6rem;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.claimStatusSectionContianerTitle {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #262724;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.claimStatusSectionContianerProgress {
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.claimStatusSectionContianerProgressFullBar {
+  width: 100%;
+  height: 12px;
+  background: #cccccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.claimStatusSectionContianerProgressBar {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #8f0000;
+  border-radius: 6px;
+}
+
+.claimStatusSectionContianerProgressBar::after {
+  position: absolute;
+  content: "";
+  right: 2px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffe9ac;
+  border-radius: 50%;
+}
+
+.claimStatusSectionContianerProgressBarText {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  border-bottom: 1px solid #8e938d;
+}
+
+.claimStatusSectionContianerProgressBarText span {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 14px;
+  text-align: center;
+  color: #262724;
+  margin-bottom: 1.6rem;
+}
+
+.claimStatusSectionContianerProgressBarText span.active {
+  font-weight: 700;
+}
+
+.claimStatusSectionContianerActions {
+  /* display: flex;
+  justify-content: space-evenly; */
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+.claimStatusSectionContianerActionsAction {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */;
+}
+
+.claimStatusSectionContianerActionsAction svg {
+  width: 25px;
+  height: 25px;
+}
+
+.claimStatusSectionContianerActionsAction span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #8f0000;
+}
+
+.claimStatusSectionContianer a.primaryButton {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}

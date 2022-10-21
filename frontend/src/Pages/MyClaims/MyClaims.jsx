@@ -55,5 +55,4 @@ const MyClaims = () => {
     </div>
   );
 };
-
 export default MyClaims;

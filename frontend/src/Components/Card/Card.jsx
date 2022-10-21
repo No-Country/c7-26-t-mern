@@ -6,7 +6,7 @@ import "./card.css";
 // Image Claimmer
 import profileClaimmer from "../../Assets/img/imgClaimer.jpg";
 
-const Card = ({ title, address, status, description }) => {
+const Card = (props) => {
   return (
     <div className="cardClaimContainer">
       <div className="cardClaimHeader">

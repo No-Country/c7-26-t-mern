@@ -17,8 +17,7 @@ const TopToggle = ({ handleClick, option1, option2, option }) => {
         </li>
         <li
           key={2}
-          style={{bodybackgroundColor: "red"}}
-          className={`option institucion ${active === "2" ? "optionActive" : undefined}`}
+          className={`option ${active === "2" ? "optionActive" : undefined}`}
           id={"2"}
           onClick={handleClick}
         >
@@ -28,5 +27,4 @@ const TopToggle = ({ handleClick, option1, option2, option }) => {
     </div>
   );
 };
-
 export default TopToggle;

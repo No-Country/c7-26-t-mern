@@ -5,7 +5,6 @@ import BotNav from "../../Components/Nav/BotNav/BotNav";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import axios from "axios";
 import "./home.css";
-
 const URL = "http://localhost:4000/api/v1";
 
 const Home = () => {
@@ -16,10 +15,7 @@ const Home = () => {
     setSearch(e.target.value);
   };
 
-  // title, claimmerId, institutionCategoryId, limit, offset
-
   useEffect(() => {
-    // const query = `${search}`;
     const getClaims = async () => {
       let query;
       let response;
@@ -41,7 +37,6 @@ const Home = () => {
         }
       }
       console.log(response);
-      // const { response: response } = console.log(response.response);
     };
     getClaims();
   }, [search]);
@@ -52,7 +47,6 @@ const Home = () => {
       <BotNav></BotNav>
       <section className="sectionHome">
         <SearchBar handleSearch={handleSearch} placeholder="Busca un reclamo" />
-
         <div className="sectionHomeContainerCards">
           {claims.length > 0 &&
             claims.map(({ title, description, status, address }) => {
@@ -68,7 +62,6 @@ const Home = () => {
             })}
         </div>
       </section>
-
       {/* <ButtonClaim></ButtonClaim> */}
     </React.Fragment>
   );

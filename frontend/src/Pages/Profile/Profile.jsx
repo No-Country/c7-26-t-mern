@@ -22,7 +22,6 @@ const Perfil = () => {
 
             <div className="topNavDinamicContainer">
                 <TopNav
-                    section="Perfil"
                     className="topNav" />
             </div>
 
