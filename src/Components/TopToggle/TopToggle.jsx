@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./topToggle.css";
 
 const TopToggle = (props) => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("1");
 
   const handleClick = (event) => {
     setActive(event.target.id);
