@@ -69,7 +69,7 @@ const Login = (props) => {
           <p className="sectionLoginContainerTitle">INICIA SESIÓN</p>
           <InputField
             className="claimmerName"
-            label="Usuario"
+            label="Correo electrónico"
             name="name"
             onChange={handleOnChangeName}
           />
