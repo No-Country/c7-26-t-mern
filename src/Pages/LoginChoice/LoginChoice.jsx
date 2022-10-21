@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../Components/Logo/Logo";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
-import "./loginChoice.css";
+import "./LoginChoice.css";
 import LoginInputDesktop from "./LoginInputDesktop";
 
 const LoginChoice = (props) => {
