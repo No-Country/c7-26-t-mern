@@ -6,15 +6,31 @@ import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import Category from "./Category/Category";
 import ThemeCard from "../../Components/ThemeCard/ThemeCard";
+import axios from "axios";
+
+const URL = "http://localhost:4000/api/v1";
 
 const FilterSingleCategory = () => {
-  // const { idInstitucion } = useParams();
+  const [categories, setCategories] = useState([]);
+  const [token, setToken] = window.localStorage.getItem("token");
 
-  // useEffect(() => {
-  //     setItems(institutionData.filter((item) => {
-  //         return item.category === idInstitucion
-  //     }))
-  // }, [idInstitucion])
+  useEffect(() => {
+    const getCategories = async () => {
+      let response;
+      if (token.length > 0) {
+        const { data: array } = await axios.get(`${URL}/categories`);
+        response = array;
+        setCategories(response.data);
+      } else {
+        function error(params) {
+          console.error("No se han encontrado categories");
+          console.log(params);
+        }
+      }
+      console.log(response);
+    };
+    getCategories();
+  }, [token]);
 
   function InstitutionGetter() {
     const location = useLocation();
@@ -42,8 +58,8 @@ const FilterSingleCategory = () => {
           />
 
           <div className="themeCardContent">
-            {themesData.map(({ url, title, id }, idx) => (
-              <ThemeCard url={url} title={title} key={idx} id={id} />
+            {categories.map(({ name, id }, idx) => (
+              <ThemeCard name={name} key={idx} id={id} />
             ))}
           </div>
         </div>

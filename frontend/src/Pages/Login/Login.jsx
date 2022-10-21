@@ -56,6 +56,7 @@ const Login = (props) => {
       },
       function error(params) {
         console.error("Nombre o Contraseña incorrecta");
+        console.log(params);
       }
     );
   };
