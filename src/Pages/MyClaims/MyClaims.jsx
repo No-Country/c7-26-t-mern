@@ -19,7 +19,7 @@ const MyClaims = () => {
         />
         <p className="noResultsText">Aún no tienes ningún reclamo</p>
       </div>
-      <Link className="addNewClaimLink" to="/newClaim/institution">
+      <Link className="addNewClaimLink" to="/newClaim/institution" state={{ Title: "Institución" }}>
         <button className="addNewClaim">+ NUEVO RECLAMO</button>
       </Link>
       <BotNav />
