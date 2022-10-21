@@ -14,6 +14,7 @@ const InputReclamo = (props) => {
         defaultValue={props.defaultValue}
         name={props.name}
         required="required"
+        readOnly={props.readOnly}
       />
       <label>{props.label}</label>
     </div>

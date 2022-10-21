@@ -1,0 +1,93 @@
+.reclamosAsociadosSection {
+  padding: 1.6rem;
+  padding-top: 0;
+  margin: 0 auto;
+  max-width: 992px;
+}
+
+.reclamosAsociadosSectionSelectionTop {
+  margin: 0 auto;
+  max-width: 992px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  box-shadow: 0px -1px 18px rgba(0, 0, 0, 0.25);
+}
+
+.reclamosAsociadosSectionSelectionTop .themeColor {
+  aspect-ratio: unset;
+}
+
+.reclamosAsociadosSectionSelectionTop .filterContainer {
+  height: 100%;
+}
+
+/* .reclamosAsociadosSectionSelectionTop .filterText {
+} */
+
+.reclamosAsociadosSectionSelectionBottom a.primaryButton {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
+
+.reclamosAsociadosSectionSelectionBottom {
+  position: fixed;
+  background-color: var(--color-primary);
+  width: calc(100%);
+  padding: 1.6rem;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0px -1px 18px rgba(0, 0, 0, 0.25);
+}
+
+.reclamosAsociadosSectionSelectionClaims {
+  overflow: scroll;
+  height: calc(100vh - 300px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.reclamosAsociadosSectionSelectionClaimsTitle {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #000000;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .reclamosAsociadosSectionSelectionBottom {
+    position: static;
+    background-color: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .reclamosAsociadosSectionSelectionClaims {
+    overflow: unset;
+    height: auto;
+    display: block;
+  }
+
+  .reclamosAsociadosSectionSelectionBottom {
+    margin-bottom: 1.6rem;
+    grid-column: span 2;
+  }
+
+  .reclamosAsociadosSectionSelectionClaims .cardClaimContainer {
+    margin-bottom: 1.6rem;
+  }
+
+  .reclamosAsociadosSectionSelectionTop {
+    display: grid;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

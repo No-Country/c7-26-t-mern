@@ -1,51 +1,52 @@
+
 export const themesData = [
   {
-    url: "https://i.ibb.co/2NgKpFN/educacion.jpg",
+    color: "#E2773A ",
     title: "Educación",
     category: "educacion",
   },
   {
-    url: "https://i.ibb.co/7rpmB40/agua.jpg",
+    color: "#007544",
     title: "Agua e Higiene",
     category: "agua",
   },
   {
-    url: "https://i.ibb.co/Lz0YNsX/pluviales.jpg",
+    color: "#073F27",
     title: "Pluviales",
     category: "pluviales",
   },
   {
-    url: "https://i.ibb.co/HCPhD86/alumbrado.jpg",
+    color: "#0587D0",
     title: "Alumbrado",
     category: "alumbrado",
   },
   {
-    url: "https://i.ibb.co/mGRNVr8/espacios-Verdes.jpg",
+    color: "#005382",
     title: "Espacios verdes",
     category: "espaciosverdes",
   },
   {
-    url: "https://i.ibb.co/bbdfqBZ/salud.jpg",
+    color: "#7F0082",
     title: "Salud",
     category: "salud",
   },
   {
-    url: "https://i.ibb.co/MGBbjqj/calles-Veredas.jpg",
+    color: "#8F0000",
     title: "Calles y veredas",
     category: "calles",
   },
   {
-    url: "https://i.ibb.co/7YvBLPb/Reciclado.jpg",
+    color: "#E2773A",
     title: "Reciclado",
     category: "reciclado",
   },
   {
-    url: "https://i.ibb.co/K7hDTZr/servicios-Municipales.jpg",
+    color: "#007544",
     title: "Servicios municipales",
     category: "servicios",
   },
   {
-    url: "https://i.ibb.co/DbG16S8/corrupcion.jpg",
+    color: "#073F27",
     title: "Corrupción",
     category: "corrupcion",
   },

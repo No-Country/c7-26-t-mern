@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../Components/Logo/Logo";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
-import "./loginChoice.css";
+import "./LoginChoice.css";
+import LoginInputDesktop from "./LoginInputDesktop";
 
 const LoginChoice = (props) => {
   const [loading, setLoading] = useState(false);
@@ -11,6 +12,12 @@ const LoginChoice = (props) => {
   const [logoDiff, setLogoDiff] = useState(false);
   const [logoContainer, setContainer] = useState(false);
   const [containerOut, setContainerOut] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const changeWidth = () => {
+    setWidth(window.innerWidth);
+  };
 
   const setIntroRun = () => {
     props.setIntroRun(false);
@@ -44,6 +51,14 @@ const LoginChoice = (props) => {
       setLoading(true);
       setIntroRun();
     }, 2500);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
   }, []);
 
   return (
@@ -82,39 +97,46 @@ const LoginChoice = (props) => {
       )}
 
       <div className="sectionLoginChoiceContainer">
-        <Logo />
-        <p className="sectionLoginChoiceContainerDescription">
-          Haz valer tus reclamos y apoya los de tu comunidad
+        <div className="sectionLoginChoiceContainerFunc">
+          <div className="sectionLoginChoiceContainerInfo">
+            <Logo />
+            <p className="sectionLoginChoiceContainerDescription">
+              Haz valer tus reclamos y apoya los de tu comunidad
+            </p>
+          </div>
+          {width >= 700 ? (
+            <LoginInputDesktop />
+          ) : (
+            <div className="sectionLoginChoiceContainerButtons">
+              <PrimaryButton
+                text="INICIA SESION"
+                bg="#FFE9AC"
+                color="#8F0000"
+                to="/login"
+              />
+
+              <PrimaryButton
+                text="REGISTRATE"
+                bg="#8F0000"
+                color="#F0F0F0"
+                to="/register"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="sectionLoginChoiceContainerTerms">
+        <p className="sectionLoginChoiceContainerTerms-text">
+          Al registrarte, o iniciar sesión, aceptás los{" "}
+          <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
+            Términos de Servicio{" "}
+          </a>
+          y la{" "}
+          <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
+            Política de Privacidad
+          </a>{" "}
+          de Reclami.
         </p>
-
-        <div className="sectionLoginChoiceContainerButtons">
-          <PrimaryButton
-            text="REGISTRATE"
-            bg="#8F0000"
-            color="#F0F0F0"
-            to="/register"
-          />
-          <PrimaryButton
-            text="INICIA SESION"
-            bg="#FFE9AC"
-            color="#8F0000"
-            to="/login"
-          />
-        </div>
-
-        <div className="sectionLoginChoiceContainerTerms">
-          <p className="sectionLoginChoiceContainerTerms-text">
-            Al registrarte, o iniciar sesión, aceptás los{" "}
-            <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
-              Términos de Servicio{" "}
-            </a>
-            y la{" "}
-            <a href="/" className="sectionLoginChoiceContainerTermsTextLink">
-              Política de Privacidad
-            </a>{" "}
-            de Reclami.
-          </p>
-        </div>
       </div>
     </section>
   );

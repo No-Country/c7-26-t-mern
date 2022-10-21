@@ -6,14 +6,14 @@ import LoginChoice from "./Pages/LoginChoice/LoginChoice";
 import Home from "./Pages/Home/Home.jsx";
 import AppNotification from "./Pages/AppNotification/AppNotification";
 import Profile from "./Pages/Profile/Profile";
-import ClaimDetail from "./Pages/ClaimDetail/ClaimDetail";
+import ClaimStatus from "./Pages/ClaimStatus/ClaimStatus";
 import List from "./Components/List/List";
-import NewClaim from "./Pages/NewClaim/NewClaim";
-import FilterClaim from "./Pages/NewClaim/FilterClaim";
-import FilterSingleCategory from "./Pages/NewClaim/FilterSingleCategory";
+import NewClaim from "./Pages/NewClaim/NewClaim/NewClaim";
+import FilterInstitution from "./Pages/NewClaim/Institution/FilterInstitution";
+import FilterSingleCategory from "./Pages/NewClaim/Category/FilterCategory";
 import NewClaimIndex from "./Pages/NewClaim/NewClaimIndex";
 import MyClaims from "./Pages/MyClaims/MyClaims";
-
+import AsociateClaims from "./Pages/NewClaim/AsociateClaims/AsociateClaims";
 
 function App() {
   const [introRun, setIntroRun] = useState(true);
@@ -35,14 +35,15 @@ function App() {
         <Route path="/profile" element={<Profile />}></Route>
         {/* <Route path="/newclaim" element={<NewClaim />}></Route> */}
         <Route path="newClaim" element={<NewClaimIndex />}>
-          <Route path="institution" element={<FilterClaim />}></Route>
+          <Route path="institution" element={<FilterInstitution />}></Route>
+          <Route path="asociateClaims" element={<AsociateClaims />}></Route>
           <Route path="category" element={<FilterSingleCategory />}></Route>
           <Route path="claim" element={<NewClaim />}></Route>
         </Route>
-        <Route path="claimdetail" element={<ClaimDetail />}></Route>
+        <Route path="claimStatus" element={<ClaimStatus />}></Route>
         <Route path="myClaims" element={<MyClaims />}></Route>
-      </Routes >
-    </Router >
+      </Routes>
+    </Router>
   );
 }
 

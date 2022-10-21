@@ -3,3 +3,43 @@
     background-color: #fff;
     border-radius: 50%;
   }
+
+  @media (min-width:768px) {
+    .iconImgAvatar {
+      width: 35px;
+    }
+
+    .avatarIcon {
+      margin-left: 4rem;
+    }
+  }
+
+  @media (min-width:768px) {
+    .iconImgAvatar {
+      width: 35px;
+    }
+
+    .avatarIcon {
+      margin-left: 5rem;
+    }
+  }
+
+  @media (min-width:1280px) {
+    .iconImgAvatar {
+      width: 35px;
+    }
+
+    .avatarIcon {
+      margin-left: 13rem;
+    }
+  }
+
+  @media (min-width:1600px) {
+    .iconImgAvatar {
+      width: 35px;
+    }
+
+    .avatarIcon {
+      margin-left: 20rem;
+    }
+  }

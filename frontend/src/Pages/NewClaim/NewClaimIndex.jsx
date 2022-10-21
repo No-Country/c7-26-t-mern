@@ -1,9 +1,10 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 import { AiOutlineArrowLeft } from "react-icons/ai";
-// import asd from '../../Assets/img/verified.svg'
+import TopNav from "../../Components/Nav/TopNav/TopNav";
+import "./NewClaim/newclaim.css";
 
+// import asd from '../../Assets/img/verified.svg'
 
 const NewClaimIndex = () => {
   const history = useNavigate();
@@ -13,15 +14,20 @@ const NewClaimIndex = () => {
     try {
       const { Title } = location.state;
       return Title;
-    } catch(err) {
-      return "Default"
+    } catch (err) {
+      return "Default";
     }
   }
 
   return (
     <div>
       <div className="nuevoReclamoTopNav">
-        <span onClick={() => {history(-1)}} className="appNotificationIcon">
+        <span
+          onClick={() => {
+            history(-1);
+          }}
+          className="appNotificationIcon"
+        >
           <AiOutlineArrowLeft />
         </span>
         <h2 className="appNotificationTextMenu">{Profile()}</h2>

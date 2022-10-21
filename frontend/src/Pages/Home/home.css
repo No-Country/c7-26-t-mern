@@ -1,5 +1,7 @@
 .sectionHome {
-  padding: 16px 16px 25% 16px;
+  padding: 16px;
+  max-width: 1092px;
+  margin: 0 auto;
 }
 
 .sectionHomeContainerCards {
@@ -8,4 +10,65 @@
   gap: 16px;
   height: auto;
   padding-bottom: 66px;
+  margin-top: 1.6rem;
+}
+
+.sectionHomeButtonsDesktop {
+  display: none;
+}
+
+.sectionHomeTitleDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sectionHome form {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12),
+      0px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .sectionHomeContainerCards {
+    grid-template-columns: auto;
+  }
+
+  .sectionHomeButtonsDesktop {
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: left;
+    gap: 1.6rem;
+    border-bottom: 1px solid #8e938d;
+    margin-bottom: 2.5rem;
+  }
+
+  .sectionHomeButtonsDesktop .primaryButton {
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 13rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.14))
+      drop-shadow(0px 1px 18px rgba(0, 0, 0, 0.12))
+      drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.2));
+  }
+
+  .sectionHomeTitleDesktop {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    color: #262724;
+    letter-spacing: -0.02em;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .sectionHomeTitleDesktop h3 {
+    font-weight: 300;
+    font-size: 2.4rem;
+    
+  }
+
+  .sectionHomeTitleDesktop p {
+    font-size: 2rem;
+  }
 }
