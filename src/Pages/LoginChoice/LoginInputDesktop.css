@@ -1,0 +1,58 @@
+.sectionLoginChoiceContainerButtons div {
+    margin-top: 0px;
+}
+
+.sectionLoginChoiceContainerButtons a {
+    margin-top: 0px;
+}
+
+.textHr{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr
+}
+
+.textHr hr{
+   margin-top: auto;
+   margin-bottom: auto;
+   border-top: 1px solid #c4c4c4;
+}
+
+.textHr p {
+    text-align: center;
+    font-size: 13px;
+    margin: 0px 3px
+}
+
+.textQuestionRegister{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr
+}
+
+.textQuestionRegister hr{
+   margin-top: auto;
+   margin-bottom: auto;
+   border-top: 1px solid #c4c4c4;
+}
+
+.textQuestionRegister p {
+    text-align: center;
+    font-size: 13px;
+    margin: 0px 3px
+}
+
+.selected {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.selectedOption p{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.selectedOption hr {
+    border-top: 2px solid #c4c4c4;
+}
