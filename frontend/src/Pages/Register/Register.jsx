@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import HeaderRegister from "./registerComponents/HeaderRegister/HeaderRegister";
 import LogoRounded from "../../Components/LogoRounded/LogoRounded";
@@ -7,8 +7,11 @@ import FormCredentials from "./registerComponents/FormCredentials/FormCredential
 import FormPersonal from "./registerComponents/FormPersonal/FormPersonal";
 
 import "./register.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const Register = (props) => {
+const Register = () => {
+  const [claimmerDni, setClaimmerDni] = useState("");
   const [state, setState] = useState({
     step: 0,
     name: "",
@@ -18,6 +21,13 @@ const Register = (props) => {
     password: "",
     passwordRepited: "",
   });
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (claimmerDni.length > 0) {
+      navigate("/login");
+    }
+  }, [claimmerDni]);
 
   const nextStep = () => {
     setState((state) => ({
@@ -41,11 +51,41 @@ const Register = (props) => {
     }));
   };
 
+  const registerFunction = async (e) => {
+    e.preventDefault();
+    await axios({
+      method: "post",
+      url: "http://localhost:4000/api/v1/claimmers",
+      data: {
+        name: state.name,
+        email: state.email,
+        password: state.password,
+        DNI: state.dni,
+        lastName: state.lastName,
+      },
+      headers: {
+        alg: "HS256",
+        typ: "JWT",
+      },
+    }).then(
+      ({ data: response }) => {
+        console.log(response);
+        setClaimmerDni(response.data.DNI);
+        console.log("Reclamante registrado correctamente");
+        window.localStorage.setItem("claimmer", response.data.DNI);
+      },
+      function error(params) {
+        console.error("Nombre o Contraseña incorrecta");
+        console.log(params);
+      }
+    );
+  };
+
   return (
     <section className="sectionRegister">
       <HeaderRegister
         to={state.step === 0 ? "/" : null}
-        onClick={state.step === 1 ? prevState : ""}
+        // onClick={state.step === 1 ? prevState : ""}
       />
       <section className="sectionRegisterContainer">
         <LogoRounded />
@@ -67,6 +107,7 @@ const Register = (props) => {
             prevState={prevState}
             handleChange={handleChange}
             values={state}
+            onClick={registerFunction}
           ></FormCredentials>
         )}
       </section>
