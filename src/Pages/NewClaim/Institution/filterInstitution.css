@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 .themesDataContainer .filterText {

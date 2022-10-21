@@ -1,9 +1,13 @@
 .reclamosAsociadosSection {
   padding: 1.6rem;
   padding-top: 0;
+  margin: 0 auto;
+  max-width: 992px;
 }
 
 .reclamosAsociadosSectionSelectionTop {
+  margin: 0 auto;
+  max-width: 992px;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -51,4 +55,23 @@
   line-height: 25px;
   letter-spacing: -0.05em;
   color: #000000;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .reclamosAsociadosSectionSelectionBottom {
+    position: static;
+    background-color: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .reclamosAsociadosSectionSelectionClaims {
+    overflow: unset;
+    height: calc(100vh - 300px);
+  }
+
+  .reclamosAsociadosSectionSelectionBottom {
+    margin-bottom: 1.6rem;
+  }
 }
