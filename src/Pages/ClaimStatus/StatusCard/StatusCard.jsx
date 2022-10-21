@@ -6,12 +6,14 @@ import {AiFillCopy} from "react-icons/ai";
 
 import "./statusCard.css";
 import ImageCliamer from "../../../Assets/img/imgClaimer.jpg";
+import Card from "../../../Components/Card/Card";
 
 const StatusCard = ({ isOpen }) => {
 
   return (
+
+
     <React.Fragment>
-    
       <div className="statusCardContainer">
         <header className="statusCardContainerHeader">
           <span className="statusCardContainerHeaderDate">19 .10. 2022</span>

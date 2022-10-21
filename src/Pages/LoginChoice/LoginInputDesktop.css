@@ -57,7 +57,7 @@
     border-top: 2px solid #c4c4c4;
 }
 
-span {
+.sectionLoginChoiceContainerButtons span {
     color: red;
     font-size: 1.1rem;
     font-weight: 500;

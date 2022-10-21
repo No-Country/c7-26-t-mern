@@ -49,7 +49,7 @@ const NewClaim = () => {
   console.log(Institution);
 
   return (
-    <div>
+    <div className="nuevoReclamoSectionSelection">
       <div className="nuevoReclamoSectionSelectionTop">
         <InstitutionCard
           category={Institution.category}

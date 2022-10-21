@@ -45,6 +45,9 @@
 .reclamosAsociadosSectionSelectionClaims {
   overflow: scroll;
   height: calc(100vh - 300px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 .reclamosAsociadosSectionSelectionClaimsTitle {
@@ -58,7 +61,7 @@
   margin-bottom: 1.6rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .reclamosAsociadosSectionSelectionBottom {
     position: static;
     background-color: none;
@@ -68,10 +71,24 @@
 
   .reclamosAsociadosSectionSelectionClaims {
     overflow: unset;
-    height: calc(100vh - 300px);
+    height: auto;
+    display: block;
   }
 
   .reclamosAsociadosSectionSelectionBottom {
     margin-bottom: 1.6rem;
+    grid-column: span 2;
+  }
+
+  .reclamosAsociadosSectionSelectionClaims .cardClaimContainer {
+    margin-bottom: 1.6rem;
+  }
+
+  .reclamosAsociadosSectionSelectionTop {
+    display: grid;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    grid-template-columns: 1fr 1fr;
+    
   }
 }

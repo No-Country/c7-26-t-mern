@@ -1,5 +1,8 @@
 /* top nav */
 
+.nuevoReclamoSectionSelection {
+}
+
 .nuevoReclamoSectionSelectionTop {
   display: flex;
   flex-direction: column;
@@ -298,5 +301,11 @@ input[type="file"] {
 @media (min-width: 768px) {
   .nuevoReclamoTopNav {
     background-color: var(--color-secondary);
+    height: 66px;
+  }
+
+  .nuevoReclamoSectionSelection {
+    max-width: 992px;
+    margin: 0 auto;
   }
 }
