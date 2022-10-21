@@ -3,11 +3,35 @@ import { useState } from "react";
 import InputField from "../../Components/InputField/InputField";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import LoginButtons from "../Login/loginComponents/LoginButtons/loginButtons";
+import axios from "axios";
 
 //import "./LoginChoice.css";
 import "./LoginInputDesktop.css";
 
 const LoginInputDesktop = () => {
+  const loginFunction = async () => {
+    axios({
+      method: "post",
+      url: "http://localhost:3000/login",
+      data: {
+        claimmerName: form.name,
+        password: form.password,
+      },
+    }).then(
+      function logear(response) {
+        console.log("Logeado correctamente");
+        window.localStorage.setItem("rol", response.data.rol);
+        window.localStorage.setItem("token", response.data.token);
+        window.localStorage.setItem("id", response.data.idClaimmer);
+        const idLogged = window.localStorage.getItem("id");
+        window.localStorage.setItem("path", "/home");
+      },
+      function error(params) {
+        console.error("Nombre o Contraseña incorrecta");
+        window.localStorage.setItem("path", "/login");
+      }
+    );
+  };
 
   const [option, setOption] = useState('reclamante')
 
@@ -60,6 +84,7 @@ const LoginInputDesktop = () => {
     return false
   }
 
+  console.log(form)
   return (
     <div className="sectionLoginChoiceContainerButtons">
       <div className="selected">
@@ -105,7 +130,7 @@ const LoginInputDesktop = () => {
         text="INICIA SESION"
         bg={buttonDisable() ? "#FFE9AC" : "#8E938D"}
         color={buttonDisable() ? "#8F0000" : "#F0F0F0"}
-        // onClick={funcion para iniciar sesion}
+        onClick={loginFunction}
         disabled={buttonDisable() ? "" : "false"}
       />
 
