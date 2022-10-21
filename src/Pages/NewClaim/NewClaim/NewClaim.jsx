@@ -49,8 +49,8 @@ const NewClaim = () => {
   console.log(Institution);
 
   return (
-    <div>
-      <div className="reclamosAsociadosSectionSelectionTop">
+    <div className="nuevoReclamoSectionSelection">
+      <div className="nuevoReclamoSectionSelectionTop">
         <InstitutionCard
           category={Institution.category}
           src={Institution.src}
@@ -103,13 +103,14 @@ const NewClaim = () => {
             <div className="fileContainer">
               <img className="iconInput" src={image} alt="" />
               <div className="inputFileContainer">
-                <input 
-                type="file" 
-                id="file" 
-                accept="image/*, video/*"
-                multiple
-                capture
-                environment/>
+                <input
+                  type="file"
+                  id="file"
+                  accept="image/*, video/*"
+                  multiple
+                  capture
+                  environment
+                />
                 <label className="labelFile" htmlFor="file">
                   Adjuntá fotos/videos &nbsp;
                   <AiFillFileAdd className="labelIcon" />

@@ -108,3 +108,11 @@
   height: 45px;
   align-items: center;
 }
+
+@media (min-width: 768px) {
+
+  .claimStatusSectionContianer {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+}
