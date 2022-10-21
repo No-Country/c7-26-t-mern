@@ -24,8 +24,8 @@ const TopNav = (props) => {
 
       <ul className="topNavListDesktopContainer">
         <div className="topNavListDesktop">
-          <Link to="/myClaims" className="topNavListLinks">MIS RECLAMOS</Link>
-          <Link to={'/newClaim/institution'}>
+          <Link className="topNavListLinks">MIS RECLAMOS</Link>
+          <Link to="/newClaim/institution" state={{ Title: "Institución" }}>
           <button className="newClaimButtonNav">HACER RECLAMO</button>
           </Link>
         </div>

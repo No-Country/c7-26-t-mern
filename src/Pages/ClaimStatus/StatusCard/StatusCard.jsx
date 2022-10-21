@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
+import {AiFillCopy} from "react-icons/ai";
 
 
 import "./statusCard.css";
@@ -14,7 +15,8 @@ const StatusCard = ({ isOpen }) => {
       <div className="statusCardContainer">
         <header className="statusCardContainerHeader">
           <span className="statusCardContainerHeaderDate">19 .10. 2022</span>
-          <span className="statusCardContainerHeaderId">ID 345OI50</span>
+          <span className="statusCardContainerHeaderId" >ID 345OI50<AiFillCopy onClick={() => {navigator.clipboard.writeText("345OI50")}}/></span>
+          
         </header>
         <div className="statusCardContainerCard">
           <div className="statusCardContainerCardTop">

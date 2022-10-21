@@ -31,7 +31,7 @@
   position: static;
   background-color: var(--color-bg-primary);
   color: var(--color-white);
-  font-family: var(--font-secundary);
+  font-family: var(--font-secondary);
   padding: 1.2rem;
   padding-left: 1.2rem;
 }
@@ -295,9 +295,8 @@ input[type="file"] {
   padding-top: 0;
 }
 
-/* media querie */
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .nuevoReclamoTopNav {
-    display: none;
+    background-color: var(--color-secondary);
   }
 }

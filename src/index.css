@@ -1,6 +1,6 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;600&display=swap");
 
 /* variables */
 
@@ -15,8 +15,8 @@
   --color-inactive: #8e938d;
 
   /* fonts family*/
-  --font-primary: 'Montserrat', sans-serif;
-  --font-secundary: 'Lexend', sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Lexend", sans-serif;
 
   /* font size*/
   --text-title-primary: 2.4em;
@@ -34,16 +34,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-secondary);
 }
 
 html {
   font-size: 62.5%;
+  font-family: var(--font-secondary);
 }
 
 body {
   background-color: var(--color-primary);
   height: 100vh;
   overflow-x: hidden;
+  font-family: var(--font-secondary);
 }
 
 ul,

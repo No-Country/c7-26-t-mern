@@ -51,15 +51,15 @@ const ClaimStatus = () => {
 
   return (
     <React.Fragment>
-       <div className="topNavDinamicContainer">
+       {/* <div className="topNavDinamicContainer">
                 <TopNav
                     className="topNav" />
-            </div>
+            </div> */}
       {modal && <NewClaimModal setModal={modalHandler} />}
       <div className="nuevoReclamoTopNav">
         <span
           onClick={() => {
-            navigateHome();
+            isNewClaim.current ? navigate("/home", { replace: true }) : navigate(-1) ;
           }}
           className="appNotificationIcon"
         >
@@ -68,7 +68,7 @@ const ClaimStatus = () => {
         <h2 className="appNotificationTextMenu">{"Estado del Reclamo"}</h2>
       </div>
       <div className="claimStatusSectionContianer">
-        <StatusCard />
+        <StatusCard isNewClaim={isNewClaim}/>
         <h3 className="claimStatusSectionContianerTitle">Responsable</h3>
         <InstitutionCard
           src={"https://i.ibb.co/7rpmB40/agua.jpg"}
@@ -88,10 +88,10 @@ const ClaimStatus = () => {
         </div>
 
         <div className="claimStatusSectionContianerActions">
-          <div className="claimStatusSectionContianerActionsAction">
+          {!isNewClaim.current && <div className="claimStatusSectionContianerActionsAction">
             <BiUpvote />
             <span>VOTAR</span>
-          </div>
+          </div>}
 
           <div className="claimStatusSectionContianerActionsAction">
             <RiShareLine />

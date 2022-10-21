@@ -1,6 +1,7 @@
 .topNavHeader {
   background-color: #8f0000;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
@@ -15,7 +16,7 @@
   position: static;
   color: #fff;
   /* padding: 0.2rem 1.5rem 0.2rem 0; */
-  font-family: var(--font-secundary);
+  font-family: var(--font-secondary);
   padding: 16px;
 }
 
@@ -76,7 +77,7 @@
   border: none;
   border-radius: 9.9802px;
   padding: 1.3rem 3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -84,10 +85,8 @@
   cursor: pointer;
 }
 
-
 /* media queries */
-@media (min-width:579px) {
-
+@media (min-width: 579px) {
   .topNavUserText {
     display: none;
   }
@@ -106,8 +105,7 @@
   }
 }
 
-@media (min-width:768px) {
-
+@media (min-width: 768px) {
   .topNavHeader {
     background-color: #262724;
   }
@@ -134,11 +132,10 @@
     margin-left: 3rem;
   }
 
-
   .topNavListLinks {
     color: #fff;
     font-size: 1.2em;
-    font-family: 'Lexend';
+    font-family: "Lexend";
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
@@ -155,10 +152,9 @@
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .topNav {
     padding: 1.2rem 1rem 1.2rem 3.4rem;
-
   }
 
   .topNavListLinks {

@@ -6,7 +6,7 @@ const InstitutionCard = (props) => {
   return (
     
     <div>
-    <Link to="/newClaim/category" state={{ Title: "Categoria", Institution: props}} >
+    <Link to="/newClaim/category" state={{ Title: "Categoria", Institution: props}} style={{pointerEvents: props.link === true ? '' : 'none'}}>
       <div className="filterContainer">
         <div className="filterItemContainer">
           <img className="filterIconRounded" src={props.src} alt={props.alt} />

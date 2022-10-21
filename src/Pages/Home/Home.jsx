@@ -1,9 +1,14 @@
 import React from "react";
+import {ImArrowUp} from "react-icons/im"
+
 import Card from "../../Components/Card/Card";
 import TopNav from "../../Components/Nav/TopNav/TopNav";
 import BotNav from "../../Components/Nav/BotNav/BotNav";
 import SearchBar from "../../Components/SearchBar/SearchBar";
+import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+
 import "./home.css";
+
 
 const Home = () => {
   return (
@@ -12,6 +17,30 @@ const Home = () => {
       <BotNav></BotNav>
       <section className="sectionHome">
         <SearchBar placeholder="Busca un reclamo" />
+
+        <div className="sectionHomeButtonsDesktop">
+          <PrimaryButton
+            color="var(--color-primary)"
+            bg="var(--color-bg-primary)"
+            text="NUEVOS"
+          ></PrimaryButton>
+          <PrimaryButton
+            color="var(--color-primary)"
+            bg="var(--color-bg-primary)"
+            text="MÁS VOTADOS"
+          ></PrimaryButton>
+          <PrimaryButton
+            color="var(--color-primary)"
+            bg="var(--color-bg-primary)"
+            text="RESUELTOS"
+          ></PrimaryButton>
+        </div>
+
+        <div className="sectionHomeTitleDesktop">
+          <h3>¡Mirá los reclamos que avanzan!</h3>
+          <p>Votalos asi se resuelven más rápido</p>
+          <span><ImArrowUp fill="var(--color-bg-primary)" size={24} /></span>
+        </div>
 
         <div className="sectionHomeContainerCards">
           <Card

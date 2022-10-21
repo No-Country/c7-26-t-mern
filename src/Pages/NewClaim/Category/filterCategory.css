@@ -1,5 +1,7 @@
 .categoryClaimSection {
   padding: 1.6rem;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 .categoryClaimSection .filterItemContainer {

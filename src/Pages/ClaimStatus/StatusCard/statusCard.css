@@ -35,6 +35,10 @@
   color: #000000;
 }
 
+.statusCardContainerHeaderId svg {
+  margin-left: 0.5rem;
+}
+
 .statusCardContainerCard {
   display: flex;
   flex-direction: column;

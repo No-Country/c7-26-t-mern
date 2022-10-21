@@ -8,37 +8,37 @@ import profileClaimmer from "../../Assets/img/imgClaimer.jpg";
 
 const Card = (props) => {
   return (
-    <div className="claimContainer">
-      <div className="claimTopInfo">
-        <img className="imgClaimmer" src={profileClaimmer} alt="imgClaimmer" />
-        <div className="claimTitleAndSubtitle">
-          <h3 className="claimTitle">{props.title}</h3>
-          <h5 className="claimSubtitle">{props.subtitle}</h5>
+    <div className="cardClaimContainer">
+      <div className="cardClaimHeader">
+        <img src={profileClaimmer} alt="" />
+        <div>
+          <h4>{props.title}</h4>
+          <p>{props.subtitle}</p>
         </div>
       </div>
-      <div className="claimContent">
-        <img
-          className="claimPrincipalImg"
-          src="https://i.ibb.co/ZGCXT4D/agua2.jpg"
-          alt="imgClaim"
-        />
-        <div className="claimBottomInfo">
-          <p className="claimDescription">{props.description}</p>
-          <div className="barVote">
-            <div className="barPaintedVoted">
-              <div className="lineVoteProgress"></div>
-            </div>
+      <div className="cardClaimImg">
+        <div>
+          <img src={"https://i.ibb.co/ZGCXT4D/agua2.jpg"} alt="" />
+        </div>
+      </div>
+      <div className="cardClaimDescription">{props.description}</div>
+
+      <div className="cardClaimBottom">
+        <div className="claimStatusSectionContianerProgressFullBar">
+          <div className="claimStatusSectionContianerProgressBar"></div>
+        </div>
+        <div className="cardClaimBottomContainer">
+          <div className="cardClaimBottomLeft">
+            <button className="seeProgressButton">ESTADO</button>
+            <span className="cardClaimDate">16 de Octubre de 2022</span>
           </div>
-          <div className="claimButtons">
-            <Link className="seeProgressLink" to="/claimStatus">
-              <button className="seeProgressButton">ESTADO</button>
-            </Link>
-            <div className="claimIconsBottom">
-              <p className="vote">
-                <span>150</span> VOTOS
-              </p>
-              <BiUpvote className="upVoteIcon" />
-            </div>
+          <div className="cardClaimBottomRight">
+            <p>
+              <span>208</span> votos
+            </p>
+            <span>
+              <BiUpvote size={17} />
+            </span>
           </div>
         </div>
       </div>
